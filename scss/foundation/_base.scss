@@ -1,11 +1,12 @@
-@use '../layout/abject/_mixin.scss' as *;
-@use '../layout/abject/_variable.scss' as *;
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
 
 
 // base
 html {
     -webkit-appearance: none;
     -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 8rem;
     word-break: break-all;
     scroll-behavior: smooth;
     font-size: 10px;

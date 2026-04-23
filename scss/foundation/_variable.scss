@@ -1,8 +1,10 @@
-@use '../layout/abject/_reset.scss as *';
-@use '../layout/abject/_mixin.scss as *';
+
 
 // vw関数
 @function vw($pixelSixe, $baseWidth: 880) {
     @return calc($pixelSixe / $baseWidth * 100vw);
 }
+
+$color-white: #fff;
+$color-red: rgba(203, 0, 0, 1);
 
