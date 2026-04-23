@@ -1,0 +1,56 @@
+@use '../layout/abject/_mixin.scss' as *;
+@use '../layout/abject/_variable.scss' as *;
+
+
+// base
+html {
+    -webkit-appearance: none;
+    -webkit-text-size-adjust: 100%;
+    word-break: break-all;
+    scroll-behavior: smooth;
+    font-size: 10px;
+    @media (min-width: 768px) and (max-width: 880px) {
+        font-size: vw(10, 880);
+    }
+    @include sp {
+        font-size: vw(10, 375);
+    }
+    color: rgba(0, 0, 0, 1);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+    letter-spacing: 0;
+}
+
+@media (max-width: 767px) {
+    .pc {
+        display: none !important;
+    }
+}
+@media (min-width: 768px) {
+    .sp {
+        display: none !important;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#container {
+    width: 100%;
+    overflow: hidden;
+}
+.inner {
+    width: 88rem;
+    margin: 0 auto;
+    @include sp {
+        width: 33.5rem;
+    }
+}
