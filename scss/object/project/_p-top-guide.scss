@@ -1,0 +1,12 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+//guide 
+.guide {
+    padding: 3.4rem 0 10.8rem;
+    &__title {
+        font-size: 3rem;
+        line-height: calc(50 / 30);
+        font-weight: 700;
+    }
+}

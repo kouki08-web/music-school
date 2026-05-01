@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/style.css">
     <title>きたむらミュージックスクール</title>
 </head>
@@ -163,62 +164,68 @@
                 <section class="voice">
                     <div class="inner">
                         <div class="voice__contents">
-                            <div class="voice__items">
-                                <div class="voice__item voice-item">
-                                    <div class="voice-item__image">
-                                        <picture>
-                                            <source media="(min-width: 768px)" srcset="./images/voice01-pc.jpg">
-                                            <img src="./images/voice01-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
-                                        </picture>
+                            <div class="voice__title">
+                                <h2>生徒さんたちの声</h2>
+                            </div>
+                            <div class="swiper voice__swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide voice__item voice-item">
+                                        <div class="voice-item__image">
+                                            <picture>
+                                                <source media="(min-width: 768px)" srcset="./images/voice01-pc.jpg">
+                                                <img src="./images/voice01-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
+                                            </picture>
+                                        </div>
+                                        <div class="voice-item__text">
+                                            <h2>証券会社勤務　丸山さん</h2>
+                                            <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+                                        </div>
                                     </div>
-                                    <div class="voice-item__text">
-                                        <h2>証券会社勤務　丸山さん</h2>
-                                        <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
-                                    </div>
-                                </div>
 
-                                <div class="voice__item voice-item">
-                                    <div class="voice-item__image">
-                                        <picture>
-                                            <source media="(min-width: 768px)" srcset="./images/voice01-pc.jpg">
-                                            <img src="./images/voice02-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
-                                        </picture>
+                                    <div class="swiper-slide voice__item voice-item">
+                                        <div class="voice-item__image">
+                                            <picture>
+                                                <source media="(min-width: 768px)" srcset="./images/voice02-pc.jpg">
+                                                <img src="./images/voice02-pc.jpg" alt="IT会社勤務　S.Eさん">
+                                            </picture>
+                                        </div>
+                                        <div class="voice-item__text">
+                                            <h2>IT会社勤務　S.Eさん</h2>
+                                            <p>プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
+                                        </div>
                                     </div>
-                                    <div class="voice-item__text">
-                                        <h2>IT会社勤務　S.Eさん</h2>
-                                        <p>プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
-                                    </div>
-                                </div>
 
-                                <div class="voice__item voice-item">
-                                    <div class="voice-item__image">
-                                        <picture>
-                                            <source media="(min-width: 768px)" srcset="./images/voice0-pc.jpg">
-                                            <img src="./images/voice0-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
-                                        </picture>
-                                    </div>
-                                    <div class="voice-item__text">
-                                        <h2>都内大学生　田森さん</h2>
-                                        <p>就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
+                                    <div class="swiper-slide voice__item voice-item">
+                                        <div class="voice-item__image">
+                                            <picture>
+                                                <source media="(min-width: 768px)" srcset="./images/voice03-pc.jpg">
+                                                <img src="./images/voice03-pc.jpg" alt="都内大学生　田森さん">
+                                            </picture>
+                                        </div>
+                                        <div class="voice-item__text">
+                                            <h2>都内大学生　田森さん</h2>
+                                            <p>就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
+                    <!-- 前後の矢印（innerの外・sectionを基準に配置） -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </section>
 
                 <section class="guide">
                     <div class="inner">
                         <div class="guide__contents">
+                            <div class="guide-item__title">
+                                <h2>お問い合わせ</h2>
+                            </div>
                             <div class="guide__items">
-                                <div class="guide__image">
-                                    <img src="./images/about-02.svg" alt="">
-                                </div>
+                                <div class="guide__image"></div>
                                 <div class="guide__item guide-item">
-                                    <div class="guide-item__title">
-                                        <h2>お問い合わせ</h2>
-                                    </div>
+                                    
                                     <div class="guide-item__text">
                                         <p>まずはフォームまたはメールにてお問い合わせください。ヒアリングの日程を調整します。</p>
                                     </div>
