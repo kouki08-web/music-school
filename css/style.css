@@ -466,12 +466,12 @@ img {
 }
 
 .about {
-  padding: 6.6rem 0 5.5rem;
+  padding: 6.6rem 0 5.4rem;
   text-align: center;
 }
 @media (max-width: 767px) {
   .about {
-    padding: 4.7rem 0 8rem;
+    padding: 4.7rem 0 3.3rem;
   }
 }
 .about__title {
@@ -507,6 +507,7 @@ img {
 .about__keywords {
   position: relative;
   margin: 0 auto;
+  margin-top: 3.5rem;
 }
 @media (max-width: 767px) {
   .about__keywords {
@@ -542,7 +543,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 1.5rem;
+  margin-top: 0.7rem;
   -webkit-transform: translateX(-50%) translateY(-40%) rotate(-45deg);
           transform: translateX(-50%) translateY(-40%) rotate(-45deg);
   width: 2.5rem;
@@ -570,7 +571,7 @@ img {
 .about__list li:nth-child(1) {
   -webkit-transform: translateX(-9.5%);
           transform: translateX(-9.5%);
-  margin-top: 2.8rem;
+  margin-top: 1.8rem;
 }
 @media (max-width: 767px) {
   .about__list li:nth-child(1) {
@@ -594,7 +595,7 @@ img {
 .about__list li:nth-child(3) {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
-  margin-top: 1.9rem;
+  margin-top: 2rem;
 }
 @media (max-width: 767px) {
   .about__list li:nth-child(3) {
@@ -688,11 +689,51 @@ img {
 
 .greeting {
   position: relative;
-  padding: 4.9rem 0 4rem;
+  padding: 6.8rem 0 6rem;
+  background: rgb(203, 0, 0);
 }
 @media (max-width: 767px) {
   .greeting {
-    padding: 4rem 0 3rem;
+    padding: 5rem 0 4rem;
+  }
+}
+.greeting__contents {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+.greeting__title {
+  font-size: 3rem;
+  line-height: 1.6666666667;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .greeting__title {
+    font-size: 2.5rem;
+    line-height: 1.6;
+  }
+}
+.greeting__text {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  line-height: 1.6666666667;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .greeting__text {
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    line-height: 1.6666666667;
   }
 }
 

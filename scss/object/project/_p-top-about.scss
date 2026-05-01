@@ -2,11 +2,11 @@
 @use '../../foundation/mixin' as *;
 
 .about {
-    padding: 6.6rem 0 5.5rem;
+    padding: 6.6rem 0 5.4rem;
     text-align: center;
 
     @include sp {
-        padding: 4.7rem 0 8rem;
+        padding: 4.7rem 0 3.3rem;
     }
 
     &__title {
@@ -38,6 +38,7 @@
     &__keywords {
         position: relative;
         margin: 0 auto;
+        margin-top: 3.5rem;
 
         @include sp {
             margin-top: 2rem;
@@ -72,7 +73,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            margin-top: 1.5rem;
+            margin-top: 0.7rem;
             transform: translateX(-50%) translateY(-40%) rotate(-45deg);
             width: 2.5rem;
             height: 2.5rem;
@@ -92,7 +93,7 @@
         flex-direction: column;
         li:nth-child(1) {
             transform: translateX(-9.5%);
-            margin-top: 2.8rem;
+            margin-top: 1.8rem;
             @include sp {
                 transform: translateX(-6.5%);
                 margin-top: 3.3rem;
@@ -109,7 +110,7 @@
         }
         li:nth-child(3) {
             transform: translateX(0%);
-            margin-top: 1.9rem;
+            margin-top: 2rem;
             @include sp {
                 transform: translateX(2.5%);
                 margin-top: 1.9rem;
