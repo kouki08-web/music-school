@@ -24,7 +24,8 @@ html, body {
 }
 body {
     font-weight: 500;
-    font-family: "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+    font-family: "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+    -webkit-font-smoothing: antialiased;
     letter-spacing: 0;
 }
 
