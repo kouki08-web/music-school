@@ -36,6 +36,12 @@
         visibility: visible;
     }
 
+    &.is-docked {
+        position: absolute;
+        opacity: 1;
+        visibility: visible;
+    }
+
     img {
         width: 6.8rem;
         height: 6.8rem;

@@ -1,17 +1,30 @@
-// ページトップ・お問い合わせボタン（FVを超えたら表示）
+// ページトップ・お問い合わせボタン（FVを超えたら表示、フッター到達で位置固定）
 const $pagetop = $('#js-pagetop');
 const $contactBtn = $('.contact-btn');
+const $toggleElements = $pagetop.add($contactBtn);
 const fvHeight = $('.fv').outerHeight();
+const $footer = $('.footer');
 
-$(window).on('scroll', function() {
-    if ($(this).scrollTop() > fvHeight) {
-        $pagetop.addClass('is-show');
-        $contactBtn.addClass('is-show');
+function updateButtons() {
+    const scrollTop = $(window).scrollTop();
+    const scrollBottom = scrollTop + $(window).height();
+    const footerTop = $footer.offset().top;
+    const footerHeight = $footer.outerHeight();
+    const isPC = window.matchMedia('(min-width: 768px)').matches;
+
+    $toggleElements.toggleClass('is-show', scrollTop > fvHeight);
+
+    if (scrollBottom >= footerTop) {
+        const pagetopOffset = isPC ? 100 : 80;
+        $contactBtn.addClass('is-docked').css('bottom', footerHeight);
+        $pagetop.addClass('is-docked').css('bottom', footerHeight + pagetopOffset);
     } else {
-        $pagetop.removeClass('is-show');
-        $contactBtn.removeClass('is-show');
+        $contactBtn.removeClass('is-docked').css('bottom', '');
+        $pagetop.removeClass('is-docked').css('bottom', '');
     }
-});
+}
+
+$(window).on('scroll', updateButtons);
 
 $pagetop.on('click', function(e) {
     e.preventDefault();

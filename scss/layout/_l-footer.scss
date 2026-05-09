@@ -1,2 +1,55 @@
 @use '../foundation/variable' as *;
 @use '../foundation/mixin' as *;
+
+//footer
+.footer {
+    background: $color-red;
+    color: $color-white;
+    text-align: center;
+    padding: 4.4rem 0 4.8rem;
+
+    &__nav-link ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3.2rem;
+
+        li a {
+            font-size: 1.7rem;
+            font-weight: 700;
+            line-height: calc(33 / 17);
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
+
+    &__image {
+        width: 3.2rem;
+        margin: 2.17rem auto 0;
+    }
+
+    &__copyright {
+        margin-top: 2.3rem;
+
+        .copyright {
+            font-size: 1.5rem;
+            line-height: calc(33 / 15);
+        }
+    }
+
+    &__sns {
+        margin-top: 1.6rem;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.98rem;
+        }
+
+        .sns-icon {
+            display: block;
+            width: 2.24rem;
+        }
+    }
+}
