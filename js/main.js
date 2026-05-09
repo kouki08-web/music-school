@@ -1,6 +1,13 @@
 $('.qa-title').on('click', function(){
     $(this).toggleClass('active');
-    $(this).next().slideToggle();
+    var $next = $(this).next('.qa-text');
+    if ($next.is(':hidden')) {
+        $next.slideDown(function() {
+            $(this).css('display', 'flex');
+        });
+    } else {
+        $next.slideUp();
+    }
 });
 
 new Swiper('.voice__swiper', {
