@@ -1,0 +1,44 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.contact-btn {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+
+    &.is-show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        writing-mode: vertical-rl;
+        width: 40px;
+        padding: 16px 0;
+        background-color: $color-red;
+        color: $color-white;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s, background-color 0.3s;
+
+        @include pc {
+            width: 50px;
+            font-size: 16px;
+
+            &:hover {
+                background-color: $color-white;
+                color: $color-red;
+            }
+        }
+    }
+}

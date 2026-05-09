@@ -1,0 +1,45 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.pagetop {
+    position: fixed;
+    right: 16px;
+    bottom: 80px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, box-shadow 0.3s;
+
+    @include pc {
+        right: 24px;
+        bottom: 100px;
+        width: 68px;
+        height: 68px;
+
+        &:hover {
+            background-color: $color-white;
+            box-shadow: 0 0 0 2px #4d4d4d;
+
+            img {
+                filter: invert(1);
+            }
+        }
+    }
+
+    &.is-show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    img {
+        width: 6.8rem;
+        height: 6.8rem;
+        object-fit: contain;
+        transition: filter 0.3s;
+    }
+}

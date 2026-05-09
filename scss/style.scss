@@ -24,4 +24,6 @@
 @use "./object/project/p-top-voice";
 
 // ※ ComponentやUtilityにファイルを作ったら、ここに追記していきます。
-@use '../scss/object/component/c-slide'
+@use '../scss/object/component/c-slide';
+@use './object/component/c-pagetop';
+@use './object/component/c-contact-btn';
