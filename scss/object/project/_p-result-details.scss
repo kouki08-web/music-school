@@ -1,0 +1,54 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.page-result-details {
+    .result-details {
+        padding: 6rem 0 10rem;
+        @include sp {
+            padding: 4rem 0 6rem;
+        }
+
+        &__image {
+            width: 100%;
+            margin-bottom: 4rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__name {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: $color-red;
+            margin-bottom: 2rem;
+            @include sp {
+                font-size: 2rem;
+            }
+        }
+
+        &__body {
+            p {
+                font-size: 1.8rem;
+                line-height: calc(32 / 18);
+                @include sp {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        &__back {
+            margin-top: 5rem;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                font-size: 1.6rem;
+                color: $color-red;
+                border-bottom: 1px solid $color-red;
+                padding-bottom: 0.3rem;
+            }
+        }
+    }
+}

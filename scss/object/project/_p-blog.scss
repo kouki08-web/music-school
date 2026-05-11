@@ -1,0 +1,16 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+// ブログ一覧ページ固有のスタイル
+.page-blog {
+    .blog {
+        padding: 6rem 0 10rem;
+        @include sp {
+            padding: 4rem 0 6rem;
+        }
+
+        &__title {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+// 卒業実績ページ固有のスタイル
+.page-results {
+    .voice {
+        padding: 6rem 0 8rem;
+        @include sp {
+            padding: 4rem 0 4rem;
+        }
+
+        &__title {
+            display: none;
+        }
+    }
+}

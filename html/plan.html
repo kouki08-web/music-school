@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>プラン・料金 | きたむらミュージックスクール</title>
+</head>
+<body class="page-price">
+    <div id="container">
+        <header class="header">
+            <button id="js-hamburger" class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header-menu">
+            <nav>
+                <ul>
+                    <li><a href="./plan.html">料金</a></li>
+                    <li><a href="./blog_list.html">ブログ</a></li>
+                    <li><a href="./result_list.html">卒業実績</a></li>
+                    <li><a href="./contact_form.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="js-overlay" class="overlay"></div>
+        <div class="inner">
+            <div class="header__left">
+                <div class="header__image">
+                    <img src="../images/header-icon.svg" alt="">
+                </div>
+                <h1 class="header__logo"><a href="./index.html">きたむら<br class="pc"><span>ミュージックスクール</span></a></h1>
+            </div>
+            <nav class="header__nav pc">
+                <ul>
+                    <li><a href="./plan.html">料金</a></li>
+                    <li><a href="./blog_list.html">ブログ</a></li>
+                    <li><a href="./result_list.html">卒業実績</a></li>
+                    <li class="nav-contact"><a href="./contact_form.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+
+        <main>
+            <div class="main">
+                <section class="fv">
+                    <div class="fv__contents">
+                        <div class="fv-slide__image">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="../images/plan-pc.jpg">
+                                <img src="../images/plan-sp.jpg" alt="プラン・料金">
+                            </picture>
+                        </div>
+                        <div class="fv__catch">
+                            <h2>プラン・料金</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <nav class="breadcrumb">
+                    <div class="inner">
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="./index.html">ホーム</a></li>
+                            <li class="breadcrumb__item">プラン・料金</li>
+                        </ol>
+                    </div>
+                </nav>
+
+                <section class="price-overview">
+                    <div class="inner">
+                        <h2 class="price-overview__title">料金体系</h2>
+                        <div class="price-overview__fee">
+                            <div class="price-overview__fee-item">入会金 39,000円</div>
+                            <span class="price-overview__fee-plus">+</span>
+                            <div class="price-overview__fee-item">月額料金</div>
+                        </div>
+                        <p class="price-overview__desc">きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。</p>
+                    </div>
+                </section>
+
+                <section class="plan-table">
+                    <div class="inner">
+                        <h2 class="plan-table__title">プラン内容・月額料金</h2>
+                        <div class="plan-table__wrapper">
+                            <table class="plan-table__table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>ベーシックプラン</th>
+                                        <th class="is-recommended">
+                                            <span class="plan-table__badge">おすすめ</span>
+                                            スタンダードプラン
+                                        </th>
+                                        <th>プレミアムプラン</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="plan-table__label">月額料金</td>
+                                        <td>39,000円</td>
+                                        <td class="is-recommended">59,000円</td>
+                                        <td>128,000円</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="plan-table__label">マンツーマン授業</td>
+                                        <td>週1回</td>
+                                        <td class="is-recommended">週2回</td>
+                                        <td>無制限</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="plan-table__label">ビジネス基本講座</td>
+                                        <td>●</td>
+                                        <td class="is-recommended">●</td>
+                                        <td>●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="plan-table__label">練習ROOM利用</td>
+                                        <td>月10時間</td>
+                                        <td class="is-recommended">月20時間</td>
+                                        <td>無制限</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="plan-table__label">ビジネスコンサル</td>
+                                        <td>—</td>
+                                        <td class="is-recommended">月2回</td>
+                                        <td>月3回</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="plan-table__label">コミュニティ参加資格</td>
+                                        <td>—</td>
+                                        <td class="is-recommended">—</td>
+                                        <td>●</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="plan-table__note">※各サービスは1回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <a href="#" id="js-pagetop" class="pagetop" aria-label="ページトップへ戻る">
+            <img src="../images/top-icon.svg" alt="ページトップへ戻る">
+        </a>
+
+        <div class="contact-btn">
+            <a href="./contact_form.html">お問い合わせ</a>
+        </div>
+        <footer class="footer">
+            <div class="footer__nav">
+                <nav class="footer__nav-link">
+                    <ul>
+                        <li><a href="./index.html">ホーム</a></li>
+                        <li><a href="./plan.html">料金</a></li>
+                        <li><a href="./blog_list.html">ブログ</a></li>
+                        <li><a href="./result_list.html">卒業実績</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__image">
+                <img src="../images/footer-icon.svg" alt="フッターアイコン">
+            </div>
+            <div class="footer__copyright">
+                <p class="copyright">Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
+            </div>
+            <div class="footer__sns">
+                <ul>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/twitter.svg" alt="twitter"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/youtube.svg" alt="youtube"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/instagram.svg" alt="instagram"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+</html>

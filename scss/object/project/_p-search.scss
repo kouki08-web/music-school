@@ -1,0 +1,41 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.page-search {
+    .search {
+        padding: 6rem 0 10rem;
+        @include sp {
+            padding: 4rem 0 6rem;
+        }
+
+        &__keyword {
+            font-size: 1.8rem;
+            margin-bottom: 4rem;
+            @include sp {
+                font-size: 1.6rem;
+            }
+        }
+
+        &__keyword-text {
+            font-weight: 700;
+            color: $color-red;
+        }
+
+        .blog__items {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 4rem 3rem;
+            @include sp {
+                flex-direction: column;
+            }
+        }
+
+        .blog__item {
+            width: 26rem;
+            @include sp {
+                width: 100%;
+            }
+        }
+    }
+}

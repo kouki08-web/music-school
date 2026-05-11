@@ -1,0 +1,16 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+// お問い合わせページ固有のスタイル
+.page-contact {
+    .guide {
+        padding: 6rem 0 10rem;
+        @include sp {
+            padding: 4rem 0 6rem;
+        }
+
+        &__title {
+            display: none;
+        }
+    }
+}

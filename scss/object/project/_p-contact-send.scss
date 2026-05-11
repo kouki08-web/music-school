@@ -1,0 +1,37 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.page-contact-send {
+    .contact-send {
+        padding: 10rem 0 12rem;
+        @include sp {
+            padding: 6rem 0 8rem;
+        }
+
+        &__contents {
+            text-align: center;
+        }
+
+        &__text {
+            font-size: 1.8rem;
+            line-height: calc(32 / 18);
+            @include sp {
+                font-size: 1.6rem;
+                text-align: left;
+            }
+        }
+
+        &__btn {
+            margin-top: 5rem;
+
+            a {
+                display: inline-block;
+                padding: 1.5rem 4rem;
+                background-color: $color-red;
+                color: $color-white;
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+        }
+    }
+}

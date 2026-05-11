@@ -1,0 +1,66 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.page-blog-details {
+    .blog-details {
+        padding: 6rem 0 10rem;
+        @include sp {
+            padding: 4rem 0 6rem;
+        }
+
+        &__head {
+            margin-bottom: 3rem;
+        }
+
+        &__date {
+            display: block;
+            font-size: 1.5rem;
+            color: $color-black;
+            margin-top: 1rem;
+        }
+
+        &__title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: calc(45 / 28);
+            margin-top: 1.5rem;
+            @include sp {
+                font-size: 2.2rem;
+            }
+        }
+
+        &__image {
+            width: 100%;
+            margin-bottom: 4rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__body {
+            p {
+                font-size: 1.8rem;
+                line-height: calc(32 / 18);
+                margin-bottom: 2rem;
+                @include sp {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        &__back {
+            margin-top: 5rem;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                font-size: 1.6rem;
+                color: $color-red;
+                border-bottom: 1px solid $color-red;
+                padding-bottom: 0.3rem;
+            }
+        }
+    }
+}
