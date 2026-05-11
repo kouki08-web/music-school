@@ -1,0 +1,171 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.page-blog {
+    .breadcrumb {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        &__list {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.4rem;
+            @include sp {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__item {
+            color: $color-black;
+
+            &:not(:last-child)::after {
+                content: '>';
+                margin-left: 0.8rem;
+                color: $color-black;
+            }
+
+            a {
+                color: $color-black;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.blog-list {
+    padding: 6rem 0 10rem;
+    @include sp {
+        padding: 4rem 0 8rem;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        @include sp {
+            font-size: 2rem;
+        }
+    }
+
+    &__items {
+        margin-top: 4rem;
+        @include sp {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.blog-list-item {
+    display: flex;
+    gap: 3rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    @include sp {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &:first-child {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    &__image {
+        position: relative;
+        flex-shrink: 0;
+        width: 28rem;
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    &__category {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding: 0.6rem 1.5rem;
+        background-color: $color-red;
+        color: $color-white;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1;
+        @include sp {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__body {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: calc(30 / 20);
+        @include sp {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__date {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        line-height: calc(30 / 14);
+        @include sp {
+            margin-top: 0.5rem;
+        }
+    }
+
+    &__text {
+        margin-top: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: calc(30 / 18);
+        @include sp {
+            margin-top: 1rem;
+            font-size: 1.4rem;
+            line-height: calc(25 / 14);
+        }
+    }
+}
+
+.pagination {
+    margin-top: 5rem;
+    @include sp {
+        margin-top: 4rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    &__item {
+        a,
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            border: 1px solid $color-black;
+            font-size: 1.6rem;
+            color: $color-black;
+            text-decoration: none;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        &.is-active a {
+            background-color: $color-red;
+            border-color: $color-red;
+            color: $color-white;
+        }
+
+        &.is-dots span {
+            border: none;
+        }
+    }
+}
