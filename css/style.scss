@@ -24,3 +24,20 @@
 @use "../scss/object/project/p-top-voice";
 
 // ※ ComponentやUtilityにファイルを作ったら、ここに追記していきます。
+@use "../scss/object/component/c-slide";
+@use "../scss/object/component/c-pagetop";
+@use "../scss/object/component/c-contact-btn";
+@use "../scss/object/component/c-page-header";
+
+// ============================================================
+// Object - Project (下層ページ)
+// ============================================================
+@use "../scss/object/project/p-blog-list";
+@use "../scss/object/project/p-blog-details";
+@use "../scss/object/project/p-price";
+@use "../scss/object/project/p-contact";
+@use "../scss/object/project/p-contact-send";
+@use "../scss/object/project/p-results";
+@use "../scss/object/project/p-result-details";
+@use "../scss/object/project/p-search";
+@use "../scss/object/project/p-404";
