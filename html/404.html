@@ -46,24 +46,31 @@
 
         <main>
             <div class="main">
+                <section class="fv">
+                    <div class="fv__contents">
+                        <div class="fv-slide__image">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="../images/404-pc.jpg">
+                                <img src="../images/404-sp.jpg" alt="404 Not Found">
+                            </picture>
+                        </div>
+                        <div class="fv__catch">
+                            <h2>404 not fonud</h2>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="not-found">
                     <div class="inner">
-                        <div class="not-found__contents">
-                            <p class="not-found__code">404</p>
-                            <h2 class="not-found__title">ページが見つかりません</h2>
-                            <p class="not-found__text">お探しのページは移動または削除された可能性があります。</p>
-                            <div class="not-found__btn">
-                                <a href="./index.html">トップページへ戻る</a>
-                            </div>
+                        <p class="not-found__text">申し訳ございませんが、お探しのページが見つかりませんでした。</p>
+                        <p class="not-found__text">お探しのページは一時的に表示ができない状態にあるか、移動または削除された可能性があります。</p>
+                        <div class="not-found__btn">
+                            <a href="./index.html">ホームへ戻る</a>
                         </div>
                     </div>
                 </section>
             </div>
         </main>
-
-        <a href="#" id="js-pagetop" class="pagetop" aria-label="ページトップへ戻る">
-            <img src="../images/top-icon.svg" alt="ページトップへ戻る">
-        </a>
 
         <footer class="footer">
             <div class="footer__nav">
