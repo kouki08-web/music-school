@@ -46,29 +46,141 @@
 
         <main>
             <div class="main">
-                <section class="page-header">
+                <nav class="breadcrumb">
                     <div class="inner">
-                        <h2 class="page-header__title">卒業実績</h2>
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="./index.html">ホーム</a></li>
+                            <li class="breadcrumb__item"><a href="./result_list.html">卒業実績</a></li>
+                            <li class="breadcrumb__item"><a href="#">ポップス</a></li>
+                            <li class="breadcrumb__item">タイトルが入ります。タイトルが入ります。タイトルが入ります。</li>
+                        </ol>
                     </div>
-                </section>
+                </nav>
 
                 <article class="result-details">
                     <div class="inner">
                         <div class="result-details__image">
+                            <span class="result-details__category">ポップス</span>
                             <picture>
                                 <source media="(min-width: 768px)" srcset="../images/voice01-pc.jpg">
-                                <img src="../images/voice01-sp.jpg" alt="証券会社勤務　丸山さん">
+                                <img src="../images/voice01-sp.jpg" alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。">
                             </picture>
                         </div>
-                        <div class="result-details__body">
-                            <h2 class="result-details__name">証券会社勤務　丸山さん</h2>
-                            <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。</p>
+
+                        <h2 class="result-details__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h2>
+                        <div class="result-details__date">
+                            <time datetime="2000-01-01">0000.00.00</time>
                         </div>
-                        <div class="result-details__back">
-                            <a href="./result_list.html">卒業実績一覧へ戻る</a>
+
+                        <div class="result-details__info">
+                            <table class="result-details__table">
+                                <tbody>
+                                    <tr>
+                                        <th>名前</th>
+                                        <td>丸山</td>
+                                    </tr>
+                                    <tr>
+                                        <th>職業</th>
+                                        <td>証券会社勤務</td>
+                                    </tr>
+                                    <tr>
+                                        <th>ジャンル</th>
+                                        <td>入力欄</td>
+                                    </tr>
+                                    <tr>
+                                        <th>実績</th>
+                                        <td>入力欄</td>
+                                    </tr>
+                                    <tr>
+                                        <th>SNS</th>
+                                        <td>入力欄</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="result-details__text">
+                                <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+                            </div>
                         </div>
+
+                        <nav class="result-details__pager">
+                            <a href="#" class="result-details__pager-prev">
+                                <span class="result-details__pager-label">◄ 前の記事</span>
+                                <div class="result-details__pager-content">
+                                    <div class="result-details__pager-image">
+                                        <img src="../images/voice02-pc.jpg" alt="前の記事">
+                                    </div>
+                                    <p class="result-details__pager-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入</p>
+                                </div>
+                            </a>
+                            <a href="#" class="result-details__pager-next">
+                                <span class="result-details__pager-label result-details__pager-label--next">次の記事 ►</span>
+                                <div class="result-details__pager-content">
+                                    <div class="result-details__pager-image">
+                                        <img src="../images/voice03-pc.jpg" alt="次の記事">
+                                    </div>
+                                    <p class="result-details__pager-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入</p>
+                                </div>
+                            </a>
+                        </nav>
                     </div>
                 </article>
+
+                <section class="result-related">
+                    <div class="inner">
+                        <h2 class="result-related__title">関連記事</h2>
+                        <div class="result-related__items">
+
+                            <a href="./result_details.html" class="result-related-item">
+                                <div class="result-related-item__image">
+                                    <span class="result-related-item__category">ロック</span>
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="../images/voice02-pc.jpg">
+                                        <img src="../images/voice02-pc.jpg" alt="タイトルが入ります">
+                                    </picture>
+                                </div>
+                                <div class="result-related-item__body">
+                                    <p class="result-related-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                                    <div class="result-related-item__date">
+                                        <time datetime="2000-01-01">0000.00.00</time>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="./result_details.html" class="result-related-item">
+                                <div class="result-related-item__image">
+                                    <span class="result-related-item__category">ジャズ</span>
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="../images/voice03-pc.jpg">
+                                        <img src="../images/voice03-pc.jpg" alt="タイトルが入ります">
+                                    </picture>
+                                </div>
+                                <div class="result-related-item__body">
+                                    <p class="result-related-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                                    <div class="result-related-item__date">
+                                        <time datetime="2000-01-01">0000.00.00</time>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="./result_details.html" class="result-related-item">
+                                <div class="result-related-item__image">
+                                    <span class="result-related-item__category">ラテン</span>
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="../images/voice01-pc.jpg">
+                                        <img src="../images/voice01-sp.jpg" alt="タイトルが入ります">
+                                    </picture>
+                                </div>
+                                <div class="result-related-item__body">
+                                    <p class="result-related-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                                    <div class="result-related-item__date">
+                                        <time datetime="2000-01-01">0000.00.00</time>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
 

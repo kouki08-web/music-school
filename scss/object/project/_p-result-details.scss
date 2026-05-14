@@ -2,52 +2,265 @@
 @use '../../foundation/mixin' as *;
 
 .page-result-details {
-    .result-details {
-        padding: 6rem 0 10rem;
+    .breadcrumb {
+        margin-top: 80px;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         @include sp {
-            padding: 4rem 0 6rem;
+            margin-top: 50px;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem 0.8rem;
+            font-size: 1.4rem;
+            @include sp {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__item {
+            color: $color-black;
+
+            &:not(:last-child)::after {
+                content: '>';
+                margin-left: 0.8rem;
+                color: $color-black;
+            }
+
+            a {
+                color: $color-black;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .result-details {
+        padding: 4rem 0 6rem;
+        @include sp {
+            padding: 3rem 0 4rem;
         }
 
         &__image {
+            position: relative;
             width: 100%;
-            margin-bottom: 4rem;
+        }
 
-            img {
-                width: 100%;
-                height: auto;
+        &__category {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            padding: 0.6rem 1.5rem;
+            background-color: $color-red;
+            color: $color-white;
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1;
+            @include sp {
+                font-size: 1.2rem;
             }
         }
 
-        &__name {
-            font-size: 2.4rem;
+        &__title {
+            font-size: 2.8rem;
             font-weight: 700;
-            color: $color-red;
-            margin-bottom: 2rem;
+            line-height: calc(40 / 28);
+            margin-top: 2.5rem;
             @include sp {
                 font-size: 2rem;
+                margin-top: 2rem;
             }
         }
 
-        &__body {
-            p {
-                font-size: 1.8rem;
-                line-height: calc(32 / 18);
+        &__date {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+        }
+
+        &__info {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: start;
+            @include sp {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-top: 2.5rem;
+            }
+        }
+
+        &__table {
+            width: 100%;
+            min-width: 28rem;
+            @include sp {
+                min-width: auto;
+            }
+
+            th, td {
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                padding: 1rem 1.5rem;
+                font-size: 1.4rem;
+                text-align: left;
+                vertical-align: middle;
                 @include sp {
-                    font-size: 1.6rem;
+                    font-size: 1.3rem;
+                    padding: 0.8rem 1.2rem;
+                }
+            }
+
+            th {
+                font-weight: 700;
+                white-space: nowrap;
+            }
+        }
+
+        &__text {
+            p {
+                font-size: 1.6rem;
+                line-height: calc(28 / 16);
+                @include sp {
+                    font-size: 1.4rem;
                 }
             }
         }
 
-        &__back {
-            margin-top: 5rem;
-            text-align: center;
+        &__pager {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 6rem;
+            @include sp {
+                gap: 1.5rem;
+                margin-top: 4rem;
+            }
+        }
 
-            a {
-                display: inline-block;
+        &__pager-prev,
+        &__pager-next {
+            display: block;
+        }
+
+        &__pager-label {
+            display: block;
+            background-color: #333;
+            color: $color-white;
+            padding: 1rem 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            @include sp {
+                font-size: 1.2rem;
+                padding: 0.8rem 1rem;
+            }
+
+            &--next {
+                text-align: right;
+            }
+        }
+
+        &__pager-content {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            @include sp {
+                margin-top: 1rem;
+            }
+        }
+
+        &__pager-image {
+            flex-shrink: 0;
+            width: 8rem;
+            @include sp {
+                width: 6rem;
+            }
+        }
+
+        &__pager-title {
+            font-size: 1.4rem;
+            line-height: calc(20 / 14);
+            @include sp {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .result-related {
+        padding-bottom: 8rem;
+        @include sp {
+            padding-bottom: 6rem;
+        }
+
+        &__title {
+            background-color: #333;
+            color: $color-white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            padding: 1.5rem 2rem;
+            @include sp {
                 font-size: 1.6rem;
-                color: $color-red;
-                border-bottom: 1px solid $color-red;
-                padding-bottom: 0.3rem;
+                padding: 1.2rem 1.5rem;
+            }
+        }
+    }
+
+    .result-related-item {
+        display: flex;
+        gap: 2.5rem;
+        padding: 2.5rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        @include sp {
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+
+        &:first-child {
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        &__image {
+            position: relative;
+            flex-shrink: 0;
+            width: 16rem;
+            @include sp {
+                width: 11rem;
+            }
+        }
+
+        &__category {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            padding: 0.4rem 1rem;
+            background-color: $color-red;
+            color: $color-white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        &__body {
+            flex: 1;
+        }
+
+        &__title {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: calc(24 / 16);
+            @include sp {
+                font-size: 1.4rem;
+            }
+        }
+
+        &__date {
+            margin-top: 1rem;
+            font-size: 1.4rem;
+            @include sp {
+                margin-top: 0.7rem;
+                font-size: 1.2rem;
             }
         }
     }
