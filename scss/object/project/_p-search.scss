@@ -2,17 +2,59 @@
 @use '../../foundation/mixin' as *;
 
 .page-search {
+    .breadcrumb {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        &__list {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.4rem;
+            @include sp {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__item {
+            color: $color-black;
+
+            &:not(:last-child)::after {
+                content: '>';
+                margin-left: 0.8rem;
+                color: $color-black;
+            }
+
+            a {
+                color: $color-black;
+                text-decoration: none;
+            }
+        }
+    }
+
     .search {
         padding: 6rem 0 10rem;
         @include sp {
-            padding: 4rem 0 6rem;
+            padding: 4rem 0 8rem;
+        }
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+            @include sp {
+                margin-bottom: 3rem;
+            }
         }
 
         &__keyword {
             font-size: 1.8rem;
-            margin-bottom: 4rem;
             @include sp {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
             }
         }
 
@@ -21,20 +63,10 @@
             color: $color-red;
         }
 
-        .blog__items {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 4rem 3rem;
+        &__count {
+            font-size: 1.6rem;
             @include sp {
-                flex-direction: column;
-            }
-        }
-
-        .blog__item {
-            width: 26rem;
-            @include sp {
-                width: 100%;
+                font-size: 1.4rem;
             }
         }
     }
