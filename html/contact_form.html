@@ -46,47 +46,97 @@
 
         <main>
             <div class="main">
-                <section class="page-header">
-                    <div class="inner">
-                        <h2 class="page-header__title">お問い合わせ</h2>
+                <section class="fv">
+                    <div class="fv__contents">
+                        <div class="fv-slide__image">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="../images/contact-pc.jpg">
+                                <img src="../images/contact-sp.jpg" alt="お問い合わせ">
+                            </picture>
+                        </div>
+                        <div class="fv__catch">
+                            <h2>お問い合わせ</h2>
+                        </div>
                     </div>
                 </section>
 
-                <section class="guide">
+                <nav class="breadcrumb">
                     <div class="inner">
-                        <div class="guide__contents">
-                            <div class="guide__title">
-                                <h2>お問い合わせ</h2>
-                            </div>
-                            <div class="guide__items">
-                                <div class="guide__item guide-item">
-                                    <div class="guide-item__title">
-                                        <h3>お名前</h3>
-                                    </div>
-                                    <div class="guide-item__text">
-                                        <p>山田 太郎</p>
-                                    </div>
-                                </div>
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="./index.html">ホーム</a></li>
+                            <li class="breadcrumb__item">お問い合わせ</li>
+                        </ol>
+                    </div>
+                </nav>
 
-                                <div class="guide__item guide-item">
-                                    <div class="guide-item__title">
-                                        <h3>メールアドレス</h3>
-                                    </div>
-                                    <div class="guide-item__text">
-                                        <p>example@example.com</p>
-                                    </div>
-                                </div>
+                <section class="contact-form">
+                    <div class="inner">
+                        <p class="contact-form__intro">当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。<br class="pc">通常３営業日以内にメールにてご連絡させていただきます。</p>
 
-                                <div class="guide__item guide-item">
-                                    <div class="guide-item__title">
-                                        <h3>お問い合わせ内容</h3>
-                                    </div>
-                                    <div class="guide-item__text">
-                                        <p>ご質問・ご相談など、お気軽にお問い合わせください。<br>通常2〜3営業日以内にご返答いたします。</p>
-                                    </div>
+                        <form class="contact-form__form" action="./contact_send.html" method="post">
+                            <div class="contact-form__row">
+                                <label class="contact-form__label" for="company">会社名</label>
+                                <div class="contact-form__input-wrap">
+                                    <input type="text" id="company" name="company" placeholder="きたむらミュージックスクール">
                                 </div>
                             </div>
-                        </div>
+
+                            <div class="contact-form__row">
+                                <label class="contact-form__label" for="name">お名前</label>
+                                <div class="contact-form__input-wrap">
+                                    <input type="text" id="name" name="name" placeholder="北村　翔平">
+                                </div>
+                            </div>
+
+                            <div class="contact-form__row">
+                                <label class="contact-form__label" for="email">メールアドレス</label>
+                                <div class="contact-form__input-wrap">
+                                    <input type="email" id="email" name="email" placeholder="info@kitamura.musicschool.jp">
+                                </div>
+                            </div>
+
+                            <div class="contact-form__row">
+                                <label class="contact-form__label" for="tel">電話番号</label>
+                                <div class="contact-form__input-wrap">
+                                    <input type="tel" id="tel" name="tel" placeholder="090-1234-5678">
+                                </div>
+                            </div>
+
+                            <div class="contact-form__row">
+                                <div class="contact-form__label">目　的<span class="contact-form__label-note">(複数選択可)</span></div>
+                                <div class="contact-form__input-wrap">
+                                    <div class="contact-form__checkboxes">
+                                        <label class="contact-form__checkbox">
+                                            <input type="checkbox" name="purpose" value="plan">
+                                            プランについてのお問い合わせ
+                                        </label>
+                                        <label class="contact-form__checkbox">
+                                            <input type="checkbox" name="purpose" value="hearing">
+                                            ヒアリングのご予約
+                                        </label>
+                                        <label class="contact-form__checkbox">
+                                            <input type="checkbox" name="purpose" value="material">
+                                            資料請求
+                                        </label>
+                                        <label class="contact-form__checkbox">
+                                            <input type="checkbox" name="purpose" value="other">
+                                            その他
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-form__row">
+                                <label class="contact-form__label" for="message">内　容</label>
+                                <div class="contact-form__input-wrap">
+                                    <textarea id="message" name="message" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="contact-form__submit">
+                                <button type="submit">送信</button>
+                            </div>
+                        </form>
                     </div>
                 </section>
             </div>
