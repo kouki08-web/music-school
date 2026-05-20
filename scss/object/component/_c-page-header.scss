@@ -8,15 +8,15 @@
     @include sp {
         padding: 3.5rem 0;
     }
+}
 
-    &__title {
-        font-size: 3.5rem;
-        font-weight: 700;
-        color: $color-red;
-        line-height: calc(50 / 35);
-        @include sp {
-            font-size: 2.5rem;
-            line-height: calc(40 / 25);
-        }
+.page-header__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: $color-red;
+    line-height: calc(50 / 35);
+    @include sp {
+        font-size: 2.5rem;
+        line-height: calc(40 / 25);
     }
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>プラン・料金 | きたむらミュージックスクール</title>
 </head>
-<body class="page-price">
+<body class="page-plan">
     <div id="container">
         <header class="header">
             <button id="js-hamburger" class="hamburger" aria-label="メニューを開く" aria-expanded="false">
@@ -29,7 +29,7 @@
         <div class="inner">
             <div class="header__left">
                 <div class="header__image">
-                    <img src="../images/header-icon.svg" alt="">
+                    <img src="../images/header-icon.svg" alt="" width="33" height="50">
                 </div>
                 <h1 class="header__logo"><a href="./index.html">きたむら<br class="pc"><span>ミュージックスクール</span></a></h1>
             </div>
@@ -51,7 +51,7 @@
                         <div class="fv-slide__image">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="../images/plan-pc.jpg">
-                                <img src="../images/plan-sp.jpg" alt="プラン・料金">
+                                <img src="../images/plan-sp.jpg" alt="プラン・料金" width="750" height="600">
                             </picture>
                         </div>
                         <div class="fv__catch">
@@ -69,15 +69,15 @@
                     </div>
                 </nav>
 
-                <section class="price-overview">
+                <section class="plan-overview">
                     <div class="inner">
-                        <h2 class="price-overview__title">料金体系</h2>
-                        <div class="price-overview__fee">
-                            <div class="price-overview__fee-item">入会金 39,000円</div>
-                            <span class="price-overview__fee-plus">+</span>
-                            <div class="price-overview__fee-item">月額料金</div>
+                        <h2 class="plan-overview__title">料金体系</h2>
+                        <div class="plan-overview__fee-items">
+                            <div class="plan-overview__fee-item">入会金 39,000円</div>
+                            <span class="plan-overview__fee-plus"></span>
+                            <div class="plan-overview__fee-item">月額料金</div>
                         </div>
-                        <p class="price-overview__desc">きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。</p>
+                        <p class="plan-overview__desc">きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。</p>
                     </div>
                 </section>
 
@@ -85,10 +85,10 @@
                     <div class="inner">
                         <h2 class="plan-table__title">プラン内容・月額料金</h2>
                         <div class="plan-table__wrapper">
-                            <table class="plan-table__table">
+                            <table class="plan-table__table" aria-label="プラン内容・月額料金">
                                 <thead>
                                     <tr>
-                                        <th></th>
+                                        <th scope="col" aria-label="項目"></th>
                                         <th>ベーシックプラン</th>
                                         <th class="is-recommended">
                                             <span class="plan-table__badge">おすすめ</span>
@@ -101,50 +101,50 @@
                                     <tr>
                                         <td class="plan-table__label">月額料金</td>
                                         <td>39,000円</td>
-                                        <td class="is-recommended">59,000円</td>
+                                        <td class="is-recommended is-price">59,000円</td>
                                         <td>128,000円</td>
                                     </tr>
                                     <tr>
                                         <td class="plan-table__label">マンツーマン授業</td>
-                                        <td>週1回</td>
-                                        <td class="is-recommended">週2回</td>
-                                        <td>無制限</td>
+                                        <td><span class="plan-table__dot"></span>週１回</td>
+                                        <td class="is-recommended"><span class="plan-table__dot"></span>週２回</td>
+                                        <td><span class="plan-table__dot"></span>無制限</td>
                                     </tr>
                                     <tr>
                                         <td class="plan-table__label">ビジネス基本講座</td>
-                                        <td>●</td>
-                                        <td class="is-recommended">●</td>
-                                        <td>●</td>
+                                        <td><span class="plan-table__dot"></span></td>
+                                        <td class="is-recommended"><span class="plan-table__dot"></span></td>
+                                        <td><span class="plan-table__dot"></span></td>
                                     </tr>
                                     <tr>
                                         <td class="plan-table__label">練習ROOM利用</td>
-                                        <td>月10時間</td>
-                                        <td class="is-recommended">月20時間</td>
-                                        <td>無制限</td>
+                                        <td><span class="plan-table__dot"></span>月10時間</td>
+                                        <td class="is-recommended"><span class="plan-table__dot"></span>月20時間</td>
+                                        <td><span class="plan-table__dot"></span>無制限</td>
                                     </tr>
                                     <tr>
                                         <td class="plan-table__label">ビジネスコンサル</td>
-                                        <td>—</td>
-                                        <td class="is-recommended">月2回</td>
-                                        <td>月3回</td>
+                                        <td><span class="plan-table__dash">—</span></td>
+                                        <td class="is-recommended"><span class="plan-table__dot"></span>月２回</td>
+                                        <td><span class="plan-table__dot"></span>月３回</td>
                                     </tr>
                                     <tr>
                                         <td class="plan-table__label">コミュニティ参加資格</td>
                                         <td>—</td>
                                         <td class="is-recommended">—</td>
-                                        <td>●</td>
+                                        <td><span class="plan-table__dot"></span></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <p class="plan-table__note">※各サービスは1回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>
+                        <p class="plan-table__note">※各サービスは１回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>
                     </div>
                 </section>
             </div>
         </main>
 
         <a href="#" id="js-pagetop" class="pagetop" aria-label="ページトップへ戻る">
-            <img src="../images/top-icon.svg" alt="ページトップへ戻る">
+            <img src="../images/top-icon.svg" alt="ページトップへ戻る" width="68" height="68">
         </a>
 
         <div class="contact-btn">
@@ -162,17 +162,17 @@
                 </nav>
             </div>
             <div class="footer__image">
-                <img src="../images/footer-icon.svg" alt="フッターアイコン">
+                <img src="../images/footer-icon.svg" alt="フッターアイコン" width="33" height="50">
             </div>
             <div class="footer__copyright">
                 <p class="copyright">Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
             </div>
             <div class="footer__sns">
                 <ul>
-                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/twitter.svg" alt="twitter"></a></li>
-                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/facebook.svg" alt="facebook"></a></li>
-                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/youtube.svg" alt="youtube"></a></li>
-                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/instagram.svg" alt="instagram"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/twitter.svg" alt="twitter" width="23" height="19"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/facebook.svg" alt="facebook" width="23" height="23"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/youtube.svg" alt="youtube" width="23" height="16"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/instagram.svg" alt="instagram" width="20" height="20"></a></li>
                 </ul>
             </div>
         </footer>

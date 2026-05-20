@@ -9,32 +9,32 @@
         @include sp {
             margin-top: 50px;
         }
+    }
 
-        &__list {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 0.5rem 0.8rem;
-            font-size: 1.4rem;
-            @include sp {
-                font-size: 1.2rem;
-            }
+    .breadcrumb__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem 0.8rem;
+        font-size: 1.4rem;
+        @include sp {
+            font-size: 1.2rem;
         }
+    }
 
-        &__item {
-            color: $color-black;
+    .breadcrumb__item {
+        color: $color-black;
+    }
 
-            &:not(:last-child)::after {
-                content: '>';
-                margin-left: 0.8rem;
-                color: $color-black;
-            }
+    .breadcrumb__item:not(:last-child)::after {
+        content: '>';
+        margin-left: 0.8rem;
+        color: $color-black;
+    }
 
-            a {
-                color: $color-black;
-                text-decoration: none;
-            }
-        }
+    .breadcrumb__item a {
+        color: $color-black;
+        text-decoration: none;
     }
 
     .result-details {
@@ -42,148 +42,147 @@
         @include sp {
             padding: 3rem 0 4rem;
         }
+    }
 
-        &__image {
-            position: relative;
-            width: 100%;
+    .result-details__image {
+        position: relative;
+        width: 100%;
+    }
+
+    .result-details__category {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding: 0.6rem 1.5rem;
+        background-color: $color-red;
+        color: $color-white;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1;
+        @include sp {
+            font-size: 1.2rem;
         }
+    }
 
-        &__category {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            padding: 0.6rem 1.5rem;
-            background-color: $color-red;
-            color: $color-white;
-            font-size: 1.4rem;
-            font-weight: 700;
-            line-height: 1;
-            @include sp {
-                font-size: 1.2rem;
-            }
+    .result-details__title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: calc(40 / 28);
+        margin-top: 2.5rem;
+        @include sp {
+            font-size: 2rem;
+            margin-top: 2rem;
         }
+    }
 
-        &__title {
-            font-size: 2.8rem;
-            font-weight: 700;
-            line-height: calc(40 / 28);
+    .result-details__date {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+
+    .result-details__info {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 4rem;
+        margin-top: 3rem;
+        align-items: start;
+        @include sp {
+            grid-template-columns: 1fr;
+            gap: 2rem;
             margin-top: 2.5rem;
-            @include sp {
-                font-size: 2rem;
-                margin-top: 2rem;
-            }
         }
+    }
 
-        &__date {
+    .result-details__table {
+        width: 100%;
+        min-width: 28rem;
+        @include sp {
+            min-width: auto;
+        }
+    }
+
+    .result-details__table th,
+    .result-details__table td {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 1rem 1.5rem;
+        font-size: 1.4rem;
+        text-align: left;
+        vertical-align: middle;
+        @include sp {
+            font-size: 1.3rem;
+            padding: 0.8rem 1.2rem;
+        }
+    }
+
+    .result-details__table th {
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .result-details__text p {
+        font-size: 1.6rem;
+        line-height: calc(28 / 16);
+        @include sp {
             font-size: 1.4rem;
+        }
+    }
+
+    .result-details__pager {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 6rem;
+        @include sp {
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+    }
+
+    .result-details__pager-prev,
+    .result-details__pager-next {
+        display: block;
+    }
+
+    .result-details__pager-label {
+        display: block;
+        background-color: #333;
+        color: $color-white;
+        padding: 1rem 1.5rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        @include sp {
+            font-size: 1.2rem;
+            padding: 0.8rem 1rem;
+        }
+    }
+
+    .result-details__pager-label--next {
+        text-align: right;
+    }
+
+    .result-details__pager-content {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        @include sp {
             margin-top: 1rem;
         }
+    }
 
-        &__info {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-            align-items: start;
-            @include sp {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                margin-top: 2.5rem;
-            }
+    .result-details__pager-image {
+        flex-shrink: 0;
+        width: 8rem;
+        @include sp {
+            width: 6rem;
         }
+    }
 
-        &__table {
-            width: 100%;
-            min-width: 28rem;
-            @include sp {
-                min-width: auto;
-            }
-
-            th, td {
-                border: 1px solid rgba(0, 0, 0, 0.2);
-                padding: 1rem 1.5rem;
-                font-size: 1.4rem;
-                text-align: left;
-                vertical-align: middle;
-                @include sp {
-                    font-size: 1.3rem;
-                    padding: 0.8rem 1.2rem;
-                }
-            }
-
-            th {
-                font-weight: 700;
-                white-space: nowrap;
-            }
-        }
-
-        &__text {
-            p {
-                font-size: 1.6rem;
-                line-height: calc(28 / 16);
-                @include sp {
-                    font-size: 1.4rem;
-                }
-            }
-        }
-
-        &__pager {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 6rem;
-            @include sp {
-                gap: 1.5rem;
-                margin-top: 4rem;
-            }
-        }
-
-        &__pager-prev,
-        &__pager-next {
-            display: block;
-        }
-
-        &__pager-label {
-            display: block;
-            background-color: #333;
-            color: $color-white;
-            padding: 1rem 1.5rem;
-            font-size: 1.4rem;
-            font-weight: 700;
-            @include sp {
-                font-size: 1.2rem;
-                padding: 0.8rem 1rem;
-            }
-
-            &--next {
-                text-align: right;
-            }
-        }
-
-        &__pager-content {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            @include sp {
-                margin-top: 1rem;
-            }
-        }
-
-        &__pager-image {
-            flex-shrink: 0;
-            width: 8rem;
-            @include sp {
-                width: 6rem;
-            }
-        }
-
-        &__pager-title {
-            font-size: 1.4rem;
-            line-height: calc(20 / 14);
-            @include sp {
-                font-size: 1.2rem;
-            }
+    .result-details__pager-title {
+        font-size: 1.4rem;
+        line-height: calc(20 / 14);
+        @include sp {
+            font-size: 1.2rem;
         }
     }
 
@@ -192,17 +191,17 @@
         @include sp {
             padding-bottom: 6rem;
         }
+    }
 
-        &__title {
-            background-color: #333;
-            color: $color-white;
-            font-size: 1.8rem;
-            font-weight: 700;
-            padding: 1.5rem 2rem;
-            @include sp {
-                font-size: 1.6rem;
-                padding: 1.2rem 1.5rem;
-            }
+    .result-related__title {
+        background-color: #333;
+        color: $color-white;
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding: 1.5rem 2rem;
+        @include sp {
+            font-size: 1.6rem;
+            padding: 1.2rem 1.5rem;
         }
     }
 
@@ -215,53 +214,53 @@
             gap: 1.5rem;
             padding: 2rem 0;
         }
+    }
 
-        &:first-child {
-            border-top: 1px solid rgba(0, 0, 0, 0.2);
+    .result-related-item:first-child {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .result-related-item__image {
+        position: relative;
+        flex-shrink: 0;
+        width: 16rem;
+        @include sp {
+            width: 11rem;
         }
+    }
 
-        &__image {
-            position: relative;
-            flex-shrink: 0;
-            width: 16rem;
-            @include sp {
-                width: 11rem;
-            }
-        }
+    .result-related-item__category {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding: 0.4rem 1rem;
+        background-color: $color-red;
+        color: $color-white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1;
+    }
 
-        &__category {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            padding: 0.4rem 1rem;
-            background-color: $color-red;
-            color: $color-white;
-            font-size: 1.2rem;
-            font-weight: 700;
-            line-height: 1;
-        }
+    .result-related-item__body {
+        flex: 1;
+    }
 
-        &__body {
-            flex: 1;
-        }
-
-        &__title {
-            font-size: 1.6rem;
-            font-weight: 500;
-            line-height: calc(24 / 16);
-            @include sp {
-                font-size: 1.4rem;
-            }
-        }
-
-        &__date {
-            margin-top: 1rem;
+    .result-related-item__title {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: calc(24 / 16);
+        @include sp {
             font-size: 1.4rem;
-            @include sp {
-                margin-top: 0.7rem;
-                font-size: 1.2rem;
-            }
+        }
+    }
+
+    .result-related-item__date {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        @include sp {
+            margin-top: 0.7rem;
+            font-size: 1.2rem;
         }
     }
 }

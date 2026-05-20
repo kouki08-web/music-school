@@ -1,0 +1,388 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.page-plan {
+    .breadcrumb {
+        padding: 1rem 0 0.47rem;
+        background: $color-grey;
+        @include sp {
+            padding: 0.3rem 0 0rem;
+        }
+    }
+
+    .breadcrumb__list {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.6rem;
+        line-height: calc(33 / 16);
+    }
+
+    .breadcrumb__item {
+        color: $color-black;
+    }
+
+    .breadcrumb__item:not(:last-child)::after {
+        content: '>';
+        margin-left: 2rem;
+        color: $color-black;
+    }
+
+    .breadcrumb__item a {
+        color: $color-black;
+        text-decoration: none;
+    }
+
+    // 料金体系セクション
+    .plan-overview {
+        padding: 6.7rem 0 5.8rem;
+        @include sp {
+            padding: 4.6rem 0 3.3rem;
+        }
+    }
+
+    .plan-overview__title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: calc(40 / 25);
+    }
+
+    .plan-overview__fee-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3.9rem;
+        gap: 3rem;
+        @include sp {
+            flex-direction: column;
+            gap: 1.3rem;
+        }
+    }
+
+    .plan-overview__fee-item {
+        background-color: $color-red;
+        width: 21rem;
+        height: 6rem;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        line-height: calc(33 / 20);
+        font-weight: 700;
+        @include sp {
+            width: 21rem;
+            height: 6rem;
+            font-size: 2rem;
+            line-height: calc(33 / 20);
+        }
+    }
+
+    .plan-overview__fee-item:last-child {
+        @include sp {
+            margin-top: 0.8rem;
+        }
+    }
+
+    .plan-overview__fee-plus {
+        position: relative;
+        display: block;
+        width: 1.85rem;
+        height: 1.85rem;
+        margin-top: 0.6rem;
+    }
+
+    .plan-overview__fee-plus::before,
+    .plan-overview__fee-plus::after {
+        content: '';
+        position: absolute;
+    }
+
+    .plan-overview__fee-plus::before {
+        border-left: 3px solid $color-black;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .plan-overview__fee-plus::after {
+        border-top: 3px solid $color-black;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .plan-overview__desc {
+        font-size: 1.8rem;
+        line-height: calc(30 / 18);
+        margin-top: 4.8rem;
+        position: relative;
+        right: 0.4rem;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: calc(30 / 16);
+            margin-top: 4.7rem;
+            right: 0;
+        }
+    }
+
+    // プラン内容・月額料金テーブルセクション
+    .plan-table {
+        padding: 0 0 22.3rem;
+        @include sp {
+            padding: 0.5rem 0 6rem;
+        }
+    }
+
+    .plan-table__title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: calc(40 / 25);
+    }
+
+    .plan-table__wrapper {
+        margin-top: 4.9rem;
+        overflow-x: auto;
+        @include sp {
+            overflow-x: scroll;
+            margin-top: 2.8rem;
+            &::-webkit-scrollbar {
+                height: 4px;
+                display: block;
+            }
+            &::-webkit-scrollbar-track {
+                background: #e0e0e0;
+                border-radius: 2px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $color-black;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    .plan-table__badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.7rem;
+        @include sp {
+            font-size: 1rem;
+        }
+    }
+
+    .plan-table__dot {
+        display: block;
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+        background: $color-black;
+        margin: 0.7rem auto 0.2rem;
+        margin-bottom: 0.55rem;
+    }
+
+    .plan-table__table {
+        width: 100%;
+        min-width: 560px;
+        border-collapse: collapse;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .plan-table__table thead tr th {
+        background: linear-gradient(to bottom, transparent 4rem, $color-black 4rem);
+        color: $color-white;
+        height: 5rem;
+        padding: 0 2rem 0.7rem;
+        font-size: 2rem;
+        line-height: calc(33 / 20);
+        font-weight: 700;
+        vertical-align: bottom;
+        @include sp {
+            font-size: 2rem;
+            line-height: calc(25 / 20);
+            padding: 0.8rem 3.5rem;
+        }
+    }
+
+    .plan-table__table thead tr th:first-child {
+        background: transparent;
+        border: none;
+    }
+
+    .plan-table__table thead tr th:last-child {
+        border-right: none;
+    }
+
+    .plan-table__table thead tr th.is-recommended {
+        background: $color-red;
+        position: relative;
+        width: 22rem;
+        padding-top: 4rem;
+        vertical-align: middle;
+    }
+
+    .plan-table__table tbody tr {
+        border-bottom: 0.5px solid $color-black;
+    }
+
+    .plan-table__table tbody tr:last-child {
+        border-bottom: none;
+    }
+
+    .plan-table__table tbody tr:nth-child(even) {
+        background: rgba(0, 0, 0, 0.03);
+    }
+
+    .plan-table__table tbody tr td {
+        padding: 2.5rem 2rem 2rem;
+        font-size: 1.7rem;
+        line-height: calc(30 / 17);
+        border-top: 0.5px solid $color-black;
+        border-right: 0.5px solid $color-black;
+        vertical-align: middle;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: calc(30 / 16);
+            padding: 1.2rem 1rem;
+            padding-right: 0;
+        }
+    }
+
+    .plan-table__table tbody tr td:last-child {
+        border-right: none;
+    }
+
+    .plan-table__table tbody tr td.is-recommended {
+        font-weight: 700;
+    }
+
+    .plan-table__table tbody tr td.is-recommended .plan-table__dot {
+        background-color: $color-red;
+    }
+
+    // 月額料金行
+    .plan-table__table tbody tr:nth-child(1) {
+        border-bottom: none;
+    }
+
+    .plan-table__table tbody tr:nth-child(1) td:not(.plan-table__label) {
+        font-size: 2.2rem;
+        padding: 2.5rem 2rem 2rem;
+        font-weight: 700;
+        @include sp {
+            padding-top: 2.5rem;
+        }
+    }
+
+    // マンツーマン授業行
+    .plan-table__table tbody tr:nth-child(2) td {
+        border-top: none;
+        padding: 1.6rem 2rem 1.2rem;
+        @include sp {
+            padding: 1.4rem 1rem;
+        }
+    }
+
+    // マンツーマン授業行・週1回（ベーシックプラン）
+    .plan-table__table tbody tr:nth-child(2) td:nth-child(2) {
+        font-size: 1.7rem;
+    }
+
+    // ビジネス基本講座行
+    .plan-table__table tbody tr:nth-child(3) td {
+        padding: 3rem 2rem 2.5rem;
+        @include sp {
+            padding: 1.2rem 1rem;
+        }
+    }
+
+    .plan-table__table tbody tr:nth-child(3) .plan-table__dot {
+        margin: -0.4rem auto 0.2rem;
+    }
+
+    // 練習ROOM利用行
+    .plan-table__table tbody tr:nth-child(4) td {
+        padding: 1.5rem 2rem 1.3rem;
+        @include sp {
+            padding-top: 1.2rem;
+        }
+    }
+    .plan-table__table tbody tr:nth-child(3) .plan-table__dot {
+        margin: -0.4rem auto 0.2rem;
+    }
+
+    // ビジネスコンサル行
+    .plan-table__table tbody tr:nth-child(5) td {
+        padding: 1.5rem 2rem 1.2rem;
+        @include sp {
+            padding-top: 1.2rem;
+        }
+    }
+
+    // ビジネスコンサル行・ベーシックプラン（—）
+    .plan-table__table tbody tr:nth-child(5) td:nth-child(2) {
+        padding-top: 0.8rem;
+        font-size: 2.7rem;
+        @include sp {
+            padding-top: 1.2rem;
+        }
+    }
+
+    // コミュニティ参加資格行
+    .plan-table__table tbody tr:nth-child(6) td {
+        padding: 2.5rem 2rem 2.1rem;
+        border-bottom: 0.5px solid $color-black;
+        @include sp {
+            padding-top: 1.2rem;
+        }
+    }
+    .plan-table__table tbody tr:nth-child(6) td:nth-child(2) {
+        padding-top: 1.6rem;
+        font-size: 2.7rem;
+        @include sp {
+            padding-top: 1.2rem;
+        }
+    }
+    .plan-table__table tbody tr:nth-child(6) td:nth-child(3) {
+        padding-top: 1.6rem;
+        font-size: 2.7rem;
+        @include sp {
+            padding-top: 1.2rem;
+        }
+    }
+
+    .plan-table__table tbody tr td.is-price {
+        color: $color-red;
+    }
+
+    .plan-table__label {
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.04);
+        width: 22rem;
+        height: 5rem;
+        font-weight: 500;
+        border-right: 1px solid #ddd;
+    }
+
+    .plan-table__note {
+        font-size: 1.7rem;
+        line-height: calc(25 / 17);
+        margin-top: 2.8rem;
+        @include sp {
+            font-size: 1.1rem;
+        }
+    }
+}

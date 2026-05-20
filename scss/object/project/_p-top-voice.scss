@@ -9,66 +9,71 @@
     @include sp {
         padding: 4.5rem 0 1.4rem;
     }
-    &__title {
-        h2 {
-            font-size: 3rem;
-            line-height: calc(50 / 30);
-            font-weight: 700;
-            color: $color-white;
-            text-align: center;
-            @include sp {
-                font-size: 2.5rem;
-                line-height: calc(40 / 25);
-            }
-        }
-    }
-    &__swiper {
-        margin-top: 3.6rem;
-        @include sp {
-            margin-top: 4rem;
-        }
-    }
-    // section.voice を基準（position: relative）に矢印を配置
-    .swiper-button-prev,
-    .swiper-button-next {
-        top: 27.5rem;
-        width: 2.984rem;
-        height: 2.024rem;
-        background: url('../../../images/arrow-r.svg') no-repeat center / contain;
-        &::after {
-            content: none;
-        }
-    }
-    .swiper-button-prev {
-        left: 5rem;
-        transform: scaleX(-1);
-    }
-    .swiper-button-next {
-        right: 5rem;
+}
+
+.voice__title h2 {
+    font-size: 3rem;
+    line-height: calc(50 / 30);
+    font-weight: 700;
+    color: $color-white;
+    text-align: center;
+    @include sp {
+        font-size: 2.5rem;
+        line-height: calc(40 / 25);
     }
 }
-.voice-item {
-    &__image {
-        width: 100%;
-    }
 
-    &__text {
-        color: $color-white;
-        h2 {
-            display: flex;
-            justify-content: center;
-            margin-top: 1.7rem;
-            font-size: 2.2rem;
-            line-height: calc(33 / 22);
-            font-weight: 700;
-            @include sp {
-                margin-top: 2.7rem;
-            }
-        }
-        p {
-            margin-top: 1rem;
-            font-size: 1.8rem;
-            line-height: calc(30 / 18);
-        }
+.voice__swiper {
+    margin-top: 3.6rem;
+    @include sp {
+        margin-top: 4rem;
     }
+}
+
+.voice .swiper-button-prev,
+.voice .swiper-button-next {
+    top: 27.5rem;
+    width: 2.984rem;
+    height: 2.024rem;
+    background: url('../../../images/arrow-r.svg') no-repeat center / contain;
+}
+
+.voice .swiper-button-prev::after,
+.voice .swiper-button-next::after {
+    content: none;
+}
+
+.voice .swiper-button-prev {
+    left: 5rem;
+    transform: scaleX(-1);
+}
+
+.voice .swiper-button-next {
+    right: 5rem;
+}
+
+.voice-item__image {
+    width: 100%;
+}
+
+.voice-item__text {
+    color: $color-white;
+}
+
+.voice-item__text h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.7rem;
+    font-size: 2.2rem;
+    line-height: calc(33 / 22);
+    font-weight: 700;
+    @include sp {
+        margin-top: 2.7rem;
+    }
+}
+
+.voice-item__text p {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
 }

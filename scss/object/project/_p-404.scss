@@ -9,40 +9,40 @@
             padding: 5rem 0 6rem;
             text-align: left;
         }
+    }
 
-        &__text {
-            font-size: 1.6rem;
-            line-height: calc(28 / 16);
-            @include sp {
-                font-size: 1.4rem;
-            }
-
-            &:not(:first-of-type) {
-                margin-top: 0.5rem;
-            }
+    .not-found__text {
+        font-size: 1.6rem;
+        line-height: calc(28 / 16);
+        @include sp {
+            font-size: 1.4rem;
         }
+    }
 
-        &__btn {
-            margin-top: 5rem;
-            @include sp {
-                margin-top: 4rem;
-            }
+    .not-found__text:not(:first-of-type) {
+        margin-top: 0.5rem;
+    }
 
-            a {
-                display: block;
-                width: 26rem;
-                margin: 0 auto;
-                padding: 1.8rem;
-                background-color: $color-red;
-                color: $color-white;
-                font-size: 1.8rem;
-                font-weight: 700;
-                text-align: center;
-                @include sp {
-                    width: 100%;
-                    font-size: 1.6rem;
-                }
-            }
+    .not-found__btn {
+        margin-top: 5rem;
+        @include sp {
+            margin-top: 4rem;
+        }
+    }
+
+    .not-found__btn a {
+        display: block;
+        width: 26rem;
+        margin: 0 auto;
+        padding: 1.8rem;
+        background-color: $color-red;
+        color: $color-white;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        @include sp {
+            width: 100%;
+            font-size: 1.6rem;
         }
     }
 }

@@ -12,73 +12,76 @@
     @include sp {
         height: 50px;
     }
-    .inner {
-        display: flex;
-        justify-content: space-between; // これで「左グループ」と「右ナビ」が両端に！
-        align-items: center;
-        height: 100%;
-    }
+}
 
-    // ✅ ここを追加！
-    &__left {
-        display: flex;
-        align-items: center;
-    }
-    &__image {
-        padding-right: 1rem;
-        @include sp {
-            width: 3.03rem;
-        }
-    }
-    &__logo a {
-        font-size: 2rem;
-        line-height: calc(23 / 20);
-        font-weight: 700;
-        text-decoration: none;
-        display: block;
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
 
-        @include sp {
-            font-size: 1.3rem; // ✅ ここが効くようになります
-        }
+.header__left {
+    display: flex;
+    align-items: center;
+}
 
-        span {
-            font-size: 1.5rem;
-            line-height: calc(23 / 15);
+.header__image {
+    padding-right: 1rem;
+    @include sp {
+        width: 3.03rem;
+    }
+}
 
-            @include sp {
-                font-size: 1.3rem; // ✅ ここもaタグの中に移動しました
-            }
-        }
-    }
-    &__nav.pc ul {
-        display: flex;
-        align-items: center;
-        column-gap: 3.3rem;
-        list-style: none;
-        font-weight: 700;
-        li a {
-            font-size: 1.7rem;
-            text-decoration: none;
-        }
-    }
-        .nav-contact {
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #D50000; // Figmaから抽出した赤色（適宜調整してください）
-            color: #fff;        // 白文字
-            width: 15rem;       // デザインに合わせた横幅
-            height: 4.5rem;       // デザインに合わせた高さ
-            font-weight: 700;
-            transition: opacity 0.4s;
-            font-size: 1.5rem;
+.header__logo a {
+    font-size: 2rem;
+    line-height: calc(23 / 20);
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
 
-            &:hover {
-                opacity: 0.7;
-            }
-        }
+    @include sp {
+        font-size: 1.3rem;
     }
+}
+
+.header__logo a span {
+    font-size: 1.5rem;
+    line-height: calc(23 / 15);
+
+    @include sp {
+        font-size: 1.3rem;
+    }
+}
+
+.header__nav.pc ul {
+    display: flex;
+    align-items: center;
+    column-gap: 3.3rem;
+    list-style: none;
+    font-weight: 700;
+}
+
+.header__nav.pc ul li a {
+    font-size: 1.7rem;
+    text-decoration: none;
+}
+
+.nav-contact a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D50000;
+    color: #fff;
+    width: 15rem;
+    height: 4.5rem;
+    font-weight: 700;
+    transition: opacity 0.4s;
+    font-size: 1.5rem;
+}
+
+.nav-contact a:hover {
+    opacity: 0.7;
 }
 
 /* ハンバーガーメニュー全体 */
@@ -95,42 +98,53 @@
         z-index: 999;
         border: none;
         right: 0;
+    }
+}
 
-        span {
-            position: absolute;
-            display: block;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 32px;
-            height: 4px;
-            border-radius: 5px;
-            background: $color-white;
-            transition: .4s;
+.hamburger span {
+    @include sp {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 32px;
+        height: 4px;
+        border-radius: 5px;
+        background: $color-white;
+        transition: .4s;
+    }
+}
 
-            &:nth-of-type(1) {
-                top: 30%;
-            }
-            &:nth-of-type(3) {
-                top: 70%;
-            }
-        }
+.hamburger span:nth-of-type(1) {
+    @include sp {
+        top: 30%;
+    }
+}
 
-        &.is-active {
-            span {
-                &:nth-of-type(1) {
-                    top: 50%;
-                    transform: translate(-50%, -50%) rotate(45deg);
-                }
-                &:nth-of-type(2) {
-                    opacity: 0;
-                }
-                &:nth-of-type(3) {
-                    top: 50%;
-                    transform: translate(-50%, -50%) rotate(-45deg);
-                }
-            }
-        }
+.hamburger span:nth-of-type(3) {
+    @include sp {
+        top: 70%;
+    }
+}
+
+.hamburger.is-active span:nth-of-type(1) {
+    @include sp {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+}
+
+.hamburger.is-active span:nth-of-type(2) {
+    @include sp {
+        opacity: 0;
+    }
+}
+
+.hamburger.is-active span:nth-of-type(3) {
+    @include sp {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
     }
 }
 
@@ -150,37 +164,44 @@
         transition: transform .4s;
         background: #fff;
         z-index: 200;
+    }
+}
 
-        &.is-open {
-            transform: translateX(0);
-        }
+.header-menu.is-open {
+    @include sp {
+        transform: translateX(0);
+    }
+}
 
-        ul {
-            margin: 0;
-            padding: 3rem 0 3rem 2rem;
-            text-align: left;
-            list-style: none;
-            font-size: 1.8rem;
-            color: $color-white;
+.header-menu ul {
+    @include sp {
+        margin: 0;
+        padding: 3rem 0 3rem 2rem;
+        text-align: left;
+        list-style: none;
+        font-size: 1.8rem;
+        color: $color-black;
+    }
+}
 
-            li {
-                &:not(:last-of-type) {
-                    margin-bottom: 25px;
-                }
+.header-menu ul li:not(:last-of-type) {
+    @include sp {
+        margin-bottom: 25px;
+    }
+}
 
-                // ✅ 追加: モバイルナビの <a> タグのスタイル
-                a {
-                    color: $color-white;
-                    text-decoration: none;
-                    display: block;
-                    transition: opacity 0.4s;
+.header-menu ul li a {
+    @include sp {
+        color: $color-black;
+        text-decoration: none;
+        display: block;
+        transition: opacity 0.4s;
+    }
+}
 
-                    &:hover {
-                        opacity: 0.7;
-                    }
-                }
-            }
-        }
+.header-menu ul li a:hover {
+    @include sp {
+        opacity: 0.7;
     }
 }
 
@@ -200,10 +221,12 @@
         visibility: hidden;
         transition: opacity .4s;
         z-index: 10;
+    }
+}
 
-        &.is-open {
-            opacity: 1;
-            visibility: visible;
-        }
+.overlay.is-open {
+    @include sp {
+        opacity: 1;
+        visibility: visible;
     }
 }

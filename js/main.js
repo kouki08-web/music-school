@@ -1,3 +1,32 @@
+// ハンバーガーメニュー
+const $hamburger = $('#js-hamburger');
+const $headerMenu = $('.header-menu');
+const $overlay = $('#js-overlay');
+
+$hamburger.on('click', function() {
+    const isOpen = $headerMenu.hasClass('is-open');
+    $hamburger.toggleClass('is-active').attr('aria-expanded', !isOpen);
+    $headerMenu.toggleClass('is-open');
+    $overlay.toggleClass('is-open');
+});
+
+$overlay.on('click', function() {
+    $hamburger.removeClass('is-active').attr('aria-expanded', false);
+    $headerMenu.removeClass('is-open');
+    $overlay.removeClass('is-open');
+});
+
+$headerMenu.find('a').on('click', function(e) {
+    e.preventDefault();
+    const href = $(this).attr('href');
+    $hamburger.removeClass('is-active').attr('aria-expanded', false);
+    $headerMenu.removeClass('is-open');
+    $overlay.removeClass('is-open');
+    setTimeout(function() {
+        window.location.href = href;
+    }, 400);
+});
+
 // ページトップ・お問い合わせボタン（FVを超えたら表示、フッター到達で位置固定）
 const $pagetop = $('#js-pagetop');
 const $contactBtn = $('.contact-btn');

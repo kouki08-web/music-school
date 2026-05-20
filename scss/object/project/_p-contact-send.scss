@@ -5,34 +5,34 @@
     .breadcrumb {
         padding: 1.5rem 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
 
-        &__list {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            font-size: 1.4rem;
-            @include sp {
-                font-size: 1.2rem;
-            }
+    .breadcrumb__list {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.4rem;
+        @include sp {
+            font-size: 1.2rem;
         }
+    }
 
-        &__item {
-            color: $color-black;
+    .breadcrumb__item {
+        color: $color-black;
+    }
 
-            &:not(:last-child)::after {
-                content: '>';
-                margin-left: 0.8rem;
-                color: $color-black;
-            }
+    .breadcrumb__item:not(:last-child)::after {
+        content: '>';
+        margin-left: 0.8rem;
+        color: $color-black;
+    }
 
-            a {
-                color: $color-black;
-                text-decoration: none;
-            }
-        }
+    .breadcrumb__item a {
+        color: $color-black;
+        text-decoration: none;
     }
 
     .contact-send {
@@ -40,46 +40,45 @@
         @include sp {
             padding: 6rem 0 8rem;
         }
+    }
 
-        &__contents {
-            text-align: center;
+    .contact-send__contents {
+        text-align: center;
+    }
+
+    .contact-send__text {
+        font-size: 1.8rem;
+        line-height: calc(32 / 18);
+        @include sp {
+            font-size: 1.6rem;
+            text-align: left;
         }
+    }
 
-        &__text {
-            font-size: 1.8rem;
-            line-height: calc(32 / 18);
-            @include sp {
-                font-size: 1.6rem;
-                text-align: left;
-            }
+    .contact-send__btn {
+        margin-top: 5rem;
+    }
+
+    .contact-send__btn a {
+        display: inline-block;
+        padding: 1.5rem 8rem;
+        background-color: $color-red;
+        color: $color-white;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: opacity 0.2s;
+        letter-spacing: 0.1em;
+        @include sp {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1.6rem;
+            padding: 1.5rem;
         }
+    }
 
-        &__btn {
-            margin-top: 5rem;
-
-            a {
-                display: inline-block;
-                padding: 1.5rem 8rem;
-                background-color: $color-red;
-                color: $color-white;
-                font-size: 1.8rem;
-                font-weight: 700;
-                text-decoration: none;
-                transition: opacity 0.2s;
-                letter-spacing: 0.1em;
-
-                &:hover {
-                    opacity: 0.8;
-                }
-
-                @include sp {
-                    display: block;
-                    width: 100%;
-                    box-sizing: border-box;
-                    font-size: 1.6rem;
-                    padding: 1.5rem;
-                }
-            }
-        }
+    .contact-send__btn a:hover {
+        opacity: 0.8;
     }
 }

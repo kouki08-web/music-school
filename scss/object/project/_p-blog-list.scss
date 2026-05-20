@@ -3,169 +3,195 @@
 
 .page-blog {
     .breadcrumb {
-        padding: 1.5rem 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-        &__list {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            font-size: 1.4rem;
-            @include sp {
-                font-size: 1.2rem;
-            }
+        padding: 1rem 0 0.5rem;
+        background: $color-grey;
+        @include sp {
+            padding: 0.4rem 0 0;
         }
+    }
 
-        &__item {
-            color: $color-black;
+    .breadcrumb__list {
+        display: flex;
+        align-items: center;
+        gap: 1.9rem;
+        font-size: 1.6rem;
+        line-height: calc(33 / 16);
+    }
 
-            &:not(:last-child)::after {
-                content: '>';
-                margin-left: 0.8rem;
-                color: $color-black;
-            }
+    .breadcrumb__item {
+        color: $color-black;
+    }
 
-            a {
-                color: $color-black;
-                text-decoration: none;
-            }
-        }
+    .breadcrumb__item:not(:last-child)::after {
+        content: '>';
+        margin-left: 2rem;
+        color: $color-black;
+    }
+
+    .breadcrumb__item a {
+        color: $color-black;
+        text-decoration: none;
     }
 }
 
 .blog-list {
-    padding: 6rem 0 10rem;
+    padding: 6.8rem 0 21rem;
     @include sp {
-        padding: 4rem 0 8rem;
+        padding: 4.7rem 0 20.4rem;
     }
+}
 
-    &__title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        text-align: center;
-        @include sp {
-            font-size: 2rem;
-        }
-    }
+.blog-list__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
 
-    &__items {
+.blog-list__items {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    margin-top: 4rem;
+    @include sp {
+        gap: 3.9rem;
         margin-top: 4rem;
-        @include sp {
-            margin-top: 3rem;
-        }
     }
 }
 
 .blog-list-item {
     display: flex;
-    gap: 3rem;
-    padding: 3rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    gap: 5rem;
     @include sp {
         flex-direction: column;
         gap: 1.5rem;
     }
+}
 
-    &:first-child {
-        border-top: 1px solid rgba(0, 0, 0, 0.2);
+.blog-list-item__image {
+    position: relative;
+    flex-shrink: 0;
+    width: 26rem;
+    @include sp {
+        width: 100%;
     }
+}
 
-    &__image {
-        position: relative;
-        flex-shrink: 0;
-        width: 28rem;
-        @include sp {
-            width: 100%;
-        }
+.blog-list-item__category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0.8rem 1.8rem;
+    background-color: $color-red;
+    color: $color-white;
+    font-size: 1.5rem;
+    line-height: calc(25 / 15);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.blog-list-item__category--guitar {
+    padding: 0.8rem 1.7rem;
+    @include sp {
+        padding: 0.7rem 2.3rem;
     }
+}
 
-    &__category {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        padding: 0.6rem 1.5rem;
-        background-color: $color-red;
-        color: $color-white;
-        font-size: 1.4rem;
-        font-weight: 700;
-        line-height: 1;
-        @include sp {
-            font-size: 1.2rem;
-        }
+.blog-list-item__category--guitar-2 {
+    padding: 0.8rem 1.7rem;
+}
+
+.blog-list-item__category--marketing {
+    padding: 0.8rem 1rem;
+    @include sp {
+        padding: 0.7rem 1.5rem;
     }
+}
 
-    &__body {
-        flex: 1;
+.blog-list-item__category--sns {
+    padding: 0.8rem 2.5rem;
+    @include sp {
+        padding: 0.7rem 2.9rem;
     }
+}
 
-    &__title {
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: calc(30 / 20);
-        @include sp {
-            font-size: 1.6rem;
-        }
-    }
+.blog-list-item__body {
+    flex: 1;
+}
 
-    &__date {
-        margin-top: 1rem;
-        font-size: 1.4rem;
-        line-height: calc(30 / 14);
-        @include sp {
-            margin-top: 0.5rem;
-        }
-    }
-
-    &__text {
+.blog-list-item__title {
+    margin-top: -0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: calc(30 / 20);
+    @include sp {
         margin-top: 1.5rem;
-        font-size: 1.8rem;
-        font-weight: 500;
-        line-height: calc(30 / 18);
-        @include sp {
-            margin-top: 1rem;
-            font-size: 1.4rem;
-            line-height: calc(25 / 14);
-        }
+    }
+}
+
+.blog-list-item__date {
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+    @include sp {
+        margin-top: 0.5rem;
+        text-align: right;
+    }
+}
+
+.blog-list-item__text {
+    margin-top: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: calc(30 / 18);
+    @include sp {
+        margin-top: 0.9rem;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
     }
 }
 
 .pagination {
-    margin-top: 5rem;
+    margin-top: 7rem;
     @include sp {
-        margin-top: 4rem;
+        margin-top: 5.8rem;
     }
+}
 
-    &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.8rem;
+.pagination__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    @include sp {
+        gap: 0.2rem;
     }
+}
 
-    &__item {
-        a,
-        span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 4rem;
-            height: 4rem;
-            border: 1px solid $color-black;
-            font-size: 1.6rem;
-            color: $color-black;
-            text-decoration: none;
-            transition: background-color 0.2s, color 0.2s;
-        }
-
-        &.is-active a {
-            background-color: $color-red;
-            border-color: $color-red;
-            color: $color-white;
-        }
-
-        &.is-dots span {
-            border: none;
-        }
+.pagination__item a,
+.pagination__item span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid $color-black;
+    font-size: 1.6rem;
+    line-height: calc(28 / 16);
+    color: $color-black;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    @include sp {
+        width: 4.4rem;
+        height: 4.4rem;
     }
+}
+
+.pagination__item.is-active a {
+    background-color: $color-black;
+    border-color: $color-black;
+    color: $color-white;
+}
+
+.pagination__item.is-dots span {
+    border: none;
 }

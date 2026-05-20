@@ -10,32 +10,35 @@
     @include sp {
         padding: 5rem 0 4rem;
     }
-    &__contents {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: $color-white;
+}
+
+.greeting__contents {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-white;
+}
+
+.greeting__title {
+    font-size: 3rem;
+    line-height: calc(50 / 30);
+    font-weight: 700;
+    text-align: center;
+    @include sp {
+        font-size: 2.5rem;
+        line-height: calc(40 / 25);
     }
-    &__title {
-        font-size: 3rem;
-        line-height: calc(50 / 30);
-        font-weight: 700;
-        text-align: center;
-        @include sp {
-            font-size: 2.5rem;
-            line-height: calc(40 / 25);
-        }
-    }
-    &__text {
-        margin-top: 3rem;
+}
+
+.greeting__text {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    text-align: center;
+    @include sp {
+        margin-top: 1.5rem;
         font-size: 1.8rem;
         line-height: calc(30 / 18);
-        text-align: center;
-        @include sp {
-            margin-top: 1.5rem;
-            font-size: 1.8rem;
-            line-height: calc(30 / 18);
-        }
     }
 }

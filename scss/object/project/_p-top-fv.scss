@@ -5,49 +5,42 @@
 .fv {
     position: relative;
     padding-top: 80px;
-    
+
     @include sp {
         padding-top: 50px;
     }
+}
 
-    &__contents {
-        position: relative; // absoluteから変更（中身の基準にする）
-        width: 100%;
+.fv__contents {
+    position: relative;
+    width: 100%;
+}
+
+.fv-slide__image {
+    width: 100%;
+    aspect-ratio: 1080 / 200;
+    overflow: hidden;
+
+    @include sp {
+        aspect-ratio: 375 / 300;
     }
-    &-slide__image {
-        width: 100%;
-        aspect-ratio: 1080 / 470;
-        overflow: hidden;
+}
 
-        @include sp {
-            aspect-ratio: 375 / 550;
-        }
+.fv-slide__image img {
+    height: 100%;
+    object-fit: cover;
+}
 
-        img {
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    // 文字のエリア（画像の上に重ねる）
-    &__catch {
-        position: absolute; // 文字だけを浮かせる
-        top: 52%;           // 上から50%
-        left: 50%;          // 左から50%
-        transform: translate(-50%, -50%); // 自分のサイズ分戻して真ん中へ
-        
-        width: 100%;        // 幅をいっぱいにして中央揃えを効かせる
-        text-align: center;
-        z-index: 200;
-
-        font-size: 4rem;
-        line-height: calc(60 / 40);
-        font-weight: 700;
-        color: $color-white;
-
-        @include sp {
-            font-size: 3rem;
-            line-height: calc(50 / 30);
-        }
-    }
+.fv__catch {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 200;
+    font-size: 2.5rem;
+    line-height: calc(60 / 25);
+    font-weight: 700;
+    color: $color-white;
 }

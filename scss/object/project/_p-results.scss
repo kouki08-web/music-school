@@ -5,31 +5,31 @@
     .breadcrumb {
         padding: 1.5rem 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
 
-        &__list {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            font-size: 1.4rem;
-            @include sp {
-                font-size: 1.2rem;
-            }
+    .breadcrumb__list {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1.4rem;
+        @include sp {
+            font-size: 1.2rem;
         }
+    }
 
-        &__item {
-            color: $color-black;
+    .breadcrumb__item {
+        color: $color-black;
+    }
 
-            &:not(:last-child)::after {
-                content: '>';
-                margin-left: 0.8rem;
-                color: $color-black;
-            }
+    .breadcrumb__item:not(:last-child)::after {
+        content: '>';
+        margin-left: 0.8rem;
+        color: $color-black;
+    }
 
-            a {
-                color: $color-black;
-                text-decoration: none;
-            }
-        }
+    .breadcrumb__item a {
+        color: $color-black;
+        text-decoration: none;
     }
 }
 
@@ -38,76 +38,76 @@
     @include sp {
         padding: 4rem 0 8rem;
     }
+}
 
-    &__title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        text-align: center;
-        @include sp {
-            font-size: 2rem;
-        }
+.result-list__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    @include sp {
+        font-size: 2rem;
     }
+}
 
-    &__items {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5rem 3rem;
-        margin-top: 4rem;
-        @include sp {
-            grid-template-columns: 1fr;
-            gap: 3.5rem;
-            margin-top: 3rem;
-        }
+.result-list__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem 3rem;
+    margin-top: 4rem;
+    @include sp {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        margin-top: 3rem;
     }
 }
 
 .result-list-item {
     display: block;
+}
 
-    &__image {
-        position: relative;
-        overflow: hidden;
+.result-list-item__image {
+    position: relative;
+    overflow: hidden;
+}
+
+.result-list-item__category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0.6rem 1.5rem;
+    background-color: $color-red;
+    color: $color-white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    @include sp {
+        font-size: 1.2rem;
     }
+}
 
-    &__category {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        padding: 0.6rem 1.5rem;
-        background-color: $color-red;
-        color: $color-white;
-        font-size: 1.4rem;
-        font-weight: 700;
-        line-height: 1;
-        @include sp {
-            font-size: 1.2rem;
-        }
-    }
-
-    &__body {
-        margin-top: 1.5rem;
-        @include sp {
-            margin-top: 1rem;
-        }
-    }
-
-    &__title {
-        font-size: 1.6rem;
-        font-weight: 500;
-        line-height: calc(25 / 16);
-        @include sp {
-            font-size: 1.4rem;
-        }
-    }
-
-    &__date {
+.result-list-item__body {
+    margin-top: 1.5rem;
+    @include sp {
         margin-top: 1rem;
+    }
+}
+
+.result-list-item__title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: calc(25 / 16);
+    @include sp {
         font-size: 1.4rem;
-        text-align: right;
-        @include sp {
-            font-size: 1.2rem;
-            margin-top: 0.7rem;
-        }
+    }
+}
+
+.result-list-item__date {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    text-align: right;
+    @include sp {
+        font-size: 1.2rem;
+        margin-top: 0.7rem;
     }
 }

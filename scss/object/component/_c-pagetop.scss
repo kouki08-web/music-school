@@ -20,32 +20,36 @@
         bottom: 100px;
         width: 68px;
         height: 68px;
-
-        &:hover {
-            background-color: $color-white;
-            box-shadow: 0 0 0 2px #4d4d4d;
-
-            img {
-                filter: invert(1);
-            }
-        }
     }
+}
 
-    &.is-show {
-        opacity: 1;
-        visibility: visible;
+.pagetop:hover {
+    @include pc {
+        background-color: $color-white;
+        box-shadow: 0 0 0 2px #4d4d4d;
     }
+}
 
-    &.is-docked {
-        position: absolute;
-        opacity: 1;
-        visibility: visible;
+.pagetop:hover img {
+    @include pc {
+        filter: invert(1);
     }
+}
 
-    img {
-        width: 6.8rem;
-        height: 6.8rem;
-        object-fit: contain;
-        transition: filter 0.3s;
-    }
+.pagetop.is-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pagetop.is-docked {
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+}
+
+.pagetop img {
+    width: 6.8rem;
+    height: 6.8rem;
+    object-fit: contain;
+    transition: filter 0.3s;
 }

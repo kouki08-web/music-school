@@ -1,4 +1,14 @@
 {
   "liveServer.settings.root": "/",
-  "liveServer.settings.file": "/html/index.html"
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.excludeList": [
+    "/**/node_modules/**"
+  ]
 }

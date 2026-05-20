@@ -46,25 +46,12 @@
 
         <main>
             <div class="main">
-                <section class="fv">
-                    <div class="fv__contents">
-                        <div class="fv-slide__image">
-                            <picture>
-                                <source media="(min-width: 768px)" srcset="../images/blog-list-fv-pc.jpg">
-                                <img src="../images/blog-list-fv-sp.jpg" alt="ブログ">
-                            </picture>
-                        </div>
-                        <div class="fv__catch">
-                            <h2>ブログ</h2>
-                        </div>
-                    </div>
-                </section>
-
                 <nav class="breadcrumb">
                     <div class="inner">
                         <ol class="breadcrumb__list">
                             <li class="breadcrumb__item"><a href="./index.html">ホーム</a></li>
                             <li class="breadcrumb__item"><a href="./blog_list.html">ブログ</a></li>
+                            <li class="breadcrumb__item">ギター</li>
                             <li class="breadcrumb__item">アルペジオが劇的に向上する3つの習慣</li>
                         </ol>
                     </div>
@@ -76,10 +63,16 @@
 
                             <article class="blog-details__main">
                                 <div class="blog-details__image">
+                                    <span class="blog-details__category">ギター</span>
                                     <picture>
                                         <source media="(min-width: 768px)" srcset="../images/blog_list-02-pc.jpg">
                                         <img src="../images/blog_list-02-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
                                     </picture>
+                                </div>
+
+                                <div class="blog-details__head">
+                                    <h2 class="blog-details__title">アルペジオが劇的に向上する3つの習慣</h2>
+                                    <time class="blog-details__date" datetime="2026-01-01">0000.00.00</time>
                                 </div>
 
                                 <div class="blog-details__share">
@@ -98,12 +91,6 @@
                                     <a href="#" class="share-btn share-btn--pocket" target="_blank" rel="noopener noreferrer">
                                         <img src="../images/list-pocket.jpg" alt="Pocketに保存">
                                     </a>
-                                </div>
-
-                                <div class="blog-details__head">
-                                    <span class="blog-details__category">ギター</span>
-                                    <h2 class="blog-details__title">アルペジオが劇的に向上する3つの習慣</h2>
-                                    <time class="blog-details__date" datetime="2026-01-01">0000.00.00</time>
                                 </div>
 
                                 <div class="blog-details__body">
@@ -204,75 +191,80 @@
                             </article>
 
                             <aside class="blog-details__sidebar">
-                                <div class="sidebar-widget sidebar-newsletter">
-                                    <p>無料メールマガジン</p>
-                                </div>
-
-                                <div class="sidebar-widget sidebar-ad">
-                                    <p>バナー広告</p>
+                                <div class="sidebar-widget">
+                                    <h3 class="sidebar-widget__title">無料メールマガジン</h3>
+                                    <div class="sidebar-ad">
+                                        <p>バナー広告</p>
+                                    </div>
                                 </div>
 
                                 <div class="sidebar-widget sidebar-search">
                                     <h3 class="sidebar-widget__title">ブログ内を検索</h3>
-                                    <div class="sidebar-search__form">
-                                        <input type="text" class="sidebar-search__input" placeholder="キーワードを入力">
-                                        <button type="button" class="sidebar-search__btn" aria-label="検索">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
-                                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                            </svg>
-                                        </button>
+                                    <div class="sidebar-widget__body">
+                                        <div class="sidebar-search__form">
+                                            <input type="text" class="sidebar-search__input" placeholder="キーワードを入力">
+                                            <button type="button" class="sidebar-search__btn" aria-label="検索">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                                                    <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                                </svg>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="sidebar-widget sidebar-recommended">
                                     <h3 class="sidebar-widget__title">おすすめの記事</h3>
-                                    <ul class="sidebar-recommended__list">
-                                        <li class="sidebar-recommended__item">
-                                            <a href="#">
-                                                <div class="sidebar-recommended__image">
-                                                    <img src="../images/blog01-pc.jpg" alt="">
-                                                </div>
-                                                <div class="sidebar-recommended__body">
-                                                    <p class="sidebar-recommended__title">タイトルが入ります。タイトルが入ります。タイトル</p>
-                                                    <time class="sidebar-recommended__date" datetime="2000-01-01">0000.00.00</time>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="sidebar-recommended__item">
-                                            <a href="#">
-                                                <div class="sidebar-recommended__image">
-                                                    <img src="../images/blog02-pc.jpg" alt="">
-                                                </div>
-                                                <div class="sidebar-recommended__body">
-                                                    <p class="sidebar-recommended__title">タイトルが入ります。タイトルが入ります。タイトル</p>
-                                                    <time class="sidebar-recommended__date" datetime="2000-01-01">0000.00.00</time>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="sidebar-recommended__item">
-                                            <a href="#">
-                                                <div class="sidebar-recommended__image">
-                                                    <img src="../images/blog03-pc.jpg" alt="">
-                                                </div>
-                                                <div class="sidebar-recommended__body">
-                                                    <p class="sidebar-recommended__title">タイトルが入ります。タイトルが入ります。タイトル</p>
-                                                    <time class="sidebar-recommended__date" datetime="2000-01-01">0000.00.00</time>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <div class="sidebar-widget__body">
+                                        <ul class="sidebar-recommended__list">
+                                            <li class="sidebar-recommended__item">
+                                                <a href="#">
+                                                    <div class="sidebar-recommended__image">
+                                                        <img src="../images/blog01-pc.jpg" alt="">
+                                                    </div>
+                                                    <div class="sidebar-recommended__body">
+                                                        <p class="sidebar-recommended__title">タイトルが入ります。タイトルが入ります。タイトル</p>
+                                                        <time class="sidebar-recommended__date" datetime="2000-01-01">0000.00.00</time>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-recommended__item">
+                                                <a href="#">
+                                                    <div class="sidebar-recommended__image">
+                                                        <img src="../images/blog02-pc.jpg" alt="">
+                                                    </div>
+                                                    <div class="sidebar-recommended__body">
+                                                        <p class="sidebar-recommended__title">タイトルが入ります。タイトルが入ります。タイトル</p>
+                                                        <time class="sidebar-recommended__date" datetime="2000-01-01">0000.00.00</time>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-recommended__item">
+                                                <a href="#">
+                                                    <div class="sidebar-recommended__image">
+                                                        <img src="../images/blog03-pc.jpg" alt="">
+                                                    </div>
+                                                    <div class="sidebar-recommended__body">
+                                                        <p class="sidebar-recommended__title">タイトルが入ります。タイトルが入ります。タイトル</p>
+                                                        <time class="sidebar-recommended__date" datetime="2000-01-01">0000.00.00</time>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
 
                                 <div class="sidebar-widget sidebar-categories">
                                     <h3 class="sidebar-widget__title">カテゴリー</h3>
-                                    <ul class="sidebar-categories__list">
-                                        <li><a href="#">カテゴリー</a></li>
-                                        <li><a href="#">カテゴリー</a></li>
-                                        <li><a href="#">カテゴリー</a></li>
-                                        <li><a href="#">カテゴリー</a></li>
-                                        <li><a href="#">カテゴリー</a></li>
-                                    </ul>
+                                    <div class="sidebar-widget__body">
+                                        <ul class="sidebar-categories__list">
+                                            <li><a href="#">カテゴリー</a></li>
+                                            <li><a href="#">カテゴリー</a></li>
+                                            <li><a href="#">カテゴリー</a></li>
+                                            <li><a href="#">カテゴリー</a></li>
+                                            <li><a href="#">カテゴリー</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </aside>
 
