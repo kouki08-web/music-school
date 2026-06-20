@@ -3,36 +3,40 @@
 
 .pagetop {
     position: fixed;
-    right: 16px;
-    bottom: 80px;
+    right: 11.6rem;
+    bottom: 1.3rem;
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 6.8rem;
+    height: 6.8rem;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, box-shadow 0.3s;
 
-    @include pc {
-        right: 24px;
-        bottom: 100px;
-        width: 68px;
-        height: 68px;
+    @include sp {
+        right: 2rem;
+        bottom: 1.9rem;
     }
 }
 
-.pagetop:hover {
-    @include pc {
+@include hover {
+    .pagetop:hover {
         background-color: $color-white;
         box-shadow: 0 0 0 2px #4d4d4d;
+        opacity: 1;
+        @include sp {
+            background-color: unset;
+            box-shadow: none;
+        }
     }
-}
 
-.pagetop:hover img {
-    @include pc {
+    .pagetop:hover .pagetop__icon {
         filter: invert(1);
+        @include sp {
+            filter: none;
+        }
     }
 }
 
@@ -47,7 +51,7 @@
     visibility: visible;
 }
 
-.pagetop img {
+.pagetop__icon {
     width: 6.8rem;
     height: 6.8rem;
     object-fit: contain;

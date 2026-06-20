@@ -2,9 +2,10 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="images/header-icon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>プラン・料金 | きたむらミュージックスクール</title>
 </head>
 <body class="page-plan">
@@ -21,7 +22,6 @@
                     <li><a href="./plan.html">料金</a></li>
                     <li><a href="./blog_list.html">ブログ</a></li>
                     <li><a href="./result_list.html">卒業実績</a></li>
-                    <li><a href="./contact_form.html">お問い合わせ</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,7 +29,7 @@
         <div class="inner">
             <div class="header__left">
                 <div class="header__image">
-                    <img src="../images/header-icon.svg" alt="" width="33" height="50">
+                    <img src="images/header-icon.svg" alt="" width="33" height="50">
                 </div>
                 <h1 class="header__logo"><a href="./index.html">きたむら<br class="pc"><span>ミュージックスクール</span></a></h1>
             </div>
@@ -50,8 +50,8 @@
                     <div class="fv__contents">
                         <div class="fv-slide__image">
                             <picture>
-                                <source media="(min-width: 768px)" srcset="../images/plan-pc.jpg">
-                                <img src="../images/plan-sp.jpg" alt="プラン・料金" width="750" height="600">
+                                <source media="(min-width: 768px)" srcset="images/plan-pc.jpg">
+                                <img src="images/plan-sp.jpg" alt="プラン・料金" width="750" height="600">
                             </picture>
                         </div>
                         <div class="fv__catch">
@@ -85,57 +85,72 @@
                     <div class="inner">
                         <h2 class="plan-table__title">プラン内容・月額料金</h2>
                         <div class="plan-table__wrapper">
+                            <div class="plan-table__head-row">
+                                <div class="plan-table__head-cell--label"></div>
+                                <div class="plan-table__head-black plan-table__head-basic plan-table__head-cell">ベーシック<br class="sp">プラン</div>
+                                <div class="plan-table__head-spacer"></div>
+                                <div class="plan-table__head-red plan-table__head-standard plan-table__head-cell">
+                                    <span class="plan-table__badge">おすすめ</span>
+                                    スタンダードプラン
+                                </div>
+                                <div class="plan-table__head-black plan-table__head-premium plan-table__head-cell">プレミアムプラン</div>
+                            </div>
                             <table class="plan-table__table" aria-label="プラン内容・月額料金">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" aria-label="項目"></th>
-                                        <th>ベーシックプラン</th>
-                                        <th class="is-recommended">
-                                            <span class="plan-table__badge">おすすめ</span>
-                                            スタンダードプラン
-                                        </th>
-                                        <th>プレミアムプラン</th>
-                                    </tr>
-                                </thead>
+                                <colgroup>
+                                    <col class="plan-table__col-label">
+                                    <col class="plan-table__col-plan plan-table__col-basic">
+                                    <col class="plan-table__col-spacer">
+                                    <col class="plan-table__col-plan">
+                                    <col class="plan-table__col-plan">
+                                </colgroup>
                                 <tbody>
                                     <tr>
                                         <td class="plan-table__label">月額料金</td>
                                         <td>39,000円</td>
+                                        <td class="plan-table__spacer"></td>
                                         <td class="is-recommended is-price">59,000円</td>
                                         <td>128,000円</td>
                                     </tr>
                                     <tr>
                                         <td class="plan-table__label">マンツーマン授業</td>
-                                        <td><span class="plan-table__dot"></span>週１回</td>
-                                        <td class="is-recommended"><span class="plan-table__dot"></span>週２回</td>
-                                        <td><span class="plan-table__dot"></span>無制限</td>
+                                        <td><span class="plan-table__dot"></span><span class="plan-table__sub-text">週１回</span></td>
+                                        <td class="plan-table__spacer"></td>
+                                        <td class="is-recommended"><span class="plan-table__dot"></span><span class="plan-table__sub-text">週２回</span></td>
+                                        <td><span class="plan-table__dot"></span><span class="plan-table__sub-text">無制限</span></td>
                                     </tr>
                                     <tr>
                                         <td class="plan-table__label">ビジネス基本講座</td>
                                         <td><span class="plan-table__dot"></span></td>
+                                        <td class="plan-table__spacer"></td>
                                         <td class="is-recommended"><span class="plan-table__dot"></span></td>
                                         <td><span class="plan-table__dot"></span></td>
                                     </tr>
                                     <tr>
                                         <td class="plan-table__label">練習ROOM利用</td>
-                                        <td><span class="plan-table__dot"></span>月10時間</td>
-                                        <td class="is-recommended"><span class="plan-table__dot"></span>月20時間</td>
-                                        <td><span class="plan-table__dot"></span>無制限</td>
+                                        <td><span class="plan-table__dot"></span><span class="plan-table__sub-text">月10時間</span></td>
+                                        <td class="plan-table__spacer"></td>
+                                        <td class="is-recommended"><span class="plan-table__dot"></span><span class="plan-table__sub-text">月20時間</span></td>
+                                        <td><span class="plan-table__dot"></span><span class="plan-table__sub-text">無制限</span></td>
                                     </tr>
                                     <tr>
                                         <td class="plan-table__label">ビジネスコンサル</td>
-                                        <td><span class="plan-table__dash">—</span></td>
-                                        <td class="is-recommended"><span class="plan-table__dot"></span>月２回</td>
-                                        <td><span class="plan-table__dot"></span>月３回</td>
+                                        <td><span class="plan-table__dash"></span></td>
+                                        <td class="plan-table__spacer"></td>
+                                        <td class="is-recommended"><span class="plan-table__dot"></span><span class="plan-table__sub-text">月２回</span></td>
+                                        <td><span class="plan-table__dot"></span><span class="plan-table__sub-text">月３回</span></td>
                                     </tr>
                                     <tr>
-                                        <td class="plan-table__label">コミュニティ参加資格</td>
-                                        <td>—</td>
-                                        <td class="is-recommended">—</td>
+                                        <td class="plan-table__label">コミュニティ<br class="sp">参加資格</td>
+                                        <td><span class="plan-table__dash"></span></td>
+                                        <td class="plan-table__spacer"></td>
+                                        <td class="is-recommended"><span class="plan-table__dash"></span></td>
                                         <td><span class="plan-table__dot"></span></td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="plan-table__scrollbar">
+                            <div class="plan-table__scrollbar-thumb"></div>
                         </div>
                         <p class="plan-table__note">※各サービスは１回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>
                     </div>
@@ -144,7 +159,7 @@
         </main>
 
         <a href="#" id="js-pagetop" class="pagetop" aria-label="ページトップへ戻る">
-            <img src="../images/top-icon.svg" alt="ページトップへ戻る" width="68" height="68">
+            <img class="pagetop__icon" src="images/top-icon.svg" width="68" height="68" alt="ページトップへ戻る">
         </a>
 
         <div class="contact-btn">
@@ -162,24 +177,24 @@
                 </nav>
             </div>
             <div class="footer__image">
-                <img src="../images/footer-icon.svg" alt="フッターアイコン" width="33" height="50">
+                <img src="images/footer-icon.svg" alt="フッターアイコン" width="33" height="50">
             </div>
             <div class="footer__copyright">
                 <p class="copyright">Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
             </div>
             <div class="footer__sns">
                 <ul>
-                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/twitter.svg" alt="twitter" width="23" height="19"></a></li>
-                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/facebook.svg" alt="facebook" width="23" height="23"></a></li>
-                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/youtube.svg" alt="youtube" width="23" height="16"></a></li>
-                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="../images/instagram.svg" alt="instagram" width="20" height="20"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="images/twitter.svg" alt="twitter" width="23" height="19"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="images/facebook.svg" alt="facebook" width="23" height="23"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="images/youtube.svg" alt="youtube" width="23" height="16"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="images/instagram.svg" alt="instagram" width="20" height="20"></a></li>
                 </ul>
             </div>
         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

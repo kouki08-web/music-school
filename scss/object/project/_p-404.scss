@@ -2,47 +2,62 @@
 @use '../../foundation/mixin' as *;
 
 .page-404 {
+    .fv__catch {
+        top: 51%;
+    }
+
     .not-found {
-        padding: 7rem 0 8rem;
+        padding: 6.9rem 0 9rem;
         text-align: center;
         @include sp {
-            padding: 5rem 0 6rem;
-            text-align: left;
+            padding: 4.2rem 0 5rem;
         }
     }
 
     .not-found__text {
-        font-size: 1.6rem;
-        line-height: calc(28 / 16);
+        font-size: 1.8rem;
+        line-height: calc(30 / 18);
+        text-align: center;
         @include sp {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
+            line-height: calc(30 / 16);
+            text-align: left;
         }
     }
 
-    .not-found__text:not(:first-of-type) {
-        margin-top: 0.5rem;
-    }
-
     .not-found__btn {
-        margin-top: 5rem;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
         @include sp {
-            margin-top: 4rem;
+            margin-top: 0.9rem;
         }
     }
 
     .not-found__btn a {
-        display: block;
-        width: 26rem;
-        margin: 0 auto;
-        padding: 1.8rem;
+        width: 25rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: $color-red;
         color: $color-white;
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         font-weight: 700;
-        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
         @include sp {
             width: 100%;
-            font-size: 1.6rem;
+            font-size: 2rem;
+        }
+
+        @include hover {
+            &:hover {
+                @include pc {
+                    background-color: $color-white;
+                    color: $color-red;
+                    opacity: 1;
+                }
+            }
         }
     }
 }

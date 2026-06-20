@@ -44,7 +44,8 @@ function updateButtons() {
     $toggleElements.toggleClass('is-show', scrollTop > fvHeight);
 
     if (scrollBottom >= footerTop) {
-        const pagetopOffset = isPC ? 100 : 80;
+        const isContactPage = $('body').hasClass('page-contact');
+        const pagetopOffset = isPC ? (isContactPage ? 32 : 90) : (isContactPage ? 18 : 80);
         $contactBtn.addClass('is-docked').css('bottom', footerHeight);
         $pagetop.addClass('is-docked').css('bottom', footerHeight + pagetopOffset);
     } else {
@@ -72,19 +73,64 @@ $('.qa-title').on('click', function(){
     }
 });
 
-new Swiper('.voice__swiper', {
+// プランテーブル カスタムスクロールバー
+const wrapper = document.querySelector('.plan-table__wrapper');
+const track = document.querySelector('.plan-table__scrollbar');
+const thumb = document.querySelector('.plan-table__scrollbar-thumb');
+
+if (wrapper && track && thumb) {
+    const updateThumbPosition = () => {
+        const scrollRatio = wrapper.scrollLeft / (wrapper.scrollWidth - wrapper.clientWidth);
+        const maxLeft = track.clientWidth - thumb.clientWidth;
+        thumb.style.left = `${scrollRatio * maxLeft}px`;
+    };
+
+    wrapper.addEventListener('scroll', updateThumbPosition);
+
+    let isDragging = false;
+    let startX = 0;
+    let startLeft = 0;
+
+    thumb.addEventListener('pointerdown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        startLeft = parseInt(thumb.style.left || 0, 10);
+        thumb.setPointerCapture(e.pointerId);
+    });
+
+    thumb.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        const delta = e.clientX - startX;
+        const maxLeft = track.clientWidth - thumb.clientWidth;
+        const newLeft = Math.min(Math.max(startLeft + delta, 0), maxLeft);
+        thumb.style.left = `${newLeft}px`;
+        wrapper.scrollLeft = (newLeft / maxLeft) * (wrapper.scrollWidth - wrapper.clientWidth);
+    });
+
+    thumb.addEventListener('pointerup', () => { isDragging = false; });
+}
+
+const voiceSwiper = new Swiper('.voice__swiper', {
     slidesPerView: 1,
     spaceBetween: 35,
     loop: true,
-    watchOverflow: false,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    grabCursor: true,
+    speed: 600,
     breakpoints: {
         768: {
             slidesPerView: 3,
         }
     }
+});
+
+document.querySelector('.voice-btn-prev').addEventListener('click', () => {
+    voiceSwiper.slidePrev();
+});
+document.querySelector('.voice-btn-next').addEventListener('click', () => {
+    voiceSwiper.slideNext();
+});
+
+voiceSwiper.on('click', () => {
+    window.location.href = './result_details.html';
 });
 

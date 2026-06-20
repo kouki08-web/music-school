@@ -13,3 +13,10 @@
         @content;
     }
 }
+
+// ホバー可能デバイスのみ
+@mixin hover {
+    @media (any-hover: hover) {
+        @content;
+    }
+}

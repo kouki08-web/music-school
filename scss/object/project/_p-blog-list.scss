@@ -1,41 +1,53 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
-.page-blog {
-    .breadcrumb {
-        padding: 1rem 0 0.5rem;
-        background: $color-grey;
-        @include sp {
-            padding: 0.4rem 0 0;
-        }
+.pagination {
+    margin-top: 7rem;
+    @include sp {
+        margin-top: 5.8rem;
     }
+}
 
-    .breadcrumb__list {
-        display: flex;
-        align-items: center;
-        gap: 1.9rem;
-        font-size: 1.6rem;
-        line-height: calc(33 / 16);
+.pagination__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    column-gap: 0rem;
+    list-style: none;
+}
+
+.pagination__item:nth-child(2) {
+    margin-left: 1rem;
+    @include sp {
+        margin-left: 0.3rem;
     }
+}
 
-    .breadcrumb__item {
-        color: $color-black;
+.pagination__item:nth-child(3) {
+    margin-left: 1rem;
+    @include sp {
+        margin-left: 0.3rem;
     }
+}
 
-    .breadcrumb__item:not(:last-child)::after {
-        content: '>';
-        margin-left: 2rem;
-        color: $color-black;
+.pagination__item:nth-child(4) {
+    margin-left: 0.5rem;
+    @include sp {
+        margin-left: 0rem;
     }
+}
 
-    .breadcrumb__item a {
-        color: $color-black;
-        text-decoration: none;
+.pagination__item:nth-child(5) {
+    margin-left: 0.5rem;
+    @include sp {
+        margin-left: 0rem;
     }
 }
 
 .blog-list {
-    padding: 6.8rem 0 21rem;
+    padding: 6.7rem 0 21rem;
     @include sp {
         padding: 4.7rem 0 20.4rem;
     }
@@ -54,7 +66,6 @@
     margin-top: 4rem;
     @include sp {
         gap: 3.9rem;
-        margin-top: 4rem;
     }
 }
 
@@ -85,7 +96,6 @@
     background-color: $color-red;
     color: $color-white;
     font-size: 1.5rem;
-    line-height: calc(25 / 15);
     font-weight: 700;
     line-height: 1;
 }
@@ -150,23 +160,6 @@
     }
 }
 
-.pagination {
-    margin-top: 7rem;
-    @include sp {
-        margin-top: 5.8rem;
-    }
-}
-
-.pagination__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.7rem;
-    @include sp {
-        gap: 0.2rem;
-    }
-}
-
 .pagination__item a,
 .pagination__item span {
     display: flex;
@@ -176,7 +169,8 @@
     height: 5rem;
     border: 1px solid $color-black;
     font-size: 1.6rem;
-    line-height: calc(28 / 16);
+    line-height: calc(30 / 16);
+    font-weight: 700;
     color: $color-black;
     text-decoration: none;
     transition: background-color 0.2s, color 0.2s;
@@ -192,6 +186,18 @@
     color: $color-white;
 }
 
+@include hover {
+    .pagination__item a:hover {
+        background-color: $color-black;
+        color: $color-white;
+        opacity: 1;
+    }
+}
+
 .pagination__item.is-dots span {
     border: none;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    top: 0rem;
 }

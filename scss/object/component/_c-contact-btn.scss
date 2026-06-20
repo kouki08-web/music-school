@@ -9,9 +9,10 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
+
     @include sp {
-        right: 0;
         left: 0;
+        right: 0;
         display: flex;
         justify-content: center;
     }
@@ -34,24 +35,31 @@
     justify-content: center;
     width: 30rem;
     height: 6rem;
+    position: relative;
+    top: 12%;
+    padding-top: 0.7rem;
     font-weight: 700;
     background-color: $color-red;
     color: $color-white;
     font-size: 2rem;
     text-decoration: none;
+    letter-spacing: 0.17em;
     cursor: pointer;
+    border: 1px solid $color-red;
     transition: color 0.3s, background-color 0.3s;
-
-    @include pc {
+    @include sp {
         width: 33.5rem;
-        height: 6rem;
-        font-size: 2rem;
+        padding-top: 0;
+        top: 0;
     }
 }
 
-.contact-btn a:hover {
-    @include pc {
-        background-color: $color-white;
-        color: $color-red;
+@include hover {
+    .contact-btn a:hover {
+        @include pc {
+            background-color: $color-white;
+            color: $color-red;
+            opacity: 1;
+        }
     }
 }

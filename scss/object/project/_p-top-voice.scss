@@ -7,11 +7,11 @@
     padding: 4.4rem 0 8rem;
     background: $color-red;
     @include sp {
-        padding: 4.5rem 0 1.4rem;
+        padding: 4.5rem 0 5rem;
     }
 }
 
-.voice__title h2 {
+.voice__title {
     font-size: 3rem;
     line-height: calc(50 / 30);
     font-weight: 700;
@@ -30,46 +30,83 @@
     }
 }
 
-.voice .swiper-button-prev,
-.voice .swiper-button-next {
-    top: 27.5rem;
-    width: 2.984rem;
-    height: 2.024rem;
-    background: url('../../../images/arrow-r.svg') no-repeat center / contain;
+.voice-btn-prev,
+.voice-btn-next {
+    position: absolute;
+    top: 27.7rem;
+    width: 3rem;
+    height: 4rem;
+    padding: 0;
+    background: url('../images/swiper.svg') no-repeat center / contain;
+    color: transparent;
+    z-index: 200;
+    cursor: pointer;
+    pointer-events: all;
+
+    @include sp {
+        top: 25.3rem;
+    }
 }
 
-.voice .swiper-button-prev::after,
-.voice .swiper-button-next::after {
-    content: none;
-}
-
-.voice .swiper-button-prev {
-    left: 5rem;
+.voice-btn-prev {
+    left: 5.5rem;
     transform: scaleX(-1);
+    @include sp {
+        left: 2rem;
+    }
 }
 
-.voice .swiper-button-next {
-    right: 5rem;
+.voice-btn-next {
+    right: 5.6rem;
+    @include sp {
+        right: 2rem;
+    }
 }
 
 .voice-item__image {
-    width: 100%;
+    width: 33.5rem;
+    height: 20rem;
+    overflow: hidden;
+    @include sp {
+        width: 100%;
+    }
+}
+
+.voice-item__img {
+    transition: transform 0.4s;
+}
+
+@include hover {
+    .voice-item:hover .voice-item__img {
+        @include pc {
+            transform: scale(1.1);
+        }
+    }
 }
 
 .voice-item__text {
     color: $color-white;
+    transition: opacity 0.3s;
+    padding-top: 1.7rem;
+    @include sp {
+        padding-top: 2.7rem;
+    }
+}
+
+@include hover {
+    .voice-item:hover .voice-item__text {
+        @include pc {
+            opacity: 0.7;
+        }
+    }
 }
 
 .voice-item__text h2 {
     display: flex;
     justify-content: center;
-    margin-top: 1.7rem;
     font-size: 2.2rem;
     line-height: calc(33 / 22);
     font-weight: 700;
-    @include sp {
-        margin-top: 2.7rem;
-    }
 }
 
 .voice-item__text p {

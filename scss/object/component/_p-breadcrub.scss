@@ -1,35 +1,48 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
-    .breadcrumb {
-        padding: 1rem 0 0.47rem;
-        background: $color-grey;
+
+// ベーススタイル（全ページ共通）
+.breadcrumb {
+    padding: 1.7rem 0 1.3rem;
+    background: $color-grey;
+    @include sp {
+        padding: 1.2rem 0 0.5rem;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+        font-size: 1.6rem;
+        line-height: 1.25;
         @include sp {
-            padding: 0.3rem 0 0rem;
+            row-gap: 0.1rem;
         }
     }
 
-    .breadcrumb__list {
-        display: flex;
-        align-items: center;
-        gap: 1.8rem;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 1.6rem;
-        line-height: calc(33 / 16);
-    }
-
-    .breadcrumb__item {
+    &__item {
         color: $color-black;
-    }
 
-    .breadcrumb__item:not(:last-child)::after {
-        content: '>';
-        margin-left: 2rem;
-        color: $color-black;
-    }
+        &:not(:last-child) {
+            white-space: nowrap;
+        }
 
-    .breadcrumb__item a {
-        color: $color-black;
-        text-decoration: none;
+        &:not(:last-child)::after {
+            content: '>';
+            margin-left: 2rem;
+            margin-right: 2rem;
+            color: $color-black;
+        }
+
+        &:nth-child(2)::after,
+        &:nth-child(3)::after {
+            margin-right: 2.3rem;
+        }
+
+        a {
+            color: $color-black;
+            text-decoration: none;
+        }
     }
+}

@@ -6,7 +6,7 @@
     position: relative;
     padding: 2rem 0 20.5rem;
     @include sp {
-        padding: 0 0 19.1rem;
+        padding: 0 0 19.7rem;
     }
 }
 
@@ -28,7 +28,8 @@
     row-gap: 5rem;
     @include sp {
         flex-direction: column;
-        margin-top: 3.5rem;
+        margin-top: 4rem;
+        row-gap: 4.2rem;
     }
 }
 
@@ -39,10 +40,41 @@
     }
 }
 
+.blog-item__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+@include hover {
+    .blog-item__link:hover img {
+        @include pc {
+            opacity: 0.7;
+        }
+    }
+}
+
 .blog-item__image {
     position: relative;
     display: block;
     width: 100%;
+    overflow: hidden;
+    @include sp {
+        aspect-ratio: 670 / 400;
+    }
+}
+
+.blog-item__image picture {
+    display: block;
+}
+
+.blog-item__image img {
+    transition: opacity 0.3s;
+    @include sp {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .blog-item__category {
@@ -50,14 +82,20 @@
     top: 0;
     left: 0;
     z-index: 1;
-    padding: 0.5rem 1rem;
+    width: 8rem;
+    height: 3rem;
     background-color: $color-red;
     color: $color-white;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include sp {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        width: 9rem;
+        height: 3rem;
     }
 }
 
@@ -67,7 +105,8 @@
     line-height: calc(25 / 20);
     font-weight: 700;
     @include sp {
-        margin-top: 1rem;
+        margin-top: 3rem;
+        line-height: calc(30 / 20);
     }
 }
 
@@ -77,21 +116,29 @@
     font-size: 1.7rem;
     line-height: calc(30 / 17);
     @include sp {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
     }
 }
 
 .blog-list-btn {
     margin-top: 3.7rem;
     margin-left: auto;
-    width: 10.8rem;
+    width: fit-content;
     text-align: right;
     font-size: 1.8rem;
     line-height: calc(30 / 18);
-    border-bottom: 0.5px solid $color-black;
     @include sp {
         display: flex;
         align-items: center;
-        margin-top: 3rem;
+        justify-content: center;
+        margin-top: 4.4rem;
+        margin-left: 0;
+        width: 100%;
     }
+}
+
+.blog-list-btn a {
+    display: inline-block;
+    line-height: 1;
+    border-bottom: 0.5px solid $color-black;
 }

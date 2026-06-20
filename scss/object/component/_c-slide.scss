@@ -10,7 +10,7 @@ body {
     padding: 50px 0;
 }
 .swiper-wrapper {
-    transition-timing-function: linear;
+    transition-timing-function: ease-in-out;
 }
 .swiper-slide span {
     width: 300px;

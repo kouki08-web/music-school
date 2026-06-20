@@ -50,13 +50,7 @@
     }
 }
 
-.reason__item:nth-child(2) .reason-item_catch h2 {
-    margin-top: -0.3rem;
-    @include sp {
-        margin-top: 3.1rem;
-    }
-}
-
+.reason__item:nth-child(2) .reason-item_catch h2,
 .reason__item:nth-child(3) .reason-item_catch h2 {
     margin-top: -0.3rem;
     @include sp {

@@ -28,6 +28,7 @@
 @use './object/component/c-pagetop';
 @use './object/component/c-contact-btn';
 @use './object/component/c-page-header';
+@use './object/component/p-breadcrub';
 
 // ============================================================
 // Object - Project (下層ページ)
@@ -35,9 +36,9 @@
 @use './object/project/p-blog-list';
 @use './object/project/p-blog-details';
 @use './object/project/p-plan';
-@use './object/project/p-contact';
+@use './object/project/p-contact-form';
 @use './object/project/p-contact-send';
-@use './object/project/p-results';
+@use './object/project/p-result-list';
 @use './object/project/p-result-details';
 @use './object/project/p-search';
 @use './object/project/p-404';
