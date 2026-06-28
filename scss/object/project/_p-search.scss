@@ -3,9 +3,9 @@
 
 .page-search {
     .search {
-        padding: 6.8rem 0 21rem;
-        @include sp {
-            padding: 0.7rem 0 20.4rem;
+        padding: 3.9rem 0 20.2rem;
+        @include pc {
+            padding: 6.8rem 0 21rem;
         }
     }
 
@@ -17,9 +17,6 @@
 
     .search__keyword {
         font-size: 1.8rem;
-        @include sp {
-            margin-top: 3rem;
-        }
     }
 
     .search__keyword-text {
@@ -28,9 +25,6 @@
 
     .search__count {
         font-size: 1.8rem;
-        @include sp {
-            margin-top: 2.8rem;
-        }
     }
 
     .search__items {
@@ -41,63 +35,64 @@
 
     .search-item {
         display: flex;
-        gap: 5rem;
-        @include sp {
-            flex-direction: column;
-            gap: 1.5rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        @include pc {
+            flex-direction: row;
+            gap: 5rem;
         }
         &:nth-child(2) {
-            margin-top: 6.7rem;
-            @include sp {
-                margin-top: 3.9rem;
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 6.7rem;
             }
         }
         &:nth-child(3) {
-            margin-top: 7rem;
-            @include sp {
-                margin-top: 3.9rem;
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
             }
         }
         &:nth-child(4) {
-            margin-top: 7rem;
-            @include sp {
-                margin-top: 3.9rem;
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
             }
         }
         &:nth-child(5) {
-            margin-top: 7.1rem;
-            @include sp {
-                margin-top: 3.9rem;
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7.1rem;
             }
         }
         &:nth-child(6) {
-            margin-top: 6.9rem;
-            @include sp {
-                margin-top: 3.9rem;
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 6.9rem;
             }
         }
         &:nth-child(7) {
-            margin-top: 7rem;
-            @include sp {
-                margin-top: 3.9rem;
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
             }
         }
         &:nth-child(8) {
-            margin-top: 7rem;
-            @include sp {
-                margin-top: 3.9rem;
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
             }
         }
         &:nth-child(9) {
-            margin-top: 7rem;
-            @include sp {
-                margin-top: 3.9rem;
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
             }
         }
         &:nth-child(10) {
-            margin-top: 7rem;
-            @include sp {
-                margin-top: 3.9rem;
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
             }
         }
     }
@@ -105,9 +100,9 @@
     .search-item__image {
         position: relative;
         flex-shrink: 0;
-        width: 26rem;
-        @include sp {
-            width: 100%;
+        width: 100%;
+        @include pc {
+            width: 26rem;
         }
     }
 
@@ -116,7 +111,7 @@
         top: 0;
         left: 0;
         z-index: 1;
-        width: 8rem;
+        width: 9rem;
         height: 3rem;
         background-color: $color-red;
         color: $color-white;
@@ -126,47 +121,50 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @include sp {
-            width: 9rem;
+        @include pc {
+            width: 8rem;
             height: 3rem;
         }
     }
 
     .search-item__body {
         flex: 1;
-        @include sp {
-            padding-top: 1.5rem;
+        padding-top: 1.5rem;
+        @include pc {
+            padding-top: 0;
         }
     }
 
     .search-item__title {
-        margin-top: -0.5rem;
+        margin-top: 0;
         font-size: 2rem;
         font-weight: 700;
         line-height: calc(30 / 20);
-        @include sp {
-            margin-top: 0;
+        @include pc {
+            margin-top: -0.5rem;
         }
     }
 
     .search-item__date {
         font-size: 1.7rem;
         line-height: calc(30 / 17);
-        @include sp {
-            margin-top: 0.5rem;
-            text-align: right;
+        margin-top: 0.5rem;
+        text-align: right;
+        @include pc {
+            margin-top: 0;
+            text-align: left;
         }
     }
 
     .search-item__text {
-        margin-top: 1.2rem;
-        font-size: 1.8rem;
+        margin-top: 0.9rem;
+        font-size: 1.6rem;
         font-weight: 500;
-        line-height: calc(30 / 18);
-        @include sp {
-            margin-top: 0.9rem;
-            font-size: 1.6rem;
-            line-height: calc(30 / 16);
+        line-height: calc(30 / 16);
+        @include pc {
+            margin-top: 1.2rem;
+            font-size: 1.8rem;
+            line-height: calc(30 / 18);
         }
     }
 }

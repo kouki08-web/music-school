@@ -73,6 +73,10 @@ $('.qa-title').on('click', function(){
     }
 });
 
+$('.qa-text').on('click', function(){
+    $(this).prev('.qa-title').trigger('click');
+});
+
 // プランテーブル カスタムスクロールバー
 const wrapper = document.querySelector('.plan-table__wrapper');
 const track = document.querySelector('.plan-table__scrollbar');
@@ -114,11 +118,12 @@ const voiceSwiper = new Swiper('.voice__swiper', {
     slidesPerView: 1,
     spaceBetween: 35,
     loop: true,
-    grabCursor: true,
+    grabCursor: false,
     speed: 600,
     breakpoints: {
         768: {
             slidesPerView: 3,
+            spaceBetween: 0,
         }
     }
 });
@@ -130,7 +135,4 @@ document.querySelector('.voice-btn-next').addEventListener('click', () => {
     voiceSwiper.slideNext();
 });
 
-voiceSwiper.on('click', () => {
-    window.location.href = './result_details.html';
-});
 

@@ -14,35 +14,30 @@
         position: absolute;
         inset: 0;
         background-color: rgba(80, 80, 80, 0.49);
+        mix-blend-mode: multiply;
         z-index: 100;
     }
 }
 
 .fv-slide__image {
     width: 100%;
-    aspect-ratio: 1080 / 470;
+    aspect-ratio: 375 / 550;
     overflow: hidden;
-
-    @include sp {
-        aspect-ratio: 375 / 550;
+    @include pc {
+        aspect-ratio: 1080 / 470;
     }
 }
 
 body[class] {
     .fv-slide__image {
-        aspect-ratio: 1080 / 200;
-
-        @include sp {
-            aspect-ratio: 375 / 300;
+        aspect-ratio: 375 / 300;
+        @include pc {
+            aspect-ratio: 1080 / 200;
         }
     }
 
     .fv__catch {
         font-size: 2.5rem;
-
-        @include sp {
-            font-size: 2.5rem;
-        }
     }
 }
 
@@ -53,19 +48,19 @@ body[class] {
 
 .fv__catch {
     position: absolute;
-    top: 52%;
+    top: 51.4%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
     z-index: 200;
-    font-size: 4rem;
-    line-height: calc(60 / 40);
+    font-size: 3rem;
+    line-height: calc(50 / 30);
     font-weight: 700;
     color: $color-white;
-    @include sp {
-        font-size: 3rem;
-        line-height: calc(50 / 30);
-        top: 51.4%;
+    @include pc {
+        font-size: 4rem;
+        line-height: calc(60 / 40);
+        top: 52%;
     }
 }

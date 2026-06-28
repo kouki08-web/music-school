@@ -5,10 +5,10 @@
 
 .greeting {
     position: relative;
-    padding: 6.8rem 0 6rem;
+    padding: 5rem 0 4rem;
     background: $color-red;
-    @include sp {
-        padding: 5rem 0 4rem;
+    @include pc {
+        padding: 6.8rem 0 6rem;
     }
 }
 
@@ -21,22 +21,22 @@
 }
 
 .greeting__title {
-    font-size: 3rem;
-    line-height: calc(50 / 30);
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
     font-weight: 700;
     text-align: center;
-    @include sp {
-        font-size: 2.5rem;
-        line-height: calc(40 / 25);
+    @include pc {
+        font-size: 3rem;
+        line-height: calc(50 / 30);
     }
 }
 
 .greeting__text {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     font-size: 1.8rem;
     line-height: calc(30 / 18);
     text-align: center;
-    @include sp {
-        margin-top: 1.5rem;
+    @include pc {
+        margin-top: 3rem;
     }
 }

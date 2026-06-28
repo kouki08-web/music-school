@@ -3,9 +3,9 @@
 
 .page-contact-send {
     .contact-send {
-        padding: 6.5rem 0 9rem;
-        @include sp {
-            padding: 4.7rem 0 5rem;
+        padding: 4.8rem 0 5.1rem;
+        @include pc {
+            padding: 6.6rem 0 9rem;
         }
     }
 
@@ -14,12 +14,13 @@
     }
 
     .contact-send__text {
-        font-size: 1.8rem;
-        line-height: calc(32 / 18);
-        @include sp {
-            font-size: 1.6rem;
-            line-height: calc(30 / 16);
-            text-align: left;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+        text-align: left;
+        @include pc {
+            font-size: 1.8rem;
+            line-height: calc(32 / 18);
+            text-align: center;
         }
     }
 
@@ -33,18 +34,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 25rem;
+        width: 100%;
         height: 5rem;
         background-color: $color-red;
         color: $color-white;
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: calc(33 / 25);
         font-weight: 700;
         text-decoration: none;
-        transition: background-color 0.3s, color 0.3s;
-        @include sp {
-            width: 100%;
-            font-size: 2rem;
+        transition: background-color 0.4s, color 0.4s;
+        @include pc {
+            width: 25rem;
+            font-size: 2.5rem;
         }
     }
 

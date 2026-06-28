@@ -1,10 +1,4 @@
 
-
-// vw関数
-@function vw($pixelSixe, $baseWidth: 880) {
-    @return calc($pixelSixe / $baseWidth * 100vw);
-}
-
 $color-white: #fff;
 $color-red: rgba(203, 0, 0, 1);
 $color-black: #333333;

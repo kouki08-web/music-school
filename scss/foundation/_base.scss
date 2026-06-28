@@ -9,27 +9,27 @@ html {
     scroll-padding-top: 8rem;
     word-break: break-all;
     scroll-behavior: smooth;
-    font-size: 10px;
-    @media (min-width: 768px) and (max-width: 880px) {
-        font-size: vw(10, 880);
-    }
-    @include sp {
-        font-size: vw(10, 375);
-    }
+    font-size: min(calc(10 / 375 * 100vw), calc(500 / 375 * 10px));
     color: rgba(0, 0, 0, 1);
+    @include pc {
+        font-size: calc(10 / 940 * 100vw);
+    }
+    @media (min-width: 940px) {
+        font-size: 10px;
+    }
 }
 html, body {
     margin: 0;
     padding: 0;
 }
 body {
-    padding-top: 80px;
+    padding-top: 50px;
     font-weight: 500;
     font-family: "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
     -webkit-font-smoothing: antialiased;
     letter-spacing: 0;
-    @include sp {
-        padding-top: 50px;
+    @include pc {
+        padding-top: 80px;
     }
 }
 
@@ -54,7 +54,7 @@ img {
     a:hover,
     button:hover {
         opacity: 0.7;
-        transition: opacity 0.3s;
+        transition: opacity 0.4s;
     }
 }
 
@@ -64,13 +64,11 @@ img {
     position: relative;
 }
 .inner {
-    padding-inline: 10rem;
-    margin-inline: auto;
-    max-width: 1080px;
-}
-@media (max-width: 767px) {
-    .inner {
-        padding-inline: 2rem;
-        max-width: none;
+    padding-inline: 2rem;
+    max-width: none;
+    margin: 0 auto;
+    @include pc {
+        max-width: 940px;
+        padding-inline: 3rem;
     }
 }

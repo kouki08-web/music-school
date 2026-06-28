@@ -4,36 +4,42 @@
 //voice
 .voice {
     position: relative;
-    padding: 4.4rem 0 8rem;
+    padding: 4.5rem 0 1.4rem;
     background: $color-red;
-    @include sp {
-        padding: 4.5rem 0 5rem;
+    @include pc {
+        padding: 4.4rem 0 8rem;
     }
 }
 
 .voice__title {
-    font-size: 3rem;
-    line-height: calc(50 / 30);
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
     font-weight: 700;
     color: $color-white;
     text-align: center;
-    @include sp {
-        font-size: 2.5rem;
-        line-height: calc(40 / 25);
+    @include pc {
+        font-size: 3rem;
+        line-height: calc(50 / 30);
     }
 }
 
 .voice__swiper {
-    margin-top: 3.6rem;
-    @include sp {
-        margin-top: 4rem;
+    margin-top: 4rem;
+    @include pc {
+        margin-top: 3.6rem;
+        .swiper-wrapper {
+            gap: 3.5rem;
+        }
+        .swiper-slide {
+            width: calc((100% - 7rem) / 3) !important;
+        }
     }
 }
 
 .voice-btn-prev,
 .voice-btn-next {
     position: absolute;
-    top: 27.7rem;
+    top: 25.3rem;
     width: 3rem;
     height: 4rem;
     padding: 0;
@@ -42,33 +48,47 @@
     z-index: 200;
     cursor: pointer;
     pointer-events: all;
+    transition: opacity 0.4s;
+    @include pc {
+        top: 25.5rem;
+    }
+}
 
-    @include sp {
-        top: 25.3rem;
+@include hover {
+    .voice-btn-prev:hover,
+    .voice-btn-next:hover {
+        opacity: 0.7;
     }
 }
 
 .voice-btn-prev {
-    left: 5.5rem;
+    left: 2rem;
     transform: scaleX(-1);
-    @include sp {
-        left: 2rem;
+    @include pc {
+        left: 5.5rem;
     }
 }
 
 .voice-btn-next {
-    right: 5.6rem;
-    @include sp {
-        right: 2rem;
+    right: 2rem;
+    @include pc {
+        right: 5.6rem;
     }
 }
 
 .voice-item__image {
-    width: 33.5rem;
-    height: 20rem;
+    width: 100%;
     overflow: hidden;
-    @include sp {
-        width: 100%;
+}
+
+.voice-item__link {
+    display: block;
+    text-decoration: none;
+}
+
+@include hover {
+    .voice-item__link:hover {
+        opacity: 1;
     }
 }
 
@@ -86,10 +106,10 @@
 
 .voice-item__text {
     color: $color-white;
-    transition: opacity 0.3s;
-    padding-top: 1.7rem;
-    @include sp {
-        padding-top: 2.7rem;
+    transition: opacity 0.4s;
+    margin-top: 2.7rem;
+    @include pc {
+        margin-top: 1.8rem;
     }
 }
 

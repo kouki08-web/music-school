@@ -3,18 +3,19 @@
 
 .contact-btn {
     position: fixed;
+    left: 0;
     right: 0;
     bottom: 0;
     z-index: 100;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-
-    @include sp {
-        left: 0;
+    transition: opacity 0.4s, visibility 0.4s;
+    display: flex;
+    justify-content: center;
+    @include pc {
+        left: auto;
         right: 0;
-        display: flex;
-        justify-content: center;
+        display: block;
     }
 }
 
@@ -33,11 +34,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30rem;
+    width: 33.5rem;
     height: 6rem;
     position: relative;
-    top: 12%;
-    padding-top: 0.7rem;
+    top: 0;
+    padding-top: 0;
     font-weight: 700;
     background-color: $color-red;
     color: $color-white;
@@ -46,11 +47,11 @@
     letter-spacing: 0.17em;
     cursor: pointer;
     border: 1px solid $color-red;
-    transition: color 0.3s, background-color 0.3s;
-    @include sp {
-        width: 33.5rem;
-        padding-top: 0;
-        top: 0;
+    transition: color 0.4s, background-color 0.4s;
+    @include pc {
+        width: 30rem;
+        padding-top: 0.7rem;
+        top: 12%;
     }
 }
 

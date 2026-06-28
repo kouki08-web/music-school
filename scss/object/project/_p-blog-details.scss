@@ -2,52 +2,46 @@
 @use '../../foundation/mixin' as *;
 
 
-.page-blog-details .breadcrumb {
-    @include sp {
-        padding: 1.1rem 0 0.8rem;
-    }
-}
-
 .blog-details {
-    padding: 7rem 0 18.6rem;
-    @include sp {
-        padding: 5rem 0 19.7rem;
+    padding: 5rem 0 19.8rem;
+    @include pc {
+        padding: 7rem 0 18.6rem;
     }
 }
 
 .blog-details__wrapper {
     display: flex;
+    flex-direction: column;
     gap: 3rem;
     align-items: flex-start;
-    @include sp {
-        flex-direction: column;
+    @include pc {
+        flex-direction: row;
     }
 }
 
 .blog-details__main {
+    width: 100%;
     flex: 1;
     min-width: 0;
-    @include sp {
-        width: 100%;
-    }
 }
 
 .blog-details__image {
     position: relative;
-    width: 60rem;
-    height: 35rem;
-    @include sp {
-        width: 100%;
-        height: 20rem;
+    width: 100%;
+    aspect-ratio: 335 / 200;
+    @include pc {
+        width: 60rem;
+        aspect-ratio: 60 / 35;
     }
 }
 
 .blog-details__share {
     display: flex;
-    margin-top: 2.1rem;
-    @include sp {
-        margin-top: 2.2rem;
-        gap: 0.2rem;
+    column-gap: 0.3rem;
+    margin-top: 2.2rem;
+    @include pc {
+        column-gap: 0;
+        margin-top: 2.1rem;
     }
 }
 
@@ -56,74 +50,82 @@
 }
 
 .blog-details__share .share-btn {
-    display: block;
-    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 6.5rem;
     height: 4rem;
     overflow: hidden;
+    margin-left: 0;
 
-    @include sp {
-        flex: 1;
-        width: 6.5rem;
-        margin-left: 0;
-        background-repeat: no-repeat;
-        background-position: center;
+    picture {
+        display: block;
+        line-height: 0;
+    }
 
+    @include pc {
+        flex: none;
+        flex-shrink: 0;
+        width: auto;
+        background: none;
         picture {
-            display: none;
+            display: block;
+            width: 100%;
         }
     }
 
     &--facebook {
-        width: 10.5rem;
-        @include sp {
-            background-color: #425893;
-            background-image: url('../../images/list-facebooke-pc.svg');
-            background-size: 18%;
+        background-color: #425893;
+        picture img { width: 1.17rem; height: auto; }
+        @include pc {
+            width: 10.5rem;
+            picture img { width: 100%; }
         }
     }
     &--twitter {
-        width: 8.8rem;
-        margin-left: 0.4rem;
-        @include sp {
-            background-color: #4A9FEB;
-            background-image: url('../../images/list-twitter-sp.svg');
-            background-size: 30%;
+        background-color: #4A9FEB;
+        picture img { width: 1.95rem; height: auto; }
+        @include pc {
+            width: 8.8rem;
+            margin-left: 0.4rem;
+            picture img { width: 100%; }
         }
     }
     &--hatena {
-        width: 9.3rem;
-        margin-left: 0.3rem;
-        @include sp {
-            background-color: #4EACD5;
-            background-image: url('../../images/list-hatena-sp.svg');
-            background-size: 26%;
+        background-color: #4EACD5;
+        picture img { width: 1.69rem; height: auto; }
+        @include pc {
+            width: 9.3rem;
+            margin-left: 0.3rem;
+            picture img { width: 100%; }
         }
     }
     &--line {
-        width: 8.1rem;
-        margin-left: 0.3rem;
-        @include sp {
-            background-color: #52B534;
-            background-image: url('../../images/list-line-sp.svg');
-            background-size: 33%;
+        background-color: #52B534;
+        picture img { width: 2.15rem; height: auto; }
+        @include pc {
+            width: 8.1rem;
+            margin-left: 0.3rem;
+            picture img { width: 100%; }
         }
     }
     &--pocket {
-        width: 9.1rem;
-        margin-left: 0.3rem;
-        @include sp {
-            background-color: #DC4F5A;
-            background-image: url('../../images/list-pocket-sp.svg');
-            background-size: 33%;
+        background-color: #DC4F5A;
+        picture img { width: 2.15rem; height: auto; }
+        @include pc {
+            width: 9.1rem;
+            margin-left: 0.3rem;
+            picture img { width: 100%; }
         }
     }
 }
 
 
 .blog-details__head {
-    margin-top: 4.7rem;
-    @include sp {
-        margin-top: 3.1rem;
+    margin-top: 3.1rem;
+    @include pc {
+        margin-top: 4.7rem;
     }
 }
 
@@ -138,25 +140,25 @@
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
-    width: 8rem;
+    width: 9rem;
     height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include sp {
-        width: 9rem;
+    @include pc {
+        width: 8rem;
         height: 3rem;
     }
 }
 
 .blog-details__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    line-height: calc(40 / 25);
+    line-height: calc(30 / 20);
     margin-top: 0;
-    @include sp {
-        font-size: 2rem;
-        line-height: calc(30 / 20);
+    @include pc {
+        font-size: 2.5rem;
+        line-height: calc(40 / 25);
     }
 }
 
@@ -171,24 +173,25 @@
 .blog-details__body h2 {
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 3.4rem;
-    line-height: calc(40 / 20);
-    @include sp {
-        line-height: calc(30 / 20);
-        margin-top: 4rem;
+    line-height: calc(30 / 20);
+    margin-top: 4rem;
+    @include pc {
+        line-height: calc(40 / 20);
+        margin-top: 3.4rem;
     }
 }
 
 .blog-details__body h3 {
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 4.4rem;
-    padding-left: 1.2rem;
-    line-height: calc(40 / 20);
+    margin-top: 4.9rem;
+    padding-left: 0.9rem;
+    line-height: calc(30 / 20);
     position: relative;
-    @include sp {
-        margin-top: 5.1rem;
-        padding-left: 0.9rem;
+    @include pc {
+        margin-top: 4.3rem;
+        padding-left: 1.2rem;
+        line-height: calc(40 / 20);
     }
 
     &::before {
@@ -198,26 +201,22 @@
         top: 43%;
         transform: translateY(-50%);
         width: 0.3rem;
-        height: 2rem;
+        height: 5rem;
         background-color: $color-black;
-        @include sp {
-            height: 5rem;
+        @include pc {
+            height: 2rem;
         }
-    }
-
-    @include sp {
-        line-height: calc(30 / 20);
     }
 }
 
 .blog-details__body > p {
-    font-size: 1.8rem;
-    line-height: calc(30 / 18);
-    margin-top: 4.7rem;
-    @include sp {
-        font-size: 1.6rem;
-        line-height: calc(30 / 16);
-        margin-top: 2.7rem;
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+    margin-top: 2.7rem;
+    @include pc {
+        font-size: 1.8rem;
+        line-height: calc(30 / 18);
+        margin-top: 4.7rem;
     }
 }
 
@@ -235,27 +234,27 @@
 }
 
 .blog-details__body * + ul {
-    margin-top: 2.8rem;
-    @include sp {
-        margin-top: 2.7rem;
+    margin-top: 2.7rem;
+    @include pc {
+        margin-top: 2.8rem;
     }
 }
 
 .blog-details__body ul li {
-    font-size: 1.8rem;
-    line-height: calc(30 / 18);
-    @include sp {
-        font-size: 1.6rem;
-        line-height: calc(30 / 16);
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+    @include pc {
+        font-size: 1.8rem;
+        line-height: calc(30 / 18);
     }
 }
 
 .blog-details__body-figure {
-    margin-top: 1.7rem;
-    width: 33.5rem;
-    @include sp {
-        margin-top: 3.9rem;
-        width: 100%;
+    margin-top: 3.9rem;
+    width: 100%;
+    @include pc {
+        margin-top: 1.7rem;
+        width: 33.5rem;
     }
 }
 
@@ -273,22 +272,23 @@
 .blog-details__divider {
     border: none;
     border-top: 0.5px solid $color-black;
-    margin-top: 4rem;
-    @include sp {
-        margin-top: 3.8rem;
+    margin-top: 3.8rem;
+    @include pc {
+        margin-top: 4rem;
     }
 }
 
 .blog-details__blockquote {
     background-color: #f5f5f5;
-    padding: 1.75rem 3rem 1rem 1.7rem;
-    margin-top: 1.7rem;
+    padding: 1.9rem 2rem 1rem 1.7rem;
+    margin-top: 1.9rem;
     display: flex;
     align-items: flex-start;
-    gap: 0.9rem;
-    @include sp {
-        padding: 1.9rem 2rem 1rem 1.7rem;
-        gap: 1.6rem;
+    gap: 1.6rem;
+    @include pc {
+        padding: 1.75rem 3rem 1rem 1.7rem;
+        gap: 0.9rem;
+        margin-top: 1.7rem;
     }
 
     &::before {
@@ -299,32 +299,32 @@
         background-image: url('../../images/icon-blockquote.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        margin-left: 1.3rem;
-        margin-top: 0.2rem;
-        @include sp {
-            margin-left: 0.9rem;
-            margin-top: 0.4rem;
+        margin-left: 0.9rem;
+        margin-top: 0.4rem;
+        @include pc {
+            margin-left: 1.3rem;
+            margin-top: 0.2rem;
         }
     }
 
     p {
-        font-size: 1.8rem;
-        line-height: calc(30 / 18);
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
         margin: 0;
-        @include sp {
-            font-size: 1.6rem;
-            line-height: calc(30 / 16);
+        @include pc {
+            font-size: 1.8rem;
+            line-height: calc(30 / 18);
         }
     }
 }
 
 .blog-details__nav {
     display: flex;
-    gap: 7.9rem;
-    margin-top: 5.2rem;
-    @include sp {
-        gap: 2.1rem;
-        margin-top: 4.1rem;
+    gap: 2.2rem;
+    margin-top: 4.2rem;
+    @include pc {
+        gap: 7.9rem;
+        margin-top: 5.3rem;
     }
 }
 
@@ -349,9 +349,9 @@
     color: $color-white;
     font-size: 1.7rem;
     line-height: calc(30 / 17);
-    padding: 0.4rem 1.8rem;
-    @include sp {
-        padding: 0.4rem 2rem 0.3rem;
+    padding: 0.4rem 2rem 0.3rem;
+    @include pc {
+        padding: 0.4rem 1.8rem;
     }
 }
 
@@ -361,20 +361,22 @@
 
 .blog-details__nav-content {
     display: flex;
-    gap: 1.6rem;
+    flex-direction: column;
+    gap: 0.6rem;
     margin-top: 1.5rem;
     align-items: flex-start;
-    @include sp {
-        flex-direction: column;
-        gap: 0.6rem;
+    @include pc {
+        flex-direction: row;
+        gap: 1.6rem;
     }
 }
 
 .blog-details__nav-image {
     width: 9.8rem;
     flex-shrink: 0;
-    @include sp {
-        display: none;
+    display: none;
+    @include pc {
+        display: block;
     }
 }
 
@@ -385,9 +387,9 @@
 }
 
 .blog-details__related {
-    margin-top: 9.3rem;
-    @include sp {
-        margin-top: 6.4em;
+    margin-top: 6.3em;
+    @include pc {
+        margin-top: 9.3rem;
     }
 }
 
@@ -399,31 +401,33 @@
     background-color: $color-black;
     color: $color-white;
     margin: 0;
-    @include sp {
-        text-align: center;
+    text-align: center;
+    @include pc {
+        text-align: left;
     }
 }
 
 .blog-details__related-items {
     display: flex;
     flex-direction: column;
-    @include sp {
-        gap: 0.2rem;
+    gap: 0.2rem;
+    @include pc {
+        gap: 0;
     }
 }
 
 .blog-details__related-item {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
     text-decoration: none;
     color: $color-black;
     transition: opacity 0.2s;
-    margin-top: 3rem;
+    margin-top: 1.9rem;
     align-items: flex-start;
-    @include sp {
-        gap: 2rem;
-        margin-top: 1.9rem;
+    @include pc {
+        gap: 3rem;
+        margin-top: 3rem;
     }
 }
 
@@ -435,8 +439,8 @@
 
 .blog-details__related-image {
     position: relative;
-    width: 20rem;
-    height: 14rem;
+    width: 16rem;
+    aspect-ratio: 16 / 11;
     flex-shrink: 0;
     overflow: hidden;
 
@@ -446,26 +450,27 @@
         object-fit: cover;
     }
 
-    @include sp {
-        width: 16rem;
-        height: 11rem;
+    @include pc {
+        width: 20rem;
+        aspect-ratio: 20 / 14;
     }
 }
 
 .blog-details__related-body {
     flex: 1;
-    @include sp {
     margin-top: 0.8rem;
+    @include pc {
+        margin-top: 0;
     }
 }
 
 .blog-details__related-item-title {
-    font-size: 2rem;
-    line-height: calc(25 / 20);
+    font-size: 1.7rem;
+    line-height: calc(28 / 17);
     font-weight: 700;
-    @include sp {
-        font-size: 1.7rem;
-        line-height: calc(28 / 17);
+    @include pc {
+        font-size: 2rem;
+        line-height: calc(25 / 20);
     }
 }
 
@@ -474,22 +479,23 @@
     font-size: 1.7rem;
     line-height: calc(30 / 17);
     color: $color-black;
-    margin-top: 1.2rem;
-    margin-left: 0.5rem;
-    @include sp {
-        margin-top: 0.4rem;
-        margin-left: 0;
+    margin-top: 0.4rem;
+    margin-left: 0;
+    @include pc {
+        margin-top: 1.2rem;
+        margin-left: 0.5rem;
     }
 }
 
 .blog-details__sidebar {
-    width: 25rem;
+    width: 100%;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    @include sp {
-        width: 100%;
+    gap: 2.97rem;
+    @include pc {
+        width: 25rem;
+        gap: 3rem;
     }
 }
 
@@ -508,9 +514,9 @@
 }
 
 .sidebar-widget__body {
-    padding: 1.4rem 1.4rem 1.35rem;
-    @include sp {
-        padding: 2rem 1.9rem 1.9rem
+    padding: 2rem 1.9rem 1.9rem;
+    @include pc {
+        padding: 1.4rem 1.4rem 1.35rem;
     }
 }
 
@@ -520,13 +526,14 @@
 }
 
 .sidebar-ad {
+    display: block;
     background-color: $color-grey;
-    margin: 1.5rem;
-    padding: 6.8rem 6.5rem;
+    margin: 1.9rem;
+    padding: 9.9rem 6.5rem 9.6rem;
     text-align: center;
-    @include sp {
-        margin: 1.9rem;
-        padding: 9.7rem 6.5rem;
+    @include pc {
+        margin: 1.5rem;
+        padding: 6.8rem 6.5rem;
     }
 
     p {
@@ -545,12 +552,12 @@
     flex: 1;
     background: $color-grey;
     border-right: none;
-    padding: 1rem 1.2rem;
+    padding: 1.65rem;
     font-size: 1.4rem;
     outline: none;
     min-width: 0;
-    @include sp {
-        padding: 1.65rem;
+    @include pc {
+        padding: 1rem 1.2rem;
     }
 }
 
@@ -562,23 +569,23 @@
     background-color: $color-black;
     color: $color-white;
     border: none;
-    width: 4rem;
+    width: 5.35rem;
     align-self: stretch;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    @include sp {
-        width: 5.35rem;
+    @include pc {
+        width: 4rem;
     }
 
     .sidebar-search__icon {
-        width: 2.3rem;
-        height: 2.3rem;
-        @include sp {
-            width: 3rem;
-            height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        @include pc {
+            width: 2.3rem;
+            height: 2.3rem;
         }
     }
 }
@@ -592,20 +599,20 @@
 }
 
 .sidebar-recommended__item {
-    padding-top: 1.5rem;
-    @include sp {
-        padding-top: 2.1rem;
+    padding-top: 2.1rem;
+    @include pc {
+        padding-top: 1.5rem;
     }
 }
 
 .sidebar-recommended__item a {
     display: flex;
-    gap: 1.2rem;
+    gap: 2rem;
     text-decoration: none;
     color: $color-black;
     transition: opacity 0.2s;
-    @include sp {
-        gap: 1.5rem;
+    @include pc {
+        gap: 1.2rem;
     }
 }
 
@@ -617,21 +624,22 @@
 
 .sidebar-recommended__image {
     position: relative;
-    width: 9.5rem;
-    height: 7.5rem;
+    width: 16rem;
+    aspect-ratio: 16 / 11;
     flex-shrink: 0;
-    background-color: rgba(80, 80, 80, 0.1);
-    @include sp {
-        width: 16rem;
-        height: 11rem;
+    background-color: $color-grey;
+    @include pc {
+        width: 9.5rem;
+        aspect-ratio: 95 / 75;
     }
 }
 
 .sidebar-recommended__body {
     flex: 1;
-    padding-left: 0.5rem;
-    @include sp {
-        padding-top: 0.8rem;
+    padding-top: 0.7rem;
+    @include pc {
+        padding-left: 0.5rem;
+        padding-top: 0;
     }
 }
 
@@ -648,18 +656,22 @@
 
 .sidebar-categories__list li {
     border-bottom: 0.5px solid $color-black;
+    padding-bottom: 0.75rem;
+    @include pc {
+        padding-bottom: 0.7rem;
+    }
 }
 
 .sidebar-categories__list li a {
     display: block;
-    padding: 1.2rem 0.1rem 0.7rem;
+    padding: 1.1rem 0.1rem 0;
     font-size: 1.7rem;
     line-height: calc(28 / 17);
     color: $color-black;
     text-decoration: none;
     transition: opacity 0.2s;
-    @include sp {
-            padding: 1.1rem 0.1rem 0.75rem;
+    @include pc {
+        padding: 1.2rem 0.1rem 0;
     }
 }
 
