@@ -1,0 +1,67 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+// ベーススタイル（全ページ共通）
+.breadcrumb {
+    background: $color-grey;
+    padding: 1.1rem 0 0.7rem;
+    @include pc {
+        padding: 1.8rem 0 1.3rem;
+    }
+}
+
+.breadcrumb__list {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 1.6rem;
+    line-height: 1.14;
+    row-gap: 0.2rem;
+}
+
+
+.breadcrumb__item:not(:last-child) {
+    white-space: nowrap;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+    content: '>';
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: $color-black;
+    position: relative;
+    @include pc {
+        top: -0.1rem;
+    }
+}
+
+.page-result-details .breadcrumb__item:nth-child(1)::after {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    @include pc {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+.page-result-details .breadcrumb__item:nth-child(2)::after {
+    margin-left: 2.3rem;
+    margin-right: 2.1rem;
+    @include pc {
+        margin-left: 2rem;
+        margin-right: 2.3rem;
+    }
+}
+.page-result-details .breadcrumb__item:nth-child(3)::after {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    @include pc {
+        margin-left: 2rem;
+        margin-right: 1.9rem;
+    }
+}
+
+.breadcrumb__item:has(.breadcrumb__link) {
+    padding: 0;
+}
+

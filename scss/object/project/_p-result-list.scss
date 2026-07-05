@@ -1,0 +1,145 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.page-results .pagination__gap .pagination__item:nth-child(1) { margin-left: 0; }
+.page-results .pagination__gap .pagination__item:nth-child(2) {
+    margin-left: 0.45rem;
+    @include pc {
+        margin-left: 1rem;
+    }
+}
+.page-results .pagination__gap .pagination__item:nth-child(3) {
+    margin-left: 0.45rem;
+    @include pc {
+        margin-left: 1rem;
+    }
+}
+.page-results .pagination__gap .pagination__item:nth-child(4) {
+    margin-left: 1rem;
+    @include pc {
+        margin-left: 2rem;
+    }
+}
+.page-results .pagination__gap .pagination__item:nth-child(5) {
+    margin-left: 1rem;
+    @include pc {
+        margin-left: 2rem;
+    }
+}
+
+.page-results .pagination__item.is-dots span {
+    margin-top: 0;
+    @include pc {
+        margin-top: 0;
+    }
+}
+
+.page-results .pagination {
+    margin-top: 5.8rem;
+    @include pc {
+        margin-top: 7.1rem;
+    }
+}
+
+.result-list {
+    padding: 4rem 0 8rem;
+    @include pc {
+        padding: 6.7rem 0 21rem;
+    }
+}
+
+.result-list__title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    @include pc {
+        font-size: 2.5rem;
+    }
+}
+
+.result-list__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    margin-top: 3rem;
+    @include pc {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10.6rem;
+        margin-top: 4rem;
+    }
+
+    // 2段目以降
+    & > :nth-child(n+3) {
+        margin-top: 3.5rem;
+        @include pc {
+            margin-top: 6.2rem;
+        }
+    }
+
+    // 3段目以降
+    & > :nth-child(n+5) {
+        margin-top: 3.5rem;
+        @include pc {
+            margin-top: 7.2rem;
+        }
+    }
+}
+
+.result-list-item {
+    display: block;
+}
+
+.result-list-item__image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 387 / 273;
+    @include pc {
+        width: 38.7rem;
+    }
+}
+
+.result-list-item__category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $color-red;
+    color: $color-white;
+    font-size: 1.2rem;
+    line-height: calc(25 / 15);
+    font-weight: 700;
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    @include pc {
+        font-size: 1.5rem;
+    }
+}
+
+.result-list-item__body {
+    margin-top: 1rem;
+    @include pc {
+        margin-top: 1.9rem;
+    }
+}
+
+.result-list-item__text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: calc(25 / 20);
+    @include pc {
+        font-size: 2rem;
+    }
+}
+
+.result-list-item__date {
+    margin-top: 0.7rem;
+    font-size: 1.2rem;
+    line-height: calc(32 / 18);
+    text-align: right;
+    @include pc {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+}

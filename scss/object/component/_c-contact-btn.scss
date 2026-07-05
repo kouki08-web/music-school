@@ -1,0 +1,66 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.contact-btn {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+    display: flex;
+    justify-content: center;
+    @include pc {
+        left: auto;
+        right: 0;
+        display: block;
+    }
+}
+
+.contact-btn.is-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-btn.is-docked {
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.5rem;
+    height: 6rem;
+    position: relative;
+    top: 0;
+    padding-top: 0;
+    font-weight: 700;
+    background-color: $color-red;
+    color: $color-white;
+    font-size: 2rem;
+    text-decoration: none;
+    letter-spacing: 0.17em;
+    cursor: pointer;
+    border: 1px solid $color-red;
+    transition: color 0.4s, background-color 0.4s;
+    @include pc {
+        width: 30rem;
+        padding-top: 0.7rem;
+        top: 12%;
+    }
+}
+
+@include hover {
+    .contact-btn a:hover {
+        @include pc {
+            background-color: $color-white;
+            color: $color-red;
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+// pcサイズ
+@mixin pc {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// ホバー可能デバイスのみ
+@mixin hover {
+    @media (any-hover: hover) {
+        @content;
+    }
+}

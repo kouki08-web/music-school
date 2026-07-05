@@ -1,0 +1,66 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+body.page-404 .fv-slide__image {
+    aspect-ratio: 375 / 305;
+    @include pc {
+        aspect-ratio: 1080 / 200;
+    }
+}
+
+.page-404 {
+    .not-found {
+        padding: 4.2rem 0 5rem;
+        text-align: center;
+        @include pc {
+            padding: 6.8rem 0 8.9rem;
+        }
+    }
+
+    .not-found__text {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+        text-align: left;
+        @include pc {
+            font-size: 1.8rem;
+            line-height: calc(30 / 18);
+            text-align: center;
+        }
+    }
+
+    .not-found__btn {
+        margin-top: 0.9rem;
+        display: flex;
+        justify-content: center;
+        @include pc {
+            margin-top: 4rem;
+        }
+    }
+
+    .not-found__btn a {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-red;
+        color: $color-white;
+        font-size: 2rem;
+        font-weight: 700;
+        transition: background-color 0.4s, color 0.4s;
+        @include pc {
+            width: 25rem;
+            font-size: 2.5rem;
+        }
+
+        @include hover {
+            &:hover {
+                @include pc {
+                    background-color: $color-white;
+                    color: $color-red;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

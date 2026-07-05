@@ -1,0 +1,121 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+//guide
+.guide {
+    padding: 4.6rem 0 4.8rem;
+    @include pc {
+        padding: 3.4rem 0 7.3rem;
+    }
+}
+
+.guide__title {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+    font-weight: 700;
+    @include pc {
+        font-size: 3rem;
+        line-height: calc(50 / 30);
+    }
+}
+
+.guide__items {
+    position: relative;
+    padding-left: 1.5rem;
+    padding-bottom: 0.7rem;
+    margin: 4.3rem auto 0;
+    @include pc {
+        padding-left: 6rem;
+        padding-bottom: 3.5rem;
+        margin: 6rem auto 0;
+    }
+}
+
+.guide__items::before {
+    content: '';
+    position: absolute;
+    left: 1.7rem;
+    top: 2rem;
+    bottom: 2rem;
+    width: 0.3rem;
+    background: $color-red;
+    @include pc {
+        left: 6rem;
+        top: 0;
+    }
+}
+
+.guide__items::after {
+    content: '';
+    position: absolute;
+    left: 0.55rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    bottom: 2.2rem;
+    border-right: 0.3rem solid $color-red;
+    border-bottom: 0.3rem solid $color-red;
+    transform: rotate(45deg);
+    @include pc {
+        left: 4.85rem;
+    }
+}
+
+.guide-item {
+    position: relative;
+    padding-bottom: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include pc {
+        flex-direction: row;
+        align-items: flex-start;
+        padding-bottom: 6.5rem;
+    }
+}
+
+.guide-item:last-child {
+    padding-bottom: 0;
+}
+
+.guide-item::before {
+    content: '';
+    position: absolute;
+    left: -0.7rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: $color-red;
+    z-index: 1;
+    @include pc {
+        left: -0.9rem;
+    }
+}
+
+.guide-item__title {
+    color: $color-red;
+    font-size: 2.2rem;
+    line-height: calc(33 / 22);
+    font-weight: 700;
+    margin-top: -0.7rem;
+    margin-left: 3.3rem;
+    white-space: nowrap;
+    width: 100%;
+    @include pc {
+        margin-left: 6.1rem;
+        width: 19.2rem;
+    }
+}
+
+.guide-item__text {
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+    margin-left: 3.3rem;
+    margin-top: 1rem;
+    @include pc {
+        font-size: 1.8rem;
+        line-height: calc(30 / 18);
+        margin-top: -0.7rem;
+        margin-left: 0;
+    }
+}

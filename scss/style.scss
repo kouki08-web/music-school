@@ -1,0 +1,44 @@
+// ============================================================
+// Foundation (土台)
+// ============================================================
+@use "./foundation/reset";
+@use "./foundation/base";
+
+// ============================================================
+// Layout (共通レイアウト)
+// ============================================================
+@use "./layout/l-header";
+@use "./layout/l-footer";
+
+// ============================================================
+// Object - Project (各セクション)
+// ============================================================
+@use "./object/project/p-top-fv";
+@use "./object/project/p-top-about";
+@use "./object/project/p-top-blog";
+@use "./object/project/p-top-contact";
+@use "./object/project/p-top-greeting";
+@use "./object/project/p-top-guide";
+@use "./object/project/p-top-question";
+@use "./object/project/p-top-reason";
+@use "./object/project/p-top-voice";
+
+// ※ ComponentやUtilityにファイルを作ったら、ここに追記していきます。
+@use '../scss/object/component/c-slide';
+@use './object/component/c-pagetop';
+@use './object/component/c-contact-btn';
+@use './object/component/c-page-header';
+@use './object/component/p-breadcrumb';
+
+// ============================================================
+// Object - Project (下層ページ)
+// ============================================================
+@use './object/project/p-blog-list';
+@use './object/project/p-blog-details';
+@use './object/project/p-plan';
+@use './object/project/p-contact-form';
+@use './object/project/p-contact-send';
+@use './object/project/p-result-list';
+@use './object/project/p-result-details';
+@use './object/project/p-search';
+@use './object/project/p-404';

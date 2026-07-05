@@ -1,0 +1,228 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.about {
+    padding: 4.7rem 0 3.3rem;
+    text-align: center;
+    @include pc {
+        padding: 6.6rem 0 5.4rem;
+    }
+}
+
+.about__title {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color-red;
+    line-height: calc(40 / 25);
+    @include pc {
+        font-size: 3.5rem;
+        line-height: calc(50 / 35);
+    }
+}
+
+.about__lead {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    margin-top: 0.6rem;
+    position: relative;
+    right: 0.7rem;
+    
+    @include pc {
+        transform: translateX(0);
+        margin-top: 1.7rem;
+        right: 0;
+    }
+}
+
+.about__keywords {
+    position: relative;
+    margin: 2rem auto 0;
+    @include pc {
+        margin: 3.5rem auto 0;
+    }
+}
+
+.about__arc {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.about__diagram {
+    position: relative;
+    display: inline-flex;
+    z-index: 2;
+}
+
+.about__arrow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+}
+
+.about__arrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 1.7rem;
+    transform: translateX(-50%) translateY(-40%) rotate(-45deg);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-top: 3px solid $color-red;
+    border-right: 3px solid $color-red;
+    border-radius: 1px;
+    @include pc {
+        margin-top: 0.7rem;
+    }
+}
+
+.about__list {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.about__list li:nth-child(1) {
+    transform: translateX(-6.5%);
+    margin-top: 3.3rem;
+    @include pc {
+        transform: translateX(-9.5%);
+        margin-top: 1.8rem;
+    }
+}
+
+.about__list li:nth-child(2) {
+    margin-top: 1.8rem;
+}
+
+.about__list li:nth-child(3) {
+    transform: translateX(2.5%);
+    margin-top: 1.9rem;
+    @include pc {
+        transform: translateX(0);
+        margin-top: 1.8rem;
+    }
+}
+
+.about__list::before {
+    content: '';
+    position: absolute;
+    top: 0.3rem;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    background-color: $color-red;
+    z-index: 1;
+    @include pc {
+        top: -0.5rem;
+    }
+}
+
+.about__list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.about__list .en {
+    flex: 1;
+    text-align: right;
+    padding-right: 3rem;
+    font-size: 2rem;
+    line-height: calc(50 / 20);
+    font-weight: 700;
+    color: $color-red;
+    white-space: nowrap;
+    @include pc {
+        font-size: 2.5rem;
+        line-height: calc(50 / 25);
+    }
+}
+
+.about__list .dot {
+    display: inline-block;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    width: 2rem;
+    height: 2rem;
+    background-color: $color-red;
+    border-radius: 50%;
+}
+
+// 1つ目（Enthusiasm / 熱狂し）
+.about__list li:nth-child(1) .en {
+    padding-right: 3rem;
+}
+.about__list li:nth-child(1) .ja {
+    padding-left: 3rem;
+}
+
+// 2つ目（Envision / 想像し）
+.about__list li:nth-child(2) .en {
+    padding-right: 3rem;
+}
+.about__list li:nth-child(2) .ja {
+    padding-left: 3rem;
+}
+
+// 3つ目（Effulgent / 輝く存在へ）
+.about__list li:nth-child(3) .en {
+    padding-right: 3rem;
+}
+.about__list li:nth-child(3) .ja {
+    padding-left: 3rem;
+}
+
+// 1つ目のドット（Enthusiasm）
+.about__list li:nth-child(1) .dot {
+    top: 0;
+    left: -0.2rem;
+    @include pc {
+        left: 0rem;
+    }
+}
+
+// 2つ目のドット（Envision）
+.about__list li:nth-child(2) .dot {
+    top: 0.1rem;
+    left: 0.1rem;
+    @include pc {
+        top: 0;
+        left: 0;
+    }
+}
+
+// 3つ目のドット（Effulgent）
+.about__list li:nth-child(3) .dot {
+    top: 0;
+    left: 0rem;
+    @include pc {
+        left: 0.2rem;
+    }
+}
+
+.about__list .ja {
+    flex: 1;
+    text-align: left;
+    padding-left: 3rem;
+    font-size: 2rem;
+    line-height: calc(50 / 20);
+    white-space: nowrap;
+    @include pc {
+        font-size: 2.3rem;
+        line-height: calc(50 / 23);
+    }
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/header-icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>ブログ | きたむらミュージックスクール</title>
+</head>
+<body class="page-blog">
+    <div id="container">
+        <header class="header">
+            <button id="js-hamburger" class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header-menu">
+            <nav>
+                <ul>
+                    <li><a href="./plan.html">料金</a></li>
+                    <li><a href="./blog_list.html">ブログ</a></li>
+                    <li><a href="./result_list.html">卒業実績</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="js-overlay" class="overlay"></div>
+        <div class="inner">
+            <div class="header__left">
+                <div class="header__image">
+                    <img src="images/header-icon.svg" alt="">
+                </div>
+                <p class="header__logo"><a href="./index.html">きたむら<br class="pc"><span>ミュージックスクール</span></a></p>
+            </div>
+            <nav class="header__nav pc">
+                <ul>
+                    <li><a href="./plan.html"><span>料金</span></a></li>
+                    <li><a href="./blog_list.html"><span>ブログ</span></a></li>
+                    <li><a href="./result_list.html"><span>卒業実績</span></a></li>
+                    <li class="nav-contact"><a href="./contact_form.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+
+        <main>
+            <div class="main">
+                <section class="fv">
+                    <div class="fv__contents">
+                        <div class="fv-slide__image">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="images/blog-list-fv-pc.jpg">
+                                <img src="images/blog-list-fv-sp.jpg" alt="ブログ">
+                            </picture>
+                        </div>
+                        <div class="fv__catch">
+                            <h1>ブログ</h1>
+                        </div>
+                    </div>
+                </section>
+
+                <nav class="breadcrumb">
+                    <div class="inner">
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item"><span class="breadcrumb__link" onclick="location.href='./index.html'">ホーム</span></li>
+                            <li class="breadcrumb__item">ブログ</li>
+                        </ol>
+                    </div>
+                </nav>
+
+                <section class="blog-list">
+                    <div class="inner">
+                        <div class="blog-list__contents">
+                            <h2 class="blog-list__title">ブログ一覧</h2>
+                            <div class="blog-list__items">
+                                <a href="./blog_details.html" class="blog-list__item blog-list-item">
+                                    <div class="blog-list-item__image">
+                                        <span class="blog-list-item__category blog-list-item__category">ギター</span>
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog-list-category-01-pc.jpg">
+                                            <img src="images/blog-list-category-01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
+                                        </picture>
+                                    </div>
+                                    <div class="blog-list-item__body">
+                                        <p class="blog-list-item__title">アルペジオが劇的に向上する3つの習慣</p>
+                                        <div class="blog-list-item__date">
+                                            <time datetime="2026-01-01">0000.00.00</time>
+                                        </div>
+                                        <div class="blog-list-item__text">
+                                            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="./blog_details.html" class="blog-list__item blog-list-item">
+                                    <div class="blog-list-item__image">
+                                        <span class="blog-list-item__category blog-list-item__category">集客方法</span>
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog-list-category-02-pc.jpg">
+                                            <img src="images/blog-list-category-02-sp.jpg" alt="集客してる間は売れないという法則">
+                                        </picture>
+                                    </div>
+                                    <div class="blog-list-item__body">
+                                        <p class="blog-list-item__title">集客してる間は売れないという法則</p>
+                                        <div class="blog-list-item__date">
+                                            <time datetime="2026-01-01">0000.00.00</time>
+                                        </div>
+                                        <div class="blog-list-item__text">
+                                            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="./blog_details.html" class="blog-list__item blog-list-item">
+                                    <div class="blog-list-item__image">
+                                        <span class="blog-list-item__category blog-list-item__category">SNS</span>
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog-list-category-03-pc.jpg">
+                                            <img src="images/blog-list-category-03-sp.jpg" alt="フォロワーではなくファンを増やせとは？">
+                                        </picture>
+                                    </div>
+                                    <div class="blog-list-item__body">
+                                        <p class="blog-list-item__title">フォロワーではなくファンを増やせとは？</p>
+                                        <div class="blog-list-item__date">
+                                            <time datetime="2026-01-01">0000.00.00</time>
+                                        </div>
+                                        <div class="blog-list-item__text">
+                                            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="./blog_details.html" class="blog-list__item blog-list-item">
+                                    <div class="blog-list-item__image">
+                                        <span class="blog-list-item__category blog-list-item__category">ギター</span>
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog-list-category-01-pc.jpg">
+                                            <img src="images/blog-list-category-01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
+                                        </picture>
+                                    </div>
+                                    <div class="blog-list-item__body">
+                                        <p class="blog-list-item__title">アルペジオが劇的に向上する3つの習慣</p>
+                                        <div class="blog-list-item__date">
+                                            <time datetime="2026-01-01">0000.00.00</time>
+                                        </div>
+                                        <div class="blog-list-item__text">
+                                            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="./blog_details.html" class="blog-list__item blog-list-item">
+                                    <div class="blog-list-item__image">
+                                        <span class="blog-list-item__category blog-list-item__category--marketing">集客方法</span>
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog-list-category-02-pc.jpg">
+                                            <img src="images/blog-list-category-02-sp.jpg" alt="集客してる間は売れないという法則">
+                                        </picture>
+                                    </div>
+                                    <div class="blog-list-item__body">
+                                        <p class="blog-list-item__title">集客してる間は売れないという法則</p>
+                                        <div class="blog-list-item__date">
+                                            <time datetime="2026-01-01">0000.00.00</time>
+                                        </div>
+                                        <div class="blog-list-item__text">
+                                            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="./blog_details.html" class="blog-list__item blog-list-item">
+                                    <div class="blog-list-item__image">
+                                        <span class="blog-list-item__category blog-list-item__category--sns">SNS</span>
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog-list-category-03-pc.jpg">
+                                            <img src="images/blog-list-category-03-sp.jpg" alt="フォロワーではなくファンを増やせとは？">
+                                        </picture>
+                                    </div>
+                                    <div class="blog-list-item__body">
+                                        <p class="blog-list-item__title">フォロワーではなくファンを増やせとは？</p>
+                                        <div class="blog-list-item__date">
+                                            <time datetime="2026-01-01">0000.00.00</time>
+                                        </div>
+                                        <div class="blog-list-item__text">
+                                            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="./blog_details.html" class="blog-list__item blog-list-item">
+                                    <div class="blog-list-item__image">
+                                        <span class="blog-list-item__category blog-list-item__category--guitar">ギター</span>
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog-list-category-01-pc.jpg">
+                                            <img src="images/blog-list-category-01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
+                                        </picture>
+                                    </div>
+                                    <div class="blog-list-item__body">
+                                        <p class="blog-list-item__title">アルペジオが劇的に向上する3つの習慣</p>
+                                        <div class="blog-list-item__date">
+                                            <time datetime="2026-01-01">0000.00.00</time>
+                                        </div>
+                                        <div class="blog-list-item__text">
+                                            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="./blog_details.html" class="blog-list__item blog-list-item">
+                                    <div class="blog-list-item__image">
+                                        <span class="blog-list-item__category blog-list-item__category--marketing">集客方法</span>
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog-list-category-02-pc.jpg">
+                                            <img src="images/blog-list-category-02-sp.jpg" alt="集客してる間は売れないという法則">
+                                        </picture>
+                                    </div>
+                                    <div class="blog-list-item__body">
+                                        <p class="blog-list-item__title">集客してる間は売れないという法則</p>
+                                        <div class="blog-list-item__date">
+                                            <time datetime="2026-01-01">0000.00.00</time>
+                                        </div>
+                                        <div class="blog-list-item__text">
+                                            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="./blog_details.html" class="blog-list__item blog-list-item">
+                                    <div class="blog-list-item__image">
+                                        <span class="blog-list-item__category blog-list-item__category--sns">SNS</span>
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog-list-category-03-pc.jpg">
+                                            <img src="images/blog-list-category-03-sp.jpg" alt="フォロワーではなくファンを増やせとは？">
+                                        </picture>
+                                    </div>
+                                    <div class="blog-list-item__body">
+                                        <p class="blog-list-item__title">フォロワーではなくファンを増やせとは？</p>
+                                        <div class="blog-list-item__date">
+                                            <time datetime="2026-01-01">0000.00.00</time>
+                                        </div>
+                                        <div class="blog-list-item__text">
+                                            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="./blog_details.html" class="blog-list__item blog-list-item">
+                                    <div class="blog-list-item__image">
+                                        <span class="blog-list-item__category blog-list-item__category--guitar">ギター</span>
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog-list-category-01-pc.jpg">
+                                            <img src="images/blog-list-category-01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
+                                        </picture>
+                                    </div>
+                                    <div class="blog-list-item__body">
+                                        <p class="blog-list-item__title">アルペジオが劇的に向上する3つの習慣</p>
+                                        <div class="blog-list-item__date">
+                                            <time datetime="2026-01-01">0000.00.00</time>
+                                        </div>
+                                        <div class="blog-list-item__text">
+                                            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <nav class="pagination">
+                                <ul class="pagination__list pagination__gap">
+                                    <li class="pagination__item is-active"><span>1</span></li>
+                                    <li class="pagination__item"><a href="#">2</a></li>
+                                    <li class="pagination__item"><a href="#">3</a></li>
+                                    <li class="pagination__item is-dots"><span>…</span></li>
+                                    <li class="pagination__item"><a href="#">9</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <a href="#" id="js-pagetop" class="pagetop" aria-label="ページトップへ戻る">
+            <img class="pagetop__icon" src="images/top-icon.svg" width="68" height="68" alt="ページトップへ戻る">
+        </a>
+
+        <div class="contact-btn">
+            <a href="./contact_form.html">お問い合わせ</a>
+        </div>
+        <footer class="footer">
+            <div class="footer__nav">
+                <nav class="footer__nav-link">
+                    <ul>
+                        <li><a href="./index.html">ホーム</a></li>
+                        <li><a href="./plan.html">料金</a></li>
+                        <li><a href="./blog_list.html">ブログ</a></li>
+                        <li><a href="./result_list.html">卒業実績</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__image">
+                <img src="images/footer-icon.svg" alt="フッターアイコン">
+            </div>
+            <div class="footer__copyright">
+                <p class="copyright">Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
+            </div>
+            <div class="footer__sns">
+                <ul>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="images/twitter.svg" alt="twitter"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="images/facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="images/youtube.svg" alt="youtube"></a></li>
+                    <li><a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer"><img src="images/instagram.svg" alt="instagram"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+// greeting
+
+.greeting {
+    position: relative;
+    padding: 5rem 0 4rem;
+    background: $color-red;
+    @include pc {
+        padding: 6.8rem 0 6rem;
+    }
+}
+
+.greeting__contents {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-white;
+}
+
+.greeting__title {
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+    font-weight: 700;
+    text-align: center;
+    @include pc {
+        font-size: 3rem;
+        line-height: calc(50 / 30);
+    }
+}
+
+.greeting__text {
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    text-align: center;
+    @include pc {
+        margin-top: 3rem;
+    }
+}

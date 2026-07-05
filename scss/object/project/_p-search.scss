@@ -1,0 +1,170 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.page-search {
+    .search {
+        padding: 3.9rem 0 20.2rem;
+        @include pc {
+            padding: 6.8rem 0 21rem;
+        }
+    }
+
+    .search__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .search__keyword {
+        font-size: 1.8rem;
+    }
+
+    .search__keyword-text {
+        font-weight: 700;
+    }
+
+    .search__count {
+        font-size: 1.8rem;
+    }
+
+    .search__items {
+        display: flex;
+        flex-direction: column;
+        margin-top: 4.3rem;
+    }
+
+    .search-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        @include pc {
+            flex-direction: row;
+            gap: 5rem;
+        }
+        &:nth-child(2) {
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 6.7rem;
+            }
+        }
+        &:nth-child(3) {
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
+            }
+        }
+        &:nth-child(4) {
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
+            }
+        }
+        &:nth-child(5) {
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7.1rem;
+            }
+        }
+        &:nth-child(6) {
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 6.9rem;
+            }
+        }
+        &:nth-child(7) {
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
+            }
+        }
+        &:nth-child(8) {
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
+            }
+        }
+        &:nth-child(9) {
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
+            }
+        }
+        &:nth-child(10) {
+            margin-top: 3.9rem;
+            @include pc {
+                margin-top: 7rem;
+            }
+        }
+    }
+
+    .search-item__image {
+        position: relative;
+        flex-shrink: 0;
+        width: 100%;
+        @include pc {
+            width: 26rem;
+        }
+    }
+
+    .search-item__category {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 9rem;
+        height: 3rem;
+        background-color: $color-red;
+        color: $color-white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include pc {
+            width: 8rem;
+            height: 3rem;
+        }
+    }
+
+    .search-item__body {
+        flex: 1;
+        padding-top: 1.5rem;
+        @include pc {
+            padding-top: 0;
+        }
+    }
+
+    .search-item__title {
+        margin-top: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: calc(30 / 20);
+        @include pc {
+            margin-top: -0.5rem;
+        }
+    }
+
+    .search-item__date {
+        font-size: 1.7rem;
+        line-height: calc(30 / 17);
+        margin-top: 0.5rem;
+        text-align: right;
+        @include pc {
+            margin-top: 0;
+            text-align: left;
+        }
+    }
+
+    .search-item__text {
+        margin-top: 0.9rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: calc(30 / 16);
+        @include pc {
+            margin-top: 1.2rem;
+            font-size: 1.8rem;
+            line-height: calc(30 / 18);
+        }
+    }
+}
