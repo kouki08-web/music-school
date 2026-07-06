@@ -979,17 +979,17 @@ body[class] .fv__catch {
 
 .about__list li:nth-child(1) .dot {
   top: 0;
-  left: -0.2rem;
+  right: 0.2rem;
 }
 @media (min-width: 768px) {
   .about__list li:nth-child(1) .dot {
-    left: 0rem;
+    right: 0.1rem;
   }
 }
 
 .about__list li:nth-child(2) .dot {
   top: 0.1rem;
-  left: 0.1rem;
+  left: 0rem;
 }
 @media (min-width: 768px) {
   .about__list li:nth-child(2) .dot {
@@ -1000,11 +1000,12 @@ body[class] .fv__catch {
 
 .about__list li:nth-child(3) .dot {
   top: 0;
-  left: 0rem;
+  right: 0.1rem;
 }
 @media (min-width: 768px) {
   .about__list li:nth-child(3) .dot {
     left: 0.2rem;
+    right: 0;
   }
 }
 
