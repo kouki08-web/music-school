@@ -3,9 +3,9 @@
 
 //guide
 .guide {
-    padding: 4.6rem 0 4.8rem;
+    padding: 4.6rem 0 1.3rem;
     @include pc {
-        padding: 3.4rem 0 7.3rem;
+        padding: 3.4rem 0 4.3rem;
     }
 }
 
@@ -22,12 +22,11 @@
 
 .guide__items {
     position: relative;
+    overflow: hidden;
     padding-left: 1.5rem;
-    padding-bottom: 0.7rem;
     margin: 4.3rem auto 0;
     @include pc {
         padding-left: 6rem;
-        padding-bottom: 3.5rem;
         margin: 6rem auto 0;
     }
 }
@@ -37,10 +36,11 @@
     position: absolute;
     left: 1.7rem;
     top: 2rem;
-    bottom: 2rem;
+    height: 66rem;
     width: 0.3rem;
     background: $color-red;
     @include pc {
+        height: 42rem;
         left: 6rem;
         top: 0;
     }
@@ -49,28 +49,29 @@
 .guide__items::after {
     content: '';
     position: absolute;
-    left: 0.55rem;
-    width: 2.6rem;
-    height: 2.6rem;
-    bottom: 2.2rem;
-    border-right: 0.3rem solid $color-red;
-    border-bottom: 0.3rem solid $color-red;
-    transform: rotate(45deg);
+    left: 1.5rem;
+    transform: translateX(-40%);
+    width: 3.5rem;
+    height: 2rem;
+    top: 66.1rem;
+    background: url('../images/guide-arrow.svg') no-repeat center / contain;
     @include pc {
-        left: 4.85rem;
+        left: 6.15rem;
+        top: 40.4rem;
+        transform: translateX(-49%);
     }
 }
 
 .guide-item {
     position: relative;
-    padding-bottom: 4.2rem;
+    margin-bottom: 4.2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     @include pc {
         flex-direction: row;
         align-items: flex-start;
-        padding-bottom: 6.5rem;
+        margin-bottom: 6.5rem;
     }
 }
 

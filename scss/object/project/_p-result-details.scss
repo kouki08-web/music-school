@@ -2,26 +2,12 @@
 @use '../../foundation/mixin' as *;
 .page-result-details {
     .main {
-        padding-bottom: 19.6rem;
+        padding-bottom: 19.5rem;
         @include pc {
             padding-bottom: 15.7rem;
         }
     }
-    .breadcrumb {
-        padding: 1.3rem 0 0.7rem;
-        @include pc {
-            padding: 1.8rem 0 1.3rem;
-        }
-    }
 
-    .breadcrumb__item:not(:last-child)::after {
-    content: '>';
-        position: relative;
-        top: -0.2rem;
-        @include pc {
-            top: -0.1rem;
-        }
-    }
     .result-details {
         padding: 5rem 0 4rem;
         @include pc {
@@ -188,7 +174,7 @@
         font-size: 1.6rem;
         line-height: calc(25 / 16);
         font-weight: 700;
-        width: 15.6rem;
+        width: 100%;
         @include pc {
             width: auto;
         }
@@ -205,6 +191,7 @@
         background-color: $color-black;
         color: $color-white;
         font-size: 1.8rem;
+        line-height: calc(30 / 18);
         font-weight: 700;
         padding: 0;
         width: 100%;
@@ -213,7 +200,7 @@
         justify-content: center;
         align-items: center;
         @include pc {
-            padding: 1.2rem 3.1rem 1.1rem;
+            padding: 1rem 3.1rem;
             width: auto;
             height: auto;
             display: block;

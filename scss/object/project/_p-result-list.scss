@@ -27,13 +27,6 @@
     }
 }
 
-.page-results .pagination__item.is-dots span {
-    margin-top: 0;
-    @include pc {
-        margin-top: 0;
-    }
-}
-
 .page-results .pagination {
     margin-top: 5.8rem;
     @include pc {
@@ -42,7 +35,7 @@
 }
 
 .result-list {
-    padding: 4rem 0 8rem;
+    padding: 4rem 0 20.3rem;
     @include pc {
         padding: 6.7rem 0 21rem;
     }
@@ -50,10 +43,12 @@
 
 .result-list__title {
     font-size: 2rem;
+    line-height: calc(30 / 20);
     font-weight: 700;
     text-align: center;
     @include pc {
         font-size: 2.5rem;
+        line-height: calc(40 / 25);
     }
 }
 
@@ -65,7 +60,7 @@
     @include pc {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 10.6rem;
-        margin-top: 4rem;
+        margin-top: 3.8rem;
     }
 
     // 2段目以降
@@ -111,7 +106,9 @@
     font-weight: 700;
     width: 10rem;
     height: 3rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include pc {
         font-size: 1.5rem;
     }
