@@ -6,10 +6,9 @@
     .plan-overview {
         padding: 4.6rem 0 3.8rem;
         @include pc {
-            padding: 6.7rem 0 5.7rem;
+            padding: 6.6rem 0 5.7rem;
         }
     }
-
     .plan-overview__title {
         text-align: center;
         font-size: 2.5rem;
@@ -338,7 +337,7 @@
     }
 
     .plan-table__table tbody tr td.is-recommended {
-        font-weight: 700;
+        font-weight: 500;
     }
 
     .plan-table__table tbody tr td.is-recommended .plan-table__dot {

@@ -9,6 +9,7 @@ html {
     scroll-padding-top: 8rem;
     word-break: break-all;
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
     font-size: min(calc(10 / 375 * 100vw), calc(500 / 375 * 10px));
     color: #000000;
     @include pc {

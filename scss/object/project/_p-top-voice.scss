@@ -94,15 +94,15 @@
     }
 }
 
-.voice-item__image {
+.voice-item__photo {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     transition: transform 0.4s;
 }
 
 @include hover {
-    .voice-item:hover .voice-item__image {
+    .voice-item:hover .voice-item__photo {
         @include pc {
             transform: scale(1.1);
         }

@@ -37,7 +37,6 @@
 .header__image {
     width: 2.1rem;
     aspect-ratio: 33 / 50;
-    margin-right: -0.5rem;
     @include pc {
         width: 3.2rem;
         margin-right: 1rem;
@@ -54,7 +53,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding-left: 1rem;
+    padding-left: 0.6rem;
     @include pc {
         font-size: 2rem;
         line-height: calc(23 / 20);
@@ -117,7 +116,7 @@
     &::after {
         content: '';
         position: absolute;
-        bottom: -0.2rem;
+        bottom: -0.6rem;
         left: 0;
         width: 0;
         height: 0.2rem;

@@ -46,7 +46,7 @@
         &:nth-child(2) {
             margin-top: 3.9rem;
             @include pc {
-                margin-top: 6.7rem;
+                margin-top: 6.6rem;
             }
         }
         &:nth-child(3) {
@@ -134,6 +134,7 @@
         padding-top: 1.5rem;
         @include pc {
             padding-top: 0;
+            margin-top: -0.5rem;
         }
     }
 
@@ -142,9 +143,6 @@
         font-size: 2rem;
         font-weight: 700;
         line-height: calc(30 / 20);
-        @include pc {
-            margin-top: -0.5rem;
-        }
     }
 
     .search-item__date {

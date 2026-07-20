@@ -1,6 +1,9 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
+// guide-item のテキストだけを上下させる量（ここを変えると .guide-item と ::before の丸が自動で連動）
+$guide-item-shift: 0.75rem;
+
 //guide
 .guide {
     padding: 4.6rem 0 1.3rem;
@@ -22,7 +25,6 @@
 
 .guide__items {
     position: relative;
-    overflow: hidden;
     padding-left: 1.5rem;
     margin: 4.3rem auto 0;
     @include pc {
@@ -40,7 +42,7 @@
     width: 0.3rem;
     background: $color-red;
     @include pc {
-        height: 42rem;
+        height: 42.6rem;
         left: 6rem;
         top: 0;
     }
@@ -57,21 +59,22 @@
     background: url('../images/guide-arrow.svg') no-repeat center / contain;
     @include pc {
         left: 6.15rem;
-        top: 40.4rem;
+        top: 40.7rem;
         transform: translateX(-49%);
     }
 }
 
 .guide-item {
     position: relative;
-    margin-bottom: 4.2rem;
+    margin-bottom: 3.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transform: translateY(-$guide-item-shift);
     @include pc {
         flex-direction: row;
         align-items: flex-start;
-        margin-bottom: 6.5rem;
+        margin-bottom: 5.8rem;
     }
 }
 
@@ -88,6 +91,7 @@
     border-radius: 50%;
     background: $color-red;
     z-index: 1;
+    transform: translateY($guide-item-shift);
     @include pc {
         left: -0.9rem;
     }
@@ -98,7 +102,6 @@
     font-size: 2.2rem;
     line-height: calc(33 / 22);
     font-weight: 700;
-    margin-top: -0.7rem;
     margin-left: 3.3rem;
     white-space: nowrap;
     width: 100%;
@@ -116,7 +119,7 @@
     @include pc {
         font-size: 1.8rem;
         line-height: calc(30 / 18);
-        margin-top: -0.7rem;
+        margin-top: 0;
         margin-left: 0;
     }
 }

@@ -32,8 +32,9 @@ const $pagetop = $('#js-pagetop');
 const $contactBtn = $('.contact-btn');
 const $toggleElements = $pagetop.add($contactBtn);
 const $fv = $('.fv');
-const $breadcrumb = $('.breadcrumb');
-const fvHeight = $fv.length ? $fv.outerHeight() : $breadcrumb.outerHeight();
+// FVがないページは、他ページのFV（.fv-slide__imageのaspect-ratio）相当の高さを閾値にして表示タイミングを揃える
+const subFvRatio = window.matchMedia('(min-width: 768px)').matches ? 200 / 1080 : 300 / 375;
+const fvHeight = $fv.length ? $fv.outerHeight() : window.innerWidth * subFvRatio;
 const $footer = $('.footer');
 
 function updateButtons() {

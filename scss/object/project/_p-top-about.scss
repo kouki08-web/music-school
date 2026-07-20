@@ -71,15 +71,14 @@
 .about__arrow::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 0.2rem;
     left: 50%;
-    margin-top: 0.2rem;
     transform: translateX(-50%);
     width: 3.5rem;
     height: 2rem;
     background: url('../images/about-arrow.svg') no-repeat center / contain;
     @include pc {
-        margin-top: -0.8rem;
+        top: -0.8rem;
     }
 }
 

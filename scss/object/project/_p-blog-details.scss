@@ -60,7 +60,7 @@
     overflow: hidden;
     margin-left: 0;
 
-    .share-btn__frame {
+    .share-btn__icon {
         display: block;
     }
 
@@ -70,61 +70,56 @@
         width: auto;
         background: none;
 
-        .share-btn__frame {
+        .share-btn__icon {
             position: absolute;
             inset: 0;
             width: 100%;
             height: 100%;
         }
-
-        .share-btn__icon {
-            height: 100%;
-            object-fit: cover;
-        }
     }
 
     &--facebook {
         background-color: #425893;
-        .share-btn__frame { width: 1.17rem; }
+        .share-btn__icon { width: 1.17rem; }
         @include pc {
             width: 10.5rem;
-            .share-btn__frame { width: 100%; }
+            .share-btn__icon { width: 100%; }
         }
     }
     &--twitter {
         background-color: #4A9FEB;
-        .share-btn__frame { width: 1.95rem; }
+        .share-btn__icon { width: 1.95rem; }
         @include pc {
             width: 8.8rem;
             margin-left: 0.4rem;
-            .share-btn__frame { width: 100%; }
+            .share-btn__icon { width: 100%; }
         }
     }
     &--hatena {
         background-color: #4EACD5;
-        .share-btn__frame { width: 1.69rem; }
+        .share-btn__icon { width: 1.69rem; }
         @include pc {
             width: 9.3rem;
             margin-left: 0.3rem;
-            .share-btn__frame { width: 100%; }
+            .share-btn__icon { width: 100%; }
         }
     }
     &--line {
         background-color: #52B534;
-        .share-btn__frame { width: 2.15rem; }
+        .share-btn__icon { width: 2.15rem; }
         @include pc {
             width: 8.1rem;
             margin-left: 0.3rem;
-            .share-btn__frame { width: 100%; }
+            .share-btn__icon { width: 100%; }
         }
     }
     &--pocket {
         background-color: #DC4F5A;
-        .share-btn__frame { width: 2.15rem; }
+        .share-btn__icon { width: 2.15rem; }
         @include pc {
             width: 9.1rem;
             margin-left: 0.3rem;
-            .share-btn__frame { width: 100%; }
+            .share-btn__icon { width: 100%; }
         }
     }
 }
@@ -303,7 +298,8 @@
         margin-top: 1.7rem;
     }
 
-    &-icon {
+    .blog-details__blockquote-icon {
+        display: block;
         flex-shrink: 0;
         width: 2.8rem;
         height: 2.4rem;
@@ -389,12 +385,6 @@
         display: block;
         aspect-ratio: 98 / 68;
     }
-
-    .blog-details__nav-photo {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 }
 
 .blog-details__nav-title {
@@ -460,12 +450,6 @@
     aspect-ratio: 16 / 11;
     flex-shrink: 0;
     overflow: hidden;
-
-    .blog-details__related-photo {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 
     @include pc {
         width: 20rem;
@@ -620,6 +604,7 @@
     }
 
     .sidebar-search__btn-icon {
+        display: block;
         width: 3rem;
         height: 3rem;
         @include pc {
