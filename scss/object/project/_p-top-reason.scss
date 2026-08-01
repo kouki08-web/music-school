@@ -47,6 +47,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 3.1rem;
     @include pc {
         flex-direction: row;
         align-items: flex-start;
@@ -71,6 +72,12 @@
 
 .reason-item_catch {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    @include pc {
+        gap: 3.4rem;
+    }
 }
 
 .reason-item_catch h2 {
