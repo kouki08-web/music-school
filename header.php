@@ -17,6 +17,9 @@
     if ( is_page( 'plan' ) ) {
         $extra_body_classes[] = 'page-plan';
     }
+    if ( is_singular( 'result' ) ) {
+        $extra_body_classes[] = 'page-result-details';
+    }
     body_class( $extra_body_classes );
 ?>>
     <div id="container">
@@ -31,7 +34,7 @@
                 <ul>
                     <li><a href="<?php echo esc_url(home_url('/plan/')); ?>">料金</a></li>
                     <li><a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>">ブログ</a></li>
-                    <li><a href="./result_list.html">卒業実績</a></li>
+                    <li><a href="<?php echo esc_url(get_post_type_archive_link('result')); ?>">卒業実績</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,7 +52,7 @@
                 <ul>
                     <li><a href="<?php echo esc_url(home_url('/plan/')); ?>"><span>料金</span></a></li>
                     <li><a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>"><span>ブログ</span></a></li>
-                    <li><a href="./result_list.html"><span>卒業実績</span></a></li>
+                    <li><a href="<?php echo esc_url(get_post_type_archive_link('result')); ?>"><span>卒業実績</span></a></li>
                     <li class="nav-contact"><a href="./contact_form.html">お問い合わせ</a></li>
                 </ul>
             </nav>

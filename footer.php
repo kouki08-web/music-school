@@ -5,7 +5,7 @@
                         <li><a href="./index.html">ホーム</a></li>
                         <li><a href="<?php echo esc_url(home_url('/plan/')); ?>">料金</a></li>
                         <li><a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>">ブログ</a></li>
-                        <li><a href="./result_list.html">卒業実績</a></li>
+                        <li><a href="<?php echo esc_url(get_post_type_archive_link('result')); ?>">卒業実績</a></li>
                     </ul>
                 </nav>
             </div>
