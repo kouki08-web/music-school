@@ -18,22 +18,21 @@
 
                 <?php get_template_part('template-parts/breadcrumbs'); ?>
 
-                <section class="contact-form">
+                <div class="contact-send">
                     <div class="inner">
-                        <p class="contact-form__intro">当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。<br>通常３営業日以内にメールにてご連絡させていただきます。</p>
-
-                        <?php
-                        if (have_posts()) :
-                        while (have_posts()) : the_post();
-                            remove_filter('the_content', 'wpautop');
-                            the_content();
-                        endwhile;
-                        endif;
-                        ?>
+                        <div class="contact-send__contents">
+                            <p class="contact-send__text">お問い合わせいただきありがとうございました。<br>内容確認後、担当者よりメールにてご連絡いたします。</p>
+                            <div class="contact-send__btn">
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">ホームへ戻る</a>
+                            </div>
+                        </div>
                     </div>
-                </section>
+                </div>
             </div>
         </main>
 
-        <?php get_template_part('template-parts/fix-area'); ?>
+        <a href="#" id="js-pagetop" class="pagetop" aria-label="ページトップへ戻る">
+            <img class="pagetop__icon" src="<?php echo get_template_directory_uri(); ?>/images/top-icon.svg" width="68" height="68" alt="ページトップへ戻る">
+        </a>
+
         <?php get_footer(); ?>

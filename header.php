@@ -20,6 +20,12 @@
     if ( is_singular( 'result' ) ) {
         $extra_body_classes[] = 'page-result-details';
     }
+    if ( is_page( 'contact' ) ) {
+        $extra_body_classes[] = 'page-contact';
+    }
+    if ( is_page( 'contact-send' ) ) {
+        $extra_body_classes[] = 'page-contact-send';
+    }
     body_class( $extra_body_classes );
 ?>>
     <div id="container">
@@ -53,7 +59,7 @@
                     <li><a href="<?php echo esc_url(home_url('/plan/')); ?>"><span>料金</span></a></li>
                     <li><a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>"><span>ブログ</span></a></li>
                     <li><a href="<?php echo esc_url(get_post_type_archive_link('result')); ?>"><span>卒業実績</span></a></li>
-                    <li class="nav-contact"><a href="./contact_form.html">お問い合わせ</a></li>
+                    <li class="nav-contact"><a href="<?php echo esc_url(home_url('contact')); ?>">お問い合わせ</a></li>
                 </ul>
             </nav>
         </div>
