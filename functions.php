@@ -89,7 +89,7 @@ function my_page_conditions($query)
 {
   if (!is_admin() && $query->is_main_query()) {
     // カスタム投稿のスラッグを記述
-    if (is_post_type_archive('blog')) {
+    if (is_post_type_archive(['blog', 'result'])) {
       // 表示件数を指定
       $query->set('posts_per_page', 10);
     }

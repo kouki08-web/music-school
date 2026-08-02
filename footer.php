@@ -2,14 +2,14 @@
             <div class="footer__nav">
                 <nav class="footer__nav-link">
                     <ul>
-                        <li><a href="./index.html">ホーム</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/')); ?>">ホーム</a></li>
                         <li><a href="<?php echo esc_url(home_url('/plan/')); ?>">料金</a></li>
                         <li><a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>">ブログ</a></li>
                         <li><a href="<?php echo esc_url(get_post_type_archive_link('result')); ?>">卒業実績</a></li>
                     </ul>
                 </nav>
             </div>
-            <a href="./index.html" class="footer__image">
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__image">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/footer-icon.svg" alt="フッターアイコン">
             </a>
             <div class="footer__copyright">

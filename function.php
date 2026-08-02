@@ -55,3 +55,10 @@ function add_files()
   } 
 }
 add_action('wp_enqueue_scripts', 'add_files');
+
+//管理画面で 投稿メニュー を非表示
+function remove_menus () {
+  global $menu;
+  remove_menu_page( 'edit.php' );
+}
+add_action('admin_menu', 'remove_menus');
