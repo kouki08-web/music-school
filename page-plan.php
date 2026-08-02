@@ -16,14 +16,7 @@
                     </div>
                 </section>
 
-                <nav class="breadcrumb">
-                    <div class="inner">
-                        <ol class="breadcrumb__list">
-                            <li class="breadcrumb__item"><a href="./index.html" class="breadcrumb__link">ホーム</a></li>
-                            <li class="breadcrumb__item">プラン・料金</li>
-                        </ol>
-                    </div>
-                </nav>
+                <?php get_template_part('template-parts/breadcrumbs'); ?>
 
                 <section class="plan-overview">
                     <div class="inner">

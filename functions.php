@@ -85,3 +85,14 @@ function ks_related_posts_content_shortcode() {
     return ob_get_clean();
 }
 add_shortcode('blog_related_posts', 'ks_related_posts_content_shortcode');
+function my_page_conditions($query)
+{
+  if (!is_admin() && $query->is_main_query()) {
+    // カスタム投稿のスラッグを記述
+    if (is_post_type_archive('blog')) {
+      // 表示件数を指定
+      $query->set('posts_per_page', 10);
+    }
+  }
+}
+add_action('pre_get_posts', 'my_page_conditions');

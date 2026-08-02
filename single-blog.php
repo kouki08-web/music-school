@@ -2,16 +2,8 @@
 
         <main>
             <div class="main">
-                <nav class="breadcrumb">
-                    <div class="inner">
-                        <ol class="breadcrumb__list">
-                            <li class="breadcrumb__item"><a href="./index.html" class="breadcrumb__link">ホーム</a></li>
-                            <li class="breadcrumb__item"><a href="./blog_list.html" class="breadcrumb__link">ブログ</a></li>
-                            <li class="breadcrumb__item"><a href="./blog_list.html" class="breadcrumb__link">ギター</a></li>
-                            <li class="breadcrumb__item">アルペジオが劇的に向上する３つの習慣</li>
-                        </ol>
-                    </div>
-                </nav>
+                <?php get_template_part('template-parts/breadcrumbs'); ?>
+
 
                 <?php
                     if (have_posts()):

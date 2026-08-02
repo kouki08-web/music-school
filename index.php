@@ -359,7 +359,7 @@
                                 </div>
                             </div>
                             <div class="blog-list-btn">
-                                <a href="./blog_list.html">ブログ一覧へ</a>
+                                <a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>">ブログ一覧へ</a>
                             </div>
                         </div>
                     </div>

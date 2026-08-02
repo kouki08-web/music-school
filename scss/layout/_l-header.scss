@@ -31,6 +31,12 @@
     align-self: stretch;
 }
 
+.header__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .header__image {
     width: 2.1rem;
     margin-top: 0;
@@ -46,11 +52,6 @@
 
 .header__logo {
     align-self: stretch;
-    display: flex;
-    align-items: center;
-}
-
-.header__logo a {
     font-size: 1.3rem;
     line-height: calc(23 / 20);
     font-weight: 700;
@@ -70,7 +71,7 @@
     }
 }
 
-.header__logo a span {
+.header__logo span {
     font-size: 1.3rem;
     line-height: calc(23 / 15);
     @include pc {

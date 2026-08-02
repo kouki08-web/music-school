@@ -3,8 +3,8 @@
                 <nav class="footer__nav-link">
                     <ul>
                         <li><a href="./index.html">ホーム</a></li>
-                        <li><a href="./plan.html">料金</a></li>
-                        <li><a href="./blog_list.html">ブログ</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/plan/')); ?>">料金</a></li>
+                        <li><a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>">ブログ</a></li>
                         <li><a href="./result_list.html">卒業実績</a></li>
                     </ul>
                 </nav>

@@ -29,8 +29,8 @@
         <div class="header-menu">
             <nav>
                 <ul>
-                    <li><a href="./plan.html">料金</a></li>
-                    <li><a href="./blog_list.html">ブログ</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/plan/')); ?>">料金</a></li>
+                    <li><a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>">ブログ</a></li>
                     <li><a href="./result_list.html">卒業実績</a></li>
                 </ul>
             </nav>
@@ -47,8 +47,8 @@
             </div>
             <nav class="header__nav pc">
                 <ul>
-                    <li><a href="./plan.html"><span>料金</span></a></li>
-                    <li><a href="./blog_list.html"><span>ブログ</span></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/plan/')); ?>"><span>料金</span></a></li>
+                    <li><a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>"><span>ブログ</span></a></li>
                     <li><a href="./result_list.html"><span>卒業実績</span></a></li>
                     <li class="nav-contact"><a href="./contact_form.html">お問い合わせ</a></li>
                 </ul>
