@@ -1540,12 +1540,6 @@ body[class] .fv__catch {
   .voice__swiper {
     margin-top: 3.6rem;
   }
-  .voice__swiper .swiper-wrapper {
-    gap: 3.5rem;
-  }
-  .voice__swiper .swiper-slide {
-    width: calc((100% - 7rem) / 3) !important;
-  }
 }
 
 .voice-btn-prev,

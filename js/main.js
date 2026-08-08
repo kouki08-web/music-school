@@ -1,3 +1,5 @@
+$('body').show();
+
 // ハンバーガーメニュー
 const $hamburger = $('#js-hamburger');
 const $headerMenu = $('.header-menu');
@@ -117,13 +119,13 @@ if (wrapper && track && thumb) {
 const voiceSwiper = new Swiper('.voice__swiper', {
     slidesPerView: 1,
     spaceBetween: 35,
-    loop: true,
+    loop: false,
     grabCursor: false,
     speed: 600,
     breakpoints: {
         768: {
             slidesPerView: 3,
-            spaceBetween: 0,
+            spaceBetween: 35,
         }
     }
 });

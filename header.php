@@ -12,7 +12,7 @@
     <title>きたむらミュージックスクール</title>
     <?php wp_head(); ?>
 </head>
-<body <?php
+<body style="display: none;" <?php
     $extra_body_classes = array();
     if ( is_page( 'plan' ) ) {
         $extra_body_classes[] = 'page-plan';
@@ -37,17 +37,21 @@
         </button>
         <div class="header-menu">
             <nav>
-                <ul>
-                    <li><a href="<?php echo esc_url(home_url('/plan/')); ?>">料金</a></li>
-                    <li><a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>">ブログ</a></li>
-                    <li><a href="<?php echo esc_url(get_post_type_archive_link('result')); ?>">卒業実績</a></li>
-                </ul>
+                <?php
+                wp_nav_menu(
+                array(
+                    'menu_class'     => 'l-header__nav-ul',
+                    'theme_location' => 'primary',
+                    'container'      => false,
+                )
+                );
+                ?>
             </nav>
         </div>
         <div id="js-overlay" class="overlay"></div>
         <div class="inner">
             <div class="header__left"> 
-                <a href="#" class="header__link">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header__link">
                     <div class="header__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/header-icon.svg" alt="ヘッダーアイコン">
                     </div>

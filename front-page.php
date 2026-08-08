@@ -115,106 +115,41 @@
                             <h2 class="voice__title">生徒さんたちの声</h2>
                             <div class="swiper voice__swiper">
                                 <div class="swiper-wrapper">
+                                    <?php
+                                    $args = array(
+                                        'post_type' => 'result',
+                                        'posts_per_page' => 6,
+                                    );
+                                    $the_query = new WP_Query($args);
+                                    if ($the_query->have_posts()) :
+                                        while ($the_query->have_posts()) : $the_query->the_post();
+                                    ?>
+
                                     <div class="swiper-slide voice__item voice-item">
-                                        <a href="./result_details.html" class="voice-item__link">
+                                        <a href="<?php the_permalink(); ?>" class="voice-item__link">
                                         <div class="voice-item__image">
                                             <span class="voice-item__photo">
-                                                <picture>
-                                                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice01-pc.jpg">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/voice01-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
-                                                </picture>
+                                                <?php if (has_post_thumbnail()) : ?>
+                                                <?php the_post_thumbnail(); ?>
+                                                <?php else : ?>
+                                                    <picture>
+                                                    <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice01-pc.jpg">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/voice01-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
+                                                    </picture>
+                                                <?php endif; ?>
                                             </span>
                                         </div>
                                         <div class="voice-item__text">
-                                            <h3>証券会社勤務　丸山さん</h3>
-                                            <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+                                            <h3><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
+                                            <p><?php echo wp_trim_words(get_the_content(), 42, '...'); ?></p>
                                         </div>
                                         </a>
                                     </div>
-
-                                    <div class="swiper-slide voice__item voice-item">
-                                        <a href="./result_details.html" class="voice-item__link">
-                                        <div class="voice-item__image">
-                                            <span class="voice-item__photo">
-                                                <picture>
-                                                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice02-pc.jpg">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/voice02-sp.jpg" alt="IT会社勤務　S.Eさん">
-                                                </picture>
-                                            </span>
-                                        </div>
-                                        <div class="voice-item__text">
-                                            <h3>IT会社勤務　S.Eさん</h3>
-                                            <p>プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
-                                        </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="swiper-slide voice__item voice-item">
-                                        <a href="./result_details.html" class="voice-item__link">
-                                        <div class="voice-item__image">
-                                            <span class="voice-item__photo">
-                                                <picture>
-                                                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice03-pc.jpg">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/voice03-sp.jpg" alt="都内大学生　田森さん">
-                                                </picture>
-                                            </span>
-                                        </div>
-                                        <div class="voice-item__text">
-                                            <h3>都内大学生　田森さん</h3>
-                                            <p>就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
-                                        </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="swiper-slide voice__item voice-item">
-                                        <a href="./result_details.html" class="voice-item__link">
-                                        <div class="voice-item__image">
-                                            <span class="voice-item__photo">
-                                                <picture>
-                                                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice01-pc.jpg">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/voice01-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
-                                                </picture>
-                                            </span>
-                                        </div>
-                                        <div class="voice-item__text">
-                                            <h3>証券会社勤務　丸山さん</h3>
-                                            <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
-                                        </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="swiper-slide voice__item voice-item">
-                                        <a href="./result_details.html" class="voice-item__link">
-                                        <div class="voice-item__image">
-                                            <span class="voice-item__photo">
-                                                <picture>
-                                                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice02-pc.jpg">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/voice02-sp.jpg" alt="IT会社勤務　S.Eさん">
-                                                </picture>
-                                            </span>
-                                        </div>
-                                        <div class="voice-item__text">
-                                            <h3>IT会社勤務　S.Eさん</h3>
-                                            <p>プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
-                                        </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="swiper-slide voice__item voice-item">
-                                        <a href="./result_details.html" class="voice-item__link">
-                                        <div class="voice-item__image">
-                                            <span class="voice-item__photo">
-                                                <picture>
-                                                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice03-pc.jpg">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/voice03-sp.jpg" alt="都内大学生　田森さん">
-                                                </picture>
-                                            </span>
-                                        </div>
-                                        <div class="voice-item__text">
-                                            <h3>都内大学生　田森さん</h3>
-                                            <p>就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
-                                        </div>
-                                        </a>
+                                        <?php
+                                            endwhile;
+                                        endif;
+                                        wp_reset_postdata();
+                                        ?>
                                     </div>
                                 </div>
                             </div>
@@ -306,57 +241,52 @@
                 </section>
 
                 <section class="blog">
+                    <?php
+                    $args = array(
+                        'posts_per_page' => 3,
+                        'post_type'      => 'blog',
+                        'taxonomy'        => 'blog_recommend',
+                        'term'            => 'recommend',
+                        'orderby'         => 'date',
+                        'order'           => 'DESC'
+                    );
+                    $the_query = new WP_Query($args);
+                    ?>
+
                     <div class="inner">
                         <div class="blog__contents">
                             <h2 class="blog__title">ブログ</h2>
                             <div class="blog__items">
-                                <div class="blog__item blog-item">
-                                    <a href="./blog_details.html" class="blog-item__link">
-                                        <div class="blog-item__image">
-                                            <span class="blog-item__category">SNS</span>
-                                            <picture>
-                                                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog01-pc.jpg">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/blog01-sp.jpg" alt="フォロワーではなくファンを増やせとは？">
-                                            </picture>
-                                        </div>
-                                        <p class="blog-item__text">フォロワーではなくファンを増やせとは？</p>
-                                        <div class="blog-item__date">
-                                            <time datetime="2026-01-01">0000.00.00</time>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="blog__item blog-item">
-                                    <a href="./blog_details.html" class="blog-item__link">
-                                        <div class="blog-item__image">
-                                            <span class="blog-item__category">集客方法</span>
-                                            <picture>
-                                                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog02-pc.jpg">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/blog02-sp.jpg" alt="集客してる間は売れないという法則">
-                                            </picture>
-                                        </div>
-                                        <p class="blog-item__text">集客してる間は売れないという法則</p>
-                                        <div class="blog-item__date">
-                                            <time datetime="2026-01-01">0000.00.00</time>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="blog__item blog-item">
-                                    <a href="./blog_details.html" class="blog-item__link">
-                                        <div class="blog-item__image">
-                                            <span class="blog-item__category">ギター</span>
-                                            <picture>
-                                                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog03-pc.jpg">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/blog03-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
-                                            </picture>
-                                        </div>
-                                        <p class="blog-item__text">アルペジオが劇的に向上する3つの習慣</p>
-                                        <div class="blog-item__date">
-                                            <time datetime="2026-01-01">0000.00.00</time>
-                                        </div>
-                                    </a>
-                                </div>
+                                <?php
+                                if ($the_query->have_posts()) :
+                                    while ($the_query->have_posts()) : $the_query->the_post();
+                                ?>
+                                    <div class="blog__item blog-item">
+                                        <a href="<?php the_permalink(); ?>" class="blog-item__link">
+                                            <div class="blog-item__image">
+                                                <?php
+                                                $terms = get_the_terms(get_the_ID(), 'blog_cate');
+                                                if (!empty($terms) && !is_wp_error($terms)) :
+                                                ?>
+                                                    <span class="blog-item__category"><?php echo esc_html($terms[0]->name); ?></span>
+                                                <?php endif; ?>
+                                                <?php if (has_post_thumbnail()) : ?>
+                                                    <?php the_post_thumbnail(); ?>
+                                                <?php else : ?>
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="<?php echo esc_attr(get_the_title()); ?>">
+                                                <?php endif; ?>
+                                            </div>
+                                            <p class="blog-item__text"><?php echo esc_html(get_the_title()); ?></p>
+                                            <div class="blog-item__date">
+                                                <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php
+                                    endwhile;
+                                endif;
+                                wp_reset_postdata();
+                                ?>
                             </div>
                             <div class="blog-list-btn">
                                 <a href="./blog_list.html">ブログ一覧へ</a>

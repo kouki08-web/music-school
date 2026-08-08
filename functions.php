@@ -96,3 +96,24 @@ function my_page_conditions($query)
   }
 }
 add_action('pre_get_posts', 'my_page_conditions');
+
+//管理画面「外観＞メニュー」 を表示
+function register_my_menus()
+{
+  register_nav_menus(array(
+    'primary' => 'Primary Menu',
+    'footer'  => 'Footer Menu',
+  ));
+}
+add_action('after_setup_theme', 'register_my_menus');
+
+// --------------------------------------------------
+// JS読み込み（Swiper・main.js）
+// --------------------------------------------------
+function enqueue_theme_scripts() {
+    wp_enqueue_script('jquery');
+    wp_add_inline_script('jquery', 'window.$ = window.jQuery;');
+    wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js', array(), null, true);
+    wp_enqueue_script('theme-main-js', get_template_directory_uri() . '/js/main.js', array('jquery', 'swiper-js'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');

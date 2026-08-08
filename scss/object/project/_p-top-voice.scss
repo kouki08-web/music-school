@@ -27,12 +27,6 @@
     margin-top: 4rem;
     @include pc {
         margin-top: 3.6rem;
-        .swiper-wrapper {
-            gap: 3.5rem;
-        }
-        .swiper-slide {
-            width: calc((100% - 7rem) / 3) !important;
-        }
     }
 }
 
