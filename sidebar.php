@@ -9,12 +9,7 @@
                                 <div class="sidebar-widget sidebar-search">
                                     <p class="sidebar-widget__title">ブログ内を検索</p>
                                     <div class="sidebar-widget__body">
-                                        <form class="sidebar-search__form" action="./search.html" method="get">
-                                            <input type="text" class="sidebar-search__input" name="q" aria-label="検索キーワード">
-                                            <button type="submit" class="sidebar-search__btn" aria-label="検索">
-                                                <span class="sidebar-search__btn-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/search.svg" alt="検索"></span>
-                                            </button>
-                                        </form>
+                                        <?php get_search_form(); ?>
                                     </div>
                                 </div>
 

@@ -26,6 +26,12 @@
     if ( is_page( 'contact-send' ) ) {
         $extra_body_classes[] = 'page-contact-send';
     }
+    if ( is_search() ) {
+        $extra_body_classes[] = 'page-search';
+    }
+    if ( is_404() ) {
+        $extra_body_classes[] = 'page-404';
+    }
     body_class( $extra_body_classes );
 ?>>
     <div id="container">

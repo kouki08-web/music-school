@@ -7,7 +7,7 @@
                         <div class="fv-slide__image">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/result-fv-pc.jpg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/result_details-fv-sp.jpg" alt="卒業実績">
+                                <img class="fv-slide__img" src="<?php echo get_template_directory_uri(); ?>/images/result_details-fv-sp.jpg" alt="卒業実績">
                             </picture>
                         </div>
                         <div class="fv__catch">
@@ -62,7 +62,9 @@
                         </div>
 
                         <nav class="pagination">
-                            <?php wp_pagenavi(); ?>
+                            <ul class="pagination__list pagination__gap">
+                                <?php wp_pagenavi(); ?>
+                            </ul>
                         </nav>
                     </div>
                 </section>

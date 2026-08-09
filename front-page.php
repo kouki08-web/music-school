@@ -6,7 +6,7 @@
                         <div class="fv-slide__image">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/fv-pc.jpg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/fv-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール">
+                                <img class="fv-slide__img" src="<?php echo get_template_directory_uri(); ?>/images/fv-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール">
                             </picture>
                         </div>
                         <div class="fv__catch">
@@ -289,7 +289,7 @@
                                 ?>
                             </div>
                             <div class="blog-list-btn">
-                                <a href="./blog_list.html">ブログ一覧へ</a>
+                                <a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>">ブログ一覧へ</a>
                             </div>
                         </div>
                     </div>

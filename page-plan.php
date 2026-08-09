@@ -7,7 +7,7 @@
                         <div class="fv-slide__image">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/plan-pc.jpg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/plan-sp.jpg" alt="プラン・料金">
+                                <img class="fv-slide__img" src="<?php echo get_template_directory_uri(); ?>/images/plan-sp.jpg" alt="プラン・料金">
                             </picture>
                         </div>
                         <div class="fv__catch">

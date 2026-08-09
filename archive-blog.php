@@ -7,7 +7,7 @@
                         <div class="fv-slide__image">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list-fv-pc.jpg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/blog-list-fv-sp.jpg" alt="ブログ">
+                                <img class="fv-slide__img" src="<?php echo get_template_directory_uri(); ?>/images/blog-list-fv-sp.jpg" alt="ブログ">
                             </picture>
                         </div>
                         <div class="fv__catch">

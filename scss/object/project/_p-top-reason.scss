@@ -54,8 +54,8 @@
     }
 }
 
-.reason__item:nth-child(2) .reason-item_catch h2,
-.reason__item:nth-child(3) .reason-item_catch h2 {
+.reason__item:nth-child(2) .reason-item_catch h3,
+.reason__item:nth-child(3) .reason-item_catch h3 {
     margin-top: 3.1rem;
     @include pc {
         margin-top: -0.3rem;
@@ -80,7 +80,7 @@
     }
 }
 
-.reason-item_catch h2 {
+.reason-item_catch h3 {
     font-size: 2rem;
     line-height: calc(30 / 20);
     font-weight: 700;
