@@ -1050,12 +1050,12 @@ body.home .fv-slide__img {
   }
 }
 
-.blog {
+.top-blog {
   position: relative;
   padding: 0 0 19.7rem;
 }
 @media (min-width: 768px) {
-  .blog {
+  .top-blog {
     padding: 2rem 0 20.5rem;
   }
 }
@@ -5329,4 +5329,4 @@ body.page-404 .fv-slide__image {
     color: rgb(203, 0, 0);
     opacity: 1;
   }
-}/*# sourceMappingURL=style.css.map */
+}

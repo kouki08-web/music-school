@@ -36,20 +36,33 @@ const $toggleElements = $pagetop.add($contactBtn);
 const fvHeight = $('.fv').outerHeight();
 const $footer = $('.footer');
 
+// position:absolute にした時の実際の基準(直近のpositioned祖先)のoffsetTopを取得
+function getAnchorTop(el) {
+    let node = el.parentElement;
+    while (node) {
+        if (getComputedStyle(node).position !== 'static') {
+            return $(node).offset().top;
+        }
+        node = node.parentElement;
+    }
+    return 0;
+}
+
 function updateButtons() {
     const scrollTop = $(window).scrollTop();
     const scrollBottom = scrollTop + $(window).height();
-    const containerTop = $('#container').offset().top;
-    const footerTop = $footer.offset().top - containerTop;
+    const footerAbsTop = $footer.offset().top;
     const isPC = window.matchMedia('(min-width: 768px)').matches;
 
     $toggleElements.toggleClass('is-show', scrollTop > fvHeight);
 
-    if (scrollBottom >= footerTop + containerTop) {
+    if (scrollBottom >= footerAbsTop) {
         const isContactPage = $('body').hasClass('page-contact');
         const pagetopOffset = isPC ? (isContactPage ? 32 : 90) : (isContactPage ? 18 : 80);
-        $contactBtn.addClass('is-docked').css({ bottom: 'auto', top: footerTop - $contactBtn.outerHeight() });
-        $pagetop.addClass('is-docked').css({ bottom: 'auto', top: footerTop - pagetopOffset - $pagetop.outerHeight() });
+        const contactAnchorTop = getAnchorTop($contactBtn[0]);
+        const pagetopAnchorTop = getAnchorTop($pagetop[0]);
+        $contactBtn.addClass('is-docked').css({ bottom: 'auto', top: footerAbsTop - contactAnchorTop - $contactBtn.outerHeight() });
+        $pagetop.addClass('is-docked').css({ bottom: 'auto', top: footerAbsTop - pagetopAnchorTop - pagetopOffset - $pagetop.outerHeight() });
     } else {
         $contactBtn.removeClass('is-docked').css({ bottom: '', top: '' });
         $pagetop.removeClass('is-docked').css({ bottom: '', top: '' });

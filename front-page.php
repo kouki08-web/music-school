@@ -240,7 +240,7 @@
                     </div>
                 </section>
 
-                <section class="blog">
+                <section class="top-blog">
                     <?php
                     $args = array(
                         'posts_per_page' => 3,
