@@ -14,15 +14,18 @@
     }
 }
 
+body.admin-bar .header {
+    top: 46px;
+    @media (min-width: 783px) {
+        top: 32px;
+    }
+}
+
 .header .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding-top: 0;
-    @include pc {
-        padding-top: 0.5rem;
-    }
 }
 
 .header__left {

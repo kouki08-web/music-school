@@ -123,3 +123,119 @@ function enqueue_theme_scripts() {
     wp_enqueue_script('theme-main-js', get_template_directory_uri() . '/js/main.js', array('jquery', 'swiper-js'), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');
+
+// --------------------------------------------------
+// タイトルのカスタマイズ
+// --------------------------------------------------
+function custom_document_title(string $title): string
+{
+    $site_name = 'きたむらミュージックスクール';
+
+    // トップページ
+    if (is_front_page()) {
+        return $site_name . ' | 「音楽で生きる」を叶える ミュージックスクール';
+    }
+
+    // 固定ページ
+    if (is_page()) {
+        return get_the_title() . ' | ' . $site_name;
+    }
+
+    // 投稿個別ページ
+    if (is_single()) {
+        return get_the_title() . ' | ' . $site_name;
+    }
+
+    // アーカイブ（ページ番号対応）
+    if (is_archive()) {
+        $paged = max(1, (int) get_query_var('paged'));
+
+        if (is_category()) {
+            $name = single_cat_title('', false);
+        } elseif (is_tax()) {
+            $name = single_term_title('', false);
+        } elseif (is_post_type_archive()) {
+            $name = post_type_archive_title('', false);
+        } else {
+            $name = get_the_archive_title();
+        }
+
+        // 2ページ目以降だけ「○ページ目」を付ける
+        $suffix = ($paged > 1) ? ' ' . $paged . 'ページ目' : '';
+
+        return $name . '一覧ページ' . $suffix . ' | ' . $site_name;
+    }
+
+    // 検索結果
+    if (is_search()) {
+        return '検索結果 | ' . $site_name;
+    }
+
+    // 404
+    if (is_404()) {
+        return 'お探しのページはございません | ' . $site_name;
+    }
+
+    // その他
+    return get_the_title() . ' | ' . $site_name;
+}
+add_filter('pre_get_document_title', 'custom_document_title');
+
+// --------------------------------------------------
+// メタディスクリプションの出力
+// --------------------------------------------------
+function custom_meta_description(): void
+{
+    $description = '';
+
+    // トップページ
+    if (is_front_page()) {
+        $description = '「音楽で生きる」を叶える ミュージックスクール「きたむらミュージックスクール」の公式ホームページです。';
+
+    // 固定ページ
+    } elseif (is_page()) {
+        $description = 'きたむらミュージックスクール公式ホームページの' . get_the_title() . 'ページです。';
+
+    // 投稿個別ページ
+    } elseif (is_single()) {
+        if (has_excerpt()) {
+            $description = get_the_excerpt();
+        } else {
+            $content = get_the_content();
+            $content = wp_strip_all_tags($content);      // HTML除去
+            $content = preg_replace('/\s+/u', '', $content); // 改行・空白除去
+            $description = mb_substr($content, 0, 120, 'UTF-8');
+        }
+
+    // 投稿アーカイブ
+    } elseif (is_archive()) {
+        if (is_category()) {
+            $name = single_cat_title('', false);
+        } elseif (is_tax()) {
+            $name = single_term_title('', false);
+        } elseif (is_post_type_archive()) {
+            $name = post_type_archive_title('', false);
+        } else {
+            $name = get_the_archive_title();
+        }
+
+        $description = 'きたむらミュージックスクール公式ホームページの' . $name . '一覧ページです。';
+
+    // 検索結果
+    } elseif (is_search()) {
+        $description = 'きたむらミュージックスクール公式ホームページの検索結果ページです。';
+
+    // 404
+    } elseif (is_404()) {
+        $description = 'きたむらミュージックスクール公式ホームページの404ページです。';
+
+    // その他のページ
+    } else {
+        $description = 'きたむらミュージックスクール公式ホームページの' . get_the_title() . 'ページです。';
+    }
+
+    if ($description !== '') {
+        echo '<meta name="description" content="' . esc_attr($description) . '">' . "\n";
+    }
+}
+add_action('wp_head', 'custom_meta_description', 1);

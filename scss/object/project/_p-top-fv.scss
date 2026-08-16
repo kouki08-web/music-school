@@ -28,7 +28,7 @@
     }
 }
 
-body[class] {
+body:not(.home) {
     .fv-slide__image {
         aspect-ratio: 375 / 300;
         @include pc {
@@ -44,6 +44,10 @@ body[class] {
 .fv-slide__img {
     height: 100%;
     object-fit: cover;
+}
+
+body.home .fv-slide__img {
+    object-position: 50% 12%;
 }
 
 .fv__catch {

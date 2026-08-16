@@ -11,7 +11,7 @@
                             </picture>
                         </div>
                         <div class="fv__catch">
-                            <h2>404 not fonud</h2>
+                            <h2>404 not found</h2>
                         </div>
                     </div>
                 </section>

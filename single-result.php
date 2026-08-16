@@ -72,15 +72,15 @@
                             </div>
                         </div>
 
-                        <?php get_template_part('template-parts/single-pagination'); ?>
+                        <?php get_template_part('template-parts/single-pagination', null, ['prefix' => 'result-details__pager']); ?>
+
+                        <?php get_template_part('template-parts/related-articles'); ?>
                     </div>
                 </article>
                 <?php
                 endwhile;
                 endif;
                 ?>
-
-                <?php get_template_part('template-parts/related-articles'); ?>
             </div>
         </main>
 

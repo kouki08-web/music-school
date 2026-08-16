@@ -17,7 +17,7 @@
     list-style: none;
     font-size: 1.6rem;
     line-height: 1.14;
-    row-gap: 0.2rem;
+    row-gap: 0.4rem;
 }
 
 
@@ -32,6 +32,7 @@
     color: $color-black;
     position: relative;
     @include pc {
+        margin-right: 2.2rem;
         top: -0.1rem;
     }
 }

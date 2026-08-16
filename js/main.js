@@ -39,24 +39,25 @@ const $footer = $('.footer');
 function updateButtons() {
     const scrollTop = $(window).scrollTop();
     const scrollBottom = scrollTop + $(window).height();
-    const footerTop = $footer.offset().top;
-    const footerHeight = $footer.outerHeight();
+    const containerTop = $('#container').offset().top;
+    const footerTop = $footer.offset().top - containerTop;
     const isPC = window.matchMedia('(min-width: 768px)').matches;
 
     $toggleElements.toggleClass('is-show', scrollTop > fvHeight);
 
-    if (scrollBottom >= footerTop) {
+    if (scrollBottom >= footerTop + containerTop) {
         const isContactPage = $('body').hasClass('page-contact');
         const pagetopOffset = isPC ? (isContactPage ? 32 : 90) : (isContactPage ? 18 : 80);
-        $contactBtn.addClass('is-docked').css('bottom', footerHeight);
-        $pagetop.addClass('is-docked').css('bottom', footerHeight + pagetopOffset);
+        $contactBtn.addClass('is-docked').css({ bottom: 'auto', top: footerTop - $contactBtn.outerHeight() });
+        $pagetop.addClass('is-docked').css({ bottom: 'auto', top: footerTop - pagetopOffset - $pagetop.outerHeight() });
     } else {
-        $contactBtn.removeClass('is-docked').css('bottom', '');
-        $pagetop.removeClass('is-docked').css('bottom', '');
+        $contactBtn.removeClass('is-docked').css({ bottom: '', top: '' });
+        $pagetop.removeClass('is-docked').css({ bottom: '', top: '' });
     }
 }
 
 $(window).on('scroll', updateButtons);
+updateButtons();
 
 $pagetop.on('click', function(e) {
     e.preventDefault();

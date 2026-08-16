@@ -52,7 +52,7 @@
                                         <th class="plan-table__head-cell">
                                             <div class="plan-table__head-red plan-table__head-standard">
                                                 <span class="plan-table__badge">おすすめ</span>
-                                                スタンダードプラン
+                                                <span class="plan-table__head-standard-text">スタンダードプラン</span>
                                             </div>
                                         </th>
                                         <th class="plan-table__head-cell">

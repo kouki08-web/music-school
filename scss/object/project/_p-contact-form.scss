@@ -233,14 +233,22 @@
     }
 }
 
+.contact-form__checkboxes .wpcf7-list-item {
+    margin: 0;
+}
+
 .contact-form__submit {
     margin-top: 4.7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.contact-form__submit .wpcf7-spinner {
+    position: absolute;
 }
 
 .contact-form__submit input[type="submit"] {
+    display: inline-block;
     background-color: $color-red;
     color: $color-white;
     border: 1px solid $color-red;

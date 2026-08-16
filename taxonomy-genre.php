@@ -68,7 +68,9 @@
                         </div>
 
                         <nav class="pagination">
-                            <?php wp_pagenavi(); ?>
+                            <ul class="pagination__list pagination__gap">
+                                <?php wp_pagenavi(); ?>
+                            </ul>
                         </nav>
                     </div>
                 </section>

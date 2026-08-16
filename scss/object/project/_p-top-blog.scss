@@ -62,7 +62,7 @@
     overflow: hidden;
     aspect-ratio: 670 / 400;
     @include pc {
-        aspect-ratio: auto;
+        aspect-ratio: 260 / 200;
     }
 }
 
@@ -75,11 +75,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    @include pc {
-        width: auto;
-        height: auto;
-        object-fit: fill;
-    }
 }
 
 .blog-item__category {

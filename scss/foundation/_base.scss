@@ -22,14 +22,17 @@ html, body {
     margin: 0;
     padding: 0;
 }
+body {
+    position: relative;
+}
 html body {
-    padding-top: 50px;
+    padding-top: 50px !important;
     font-weight: 500;
     font-family: "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
     -webkit-font-smoothing: antialiased;
     letter-spacing: 0;
     @include pc {
-        padding-top: 80px;
+        padding-top: 80px !important;
     }
 }
 
