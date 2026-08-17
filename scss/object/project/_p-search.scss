@@ -166,7 +166,9 @@
             font-size: 2rem;
             font-weight: 700;
             cursor: pointer;
-            transition: background-color 0.4s, color 0.4s;
+            border: 1px solid transparent;
+            box-sizing: border-box;
+            transition: background-color 0.4s, color 0.4s, border-color 0.4s;
             @include pc {
                 width: 25rem;
                 font-size: 2.5rem;
@@ -177,6 +179,7 @@
                     @include pc {
                         background-color: $color-white;
                         color: $color-red;
+                        border-color: $color-red;
                         opacity: 1;
                     }
                 }

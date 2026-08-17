@@ -23,10 +23,7 @@
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail('large'); ?>
                             <?php else : ?>
-                            <picture>
-                                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/result_details-fv-pc.jpg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/result_details-fv_sp.jpg" alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。">
-                            </picture>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
                             <?php endif; ?>
                         </div>
 

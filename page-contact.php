@@ -11,7 +11,7 @@
                             </picture>
                         </div>
                         <div class="fv__catch">
-                            <h2>お問い合わせ</h2>
+                            <h1>お問い合わせ</h1>
                         </div>
                     </div>
                 </section>

@@ -12,10 +12,7 @@
                                                 <?php if (has_post_thumbnail($prev_post->ID)): ?>
                                                 <?php echo get_the_post_thumbnail($prev_post->ID); ?>
                                                 <?php else: ?>
-                                                <picture>
-                                                    <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog_list-03-pc.jpg">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog_list-03-sp.jpg" alt="前の記事">
-                                                </picture>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="前の記事">
                                                 <?php endif; ?>
                                             </div>
                                             <div class="<?php echo esc_attr($prefix); ?>-body">
@@ -32,10 +29,7 @@
                                                 <?php if (has_post_thumbnail($next_post->ID)): ?>
                                                 <?php echo get_the_post_thumbnail($next_post->ID); ?>
                                                 <?php else: ?>
-                                                <picture>
-                                                    <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog_list-03-pc.jpg">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog_list-03-sp.jpg" alt="次の記事">
-                                                </picture>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="次の記事">
                                                 <?php endif; ?>
                                             </div>
                                             <div class="<?php echo esc_attr($prefix); ?>-body">

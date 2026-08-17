@@ -132,10 +132,7 @@
                                                 <?php if (has_post_thumbnail()) : ?>
                                                 <?php the_post_thumbnail(); ?>
                                                 <?php else : ?>
-                                                    <picture>
-                                                    <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice01-pc.jpg">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/voice01-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
-                                                    </picture>
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
                                                 <?php endif; ?>
                                             </span>
                                         </div>

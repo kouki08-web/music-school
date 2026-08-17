@@ -46,10 +46,7 @@
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail(); ?>
                                     <?php else : ?>
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/result01.jpg">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/result01.jpg" alt="タイトルが入ります">
-                                    </picture>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
                                     <?php endif; ?>
                                 </div>
                                 <div class="result-list-item__body">

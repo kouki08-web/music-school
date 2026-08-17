@@ -123,6 +123,16 @@ function enqueue_theme_scripts() {
     wp_enqueue_script('theme-main-js', get_template_directory_uri() . '/js/main.js', array('jquery', 'swiper-js'), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');
+function enqueue_theme_styles() {
+    $style_path = get_template_directory() . '/css/style.css';
+    wp_enqueue_style(
+        'theme-main-css',
+        get_template_directory_uri() . '/css/style.css',
+        array(),
+        filemtime($style_path)
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
 
 // --------------------------------------------------
 // タイトルのカスタマイズ
@@ -239,3 +249,10 @@ function custom_meta_description(): void
     }
 }
 add_action('wp_head', 'custom_meta_description', 1);
+
+remove_action('wp_head', 'wp_generator');// WordPressのバージョン
+remove_action('wp_head', 'feed_links', 2);//フィードリンク
+remove_action('wp_head', 'feed_links_extra', 3);// アーカイブページ用フィードへのリンク
+remove_action('wp_head', 'rsd_link');// 外部から編集するためのAPI
+remove_action('wp_head', 'wlwmanifest_link');// エディターのマニフェストファイル
+remove_action('wp_head', 'wp_shortlink_wp_head');// 短縮URLのリンク
