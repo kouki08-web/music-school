@@ -59,7 +59,7 @@
                     <div class="header__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/header-icon.svg" alt="ヘッダーアイコン">
                     </div>
-                    <?php $logo_tag = is_front_page() ? 'h1' : 'p'; ?>
+                    <?php $logo_tag = (is_front_page() || is_search()) ? 'h1' : 'p'; ?>
                     <<?php echo $logo_tag; ?> class="header__logo">きたむら<br class="pc"><span>ミュージックスクール</span></<?php echo $logo_tag; ?>>
                 </a>
             </div>

@@ -33,7 +33,7 @@ $headerMenu.find('a').on('click', function(e) {
 const $pagetop = $('#js-pagetop');
 const $contactBtn = $('.contact-btn');
 const $toggleElements = $pagetop.add($contactBtn);
-const fvHeight = $('.fv').outerHeight();
+const fvHeight = $('.fv').outerHeight() || 0;
 const $footer = $('.footer');
 
 // position:absolute にした時の実際の基準(直近のpositioned祖先)のoffsetTopを取得
@@ -69,7 +69,15 @@ function updateButtons() {
     }
 }
 
-$(window).on('scroll', updateButtons);
+let isUpdateButtonsQueued = false;
+$(window).on('scroll', function() {
+    if (isUpdateButtonsQueued) return;
+    isUpdateButtonsQueued = true;
+    requestAnimationFrame(function() {
+        updateButtons();
+        isUpdateButtonsQueued = false;
+    });
+});
 updateButtons();
 
 $pagetop.on('click', function(e) {
@@ -130,10 +138,31 @@ if (wrapper && track && thumb) {
     thumb.addEventListener('pointerup', () => { isDragging = false; });
 }
 
+// お問い合わせフォーム：項目名クリックで入力欄にフォーカス
+document.querySelectorAll('.smf-item__label').forEach((label) => {
+    label.style.cursor = 'pointer';
+    label.addEventListener('click', () => {
+        const control = label.closest('.smf-item')?.querySelector('input, textarea, select');
+        control?.focus();
+    });
+});
+
+// お問い合わせフォーム：送信完了後にサンクスページへ遷移
+const $smfForm = document.querySelector('.snow-monkey-form');
+if ($smfForm) {
+    const contactSendUrl = '/contact-send/';
+    const observer = new MutationObserver(() => {
+        if ($smfForm.dataset.screen === 'complete') {
+            window.location.href = contactSendUrl;
+        }
+    });
+    observer.observe($smfForm, { attributes: true, attributeFilter: ['data-screen'] });
+}
+
 const voiceSwiper = new Swiper('.voice__swiper', {
     slidesPerView: 1,
     spaceBetween: 35,
-    loop: false,
+    loop: true,
     grabCursor: false,
     speed: 600,
     breakpoints: {

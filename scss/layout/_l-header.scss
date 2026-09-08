@@ -154,7 +154,7 @@ body.admin-bar .header {
     font-weight: 700;
     font-size: 1.5rem;
     border: 1px solid $color-red;
-    transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 @include hover {
@@ -169,8 +169,9 @@ body.admin-bar .header {
 .hamburger {
     display: block;
     position: absolute;
+    top: 0;
     width: 7.1rem;
-    height: 50px;
+    height: 5rem;
     background: $color-red;
     margin-left: auto;
     z-index: 999;

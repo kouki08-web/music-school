@@ -10,7 +10,7 @@
                     while (have_posts()):
                     the_post();
                     ?>
-                <section class="blog-details">
+                <div class="blog-details">
                     <div class="inner">
                         <div class="blog-details__wrapper">
 
@@ -41,7 +41,7 @@
                                     $url = urlencode(get_permalink());
                                     $title = urlencode(get_the_title());
                                     ?>
-                                    <a href="#" class="share-btn share-btn--facebook" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" class="share-btn share-btn--facebook" target="_blank" rel="noopener noreferrer">
                                         <span class="share-btn__icon">
                                             <picture>
                                                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/list-facebook-pc.jpg">
@@ -49,7 +49,7 @@
                                             </picture>
                                         </span>
                                     </a>
-                                    <a href="#" class="share-btn share-btn--twitter" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" class="share-btn share-btn--twitter" target="_blank" rel="noopener noreferrer">
                                         <span class="share-btn__icon">
                                             <picture>
                                                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/list-twitter-pc.jpg">
@@ -57,7 +57,7 @@
                                             </picture>
                                         </span>
                                     </a>
-                                    <a href="#" class="share-btn share-btn--hatena" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://b.hatena.ne.jp/add?mode=confirm&url=<?php echo $url; ?>&title=<?php echo $title; ?>" class="share-btn share-btn--hatena" target="_blank" rel="noopener noreferrer">
                                         <span class="share-btn__icon">
                                             <picture>
                                                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/list-hatena-pc.jpg">
@@ -65,7 +65,7 @@
                                             </picture>
                                         </span>
                                     </a>
-                                    <a href="#" class="share-btn share-btn--line" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://social-plugins.line.me/lineit/share?url=<?php echo $url; ?>&text=<?php echo $title; ?>" class="share-btn share-btn--line" target="_blank" rel="noopener noreferrer">
                                         <span class="share-btn__icon">
                                             <picture>
                                                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/list-line-pc.jpg">
@@ -73,7 +73,7 @@
                                             </picture>
                                         </span>
                                     </a>
-                                    <a href="#" class="share-btn share-btn--pocket" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://getpocket.com/save?url=<?php echo $url; ?>&title=<?php echo $title; ?>" class="share-btn share-btn--pocket" target="_blank" rel="noopener noreferrer">
                                         <span class="share-btn__icon">
                                             <picture>
                                                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/list-pocket-pc.jpg">
@@ -95,7 +95,7 @@
 
                         </div>
                     </div>
-                </section>
+                </div>
                 <?php
                 endwhile;
                 endif;

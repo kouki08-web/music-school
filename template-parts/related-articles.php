@@ -50,7 +50,7 @@
                                     $item_date_class = $is_result ? 'result-details-related-item__date' : 'blog-details__related-item-date';
                                 ?>
                                 <div class="<?php echo esc_attr($wrap_class); ?>">
-                                    <h4 class="<?php echo esc_attr($title_class); ?>">関連記事</h4>
+                                    <h2 class="<?php echo esc_attr($title_class); ?>">関連記事</h2>
                                     <div class="<?php echo esc_attr($items_class); ?>">
                                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                                         <a href="<?php the_permalink(); ?>" class="<?php echo esc_attr($item_class); ?>">

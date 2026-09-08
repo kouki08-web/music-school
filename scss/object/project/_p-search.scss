@@ -5,7 +5,7 @@
     .search {
         padding: 3.8rem 0 20.2rem;
         @include pc {
-            padding: 6.8rem 0 21rem;
+            padding: 6.6rem 0 21rem;
         }
     }
 
@@ -72,18 +72,20 @@
         top: 0;
         left: 0;
         z-index: 1;
-        width: 9rem;
+        min-width: 9rem;
         height: 3rem;
+        padding: 0 1rem;
         background-color: $color-red;
         color: $color-white;
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 1;
+        white-space: nowrap;
         display: flex;
         justify-content: center;
         align-items: center;
         @include pc {
-            width: 8rem;
+            min-width: 8rem;
             height: 3rem;
         }
     }
@@ -185,5 +187,9 @@
                 }
             }
         }
+    }
+
+    .pagination {
+        margin-top: 6.8rem;
     }
 }

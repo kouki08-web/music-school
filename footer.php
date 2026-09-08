@@ -15,7 +15,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/footer-icon.svg" alt="フッターアイコン">
             </a>
             <div class="footer__copyright">
-                <p class="copyright">Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
+                <p class="copyright">Copyright © 2021 KITAMURA music school Inc. <br class="sp">All Rights</p>
             </div>
             <div class="footer__sns">
                 <ul>

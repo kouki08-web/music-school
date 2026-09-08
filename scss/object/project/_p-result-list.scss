@@ -6,7 +6,7 @@
     .pagination {
         margin-top: 5.8rem;
         @include pc {
-            margin-top: 7.1rem;
+            margin-top: 7.2rem;
         }
     }
 
@@ -36,7 +36,7 @@
 .result-list {
     padding: 4rem 0 8rem;
     @include pc {
-        padding: 6.8rem 0 21rem;
+        padding: 6.6rem 0 21rem;
     }
 }
 
@@ -101,8 +101,13 @@
     font-size: 1.2rem;
     line-height: calc(25 / 15);
     font-weight: 700;
-    width: 10rem;
+    min-width: 10rem;
     height: 3rem;
+    padding: 0 1rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     @include pc {
         font-size: 1.5rem;
@@ -133,5 +138,17 @@
     @include pc {
         font-size: 1.8rem;
         margin-top: 1rem;
+    }
+}
+
+.result-list__empty {
+    margin-top: 6rem;
+    padding: 6rem 0;
+    font-size: 1.6rem;
+    text-align: center;
+    @include pc {
+        margin-top: 4rem;
+        padding: 8rem 0;
+        font-size: 1.8rem;
     }
 }

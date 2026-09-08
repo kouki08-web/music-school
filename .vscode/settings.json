@@ -10,7 +10,9 @@
   ],
   "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.excludeList": [
-    "/**/node_modules/**"
+    "/**/node_modules/**",
+    "/**/wp-admin/**",
+    "/**/wp-content/plugins/**"
   ],
   "liveSassCompile.settings.watchOnLaunch": true
 }

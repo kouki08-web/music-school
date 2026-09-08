@@ -6,6 +6,7 @@ function custom_theme_setup() {
   add_theme_support('title-tag');
   add_theme_support('automatic-feed-links');
   add_theme_support('post-thumbnails');
+  set_post_thumbnail_size(800, 600, true);
   add_theme_support(
     'html5',
     array(
@@ -22,6 +23,34 @@ function custom_theme_setup() {
   add_theme_support('responsive-embeds');
 }
 add_action('after_setup_theme', 'custom_theme_setup');
+
+// --------------------------------------------------
+// カスタム投稿タイプ・タクソノミー登録
+// --------------------------------------------------
+// 投稿タイプ・タクソノミーはSCF（投稿タイプ／タクソノミー画面）で登録しています。
+
+// --------------------------------------------------
+// reCAPTCHAはお問い合わせページのみ読み込む
+// --------------------------------------------------
+function dequeue_recaptcha_except_contact_page() {
+    if (! is_page('contact')) {
+        wp_dequeue_script('google-recaptcha');
+        wp_deregister_script('google-recaptcha');
+        wp_dequeue_script('snow-monkey-forms@recaptcha');
+        wp_deregister_script('snow-monkey-forms@recaptcha');
+    }
+}
+add_action('wp_enqueue_scripts', 'dequeue_recaptcha_except_contact_page', 100);
+
+// --------------------------------------------------
+// Snow Monkey Formsが出力するHTMLをW3C準拠に補正する
+// --------------------------------------------------
+function fix_snow_monkey_form_markup($block_content) {
+    $block_content = str_replace('action=""', 'action="' . esc_url(get_permalink()) . '"', $block_content);
+    $block_content = str_replace('autocomplete="tel-national"', 'autocomplete="tel"', $block_content);
+    return $block_content;
+}
+add_filter('render_block_snow-monkey-forms/snow-monkey-form', 'fix_snow_monkey_form_markup');
 
 // --------------------------------------------------
 // 関連記事ショートコード（投稿本文内に埋め込み用）
@@ -117,6 +146,7 @@ add_action('after_setup_theme', 'register_my_menus');
 // JS読み込み（Swiper・main.js）
 // --------------------------------------------------
 function enqueue_theme_scripts() {
+    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css', array(), null);
     wp_enqueue_script('jquery');
     wp_add_inline_script('jquery', 'window.$ = window.jQuery;');
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js', array(), null, true);

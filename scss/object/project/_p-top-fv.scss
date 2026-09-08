@@ -19,6 +19,10 @@
     }
 }
 
+.post-type-archive-result .fv__contents::after {
+    content: none;
+}
+
 .fv-slide__image {
     width: 100%;
     aspect-ratio: 375 / 550;

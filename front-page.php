@@ -119,6 +119,8 @@
                                     $args = array(
                                         'post_type' => 'result',
                                         'posts_per_page' => 6,
+                                        'post__in' => array(108, 126, 125, 124, 123, 122),
+                                        'orderby' => 'post__in',
                                     );
                                     $the_query = new WP_Query($args);
                                     if ($the_query->have_posts()) :
@@ -138,7 +140,7 @@
                                         </div>
                                         <div class="voice-item__text">
                                             <h3><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
-                                            <p><?php echo wp_trim_words(get_the_content(), 42, '...'); ?></p>
+                                            <p><?php echo wp_strip_all_tags(get_the_content()); ?></p>
                                         </div>
                                         </a>
                                     </div>
@@ -150,10 +152,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="voice-btn-prev"></div>
+                            <div class="voice-btn-next"></div>
                         </div>
-                        <div class="voice-btn-prev"></div>
-                        <div class="voice-btn-next"></div>
-                    </div>
                 </section>
 
                 <section class="guide">
@@ -179,6 +180,7 @@
                                 <div class="guide__item guide-item">
                                     <h3 class="guide-item__title">ご入学</h3>
                                     <p class="guide-item__text">お申し込み完了後、レッスンがスタートします。<br>マンツーマン指導なので、いつからでもスタートが可能です。</p>
+                                    <span class="guide__arrow"></span>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +195,7 @@
                                 <dl class="qa-list">
                                     <dt class="qa-title">
                                         <span class="qa-title__icon"><img src="<?php echo get_template_directory_uri(); ?>/images/question.svg" alt="質問"></span>
-                                        どのような生徒さんがどれぐらいの期間で稼いでいますか？
+                                        <span class="qa-title__text">どのような生徒さんがどれぐらいの期間で稼いでいますか？</span>
                                     </dt>
                                     <dd class="qa-text">
                                         <div class="qa-text__inner">
@@ -203,7 +205,7 @@
                                     </dd>
                                     <dt class="qa-title">
                                         <span class="qa-title__icon"><img src="<?php echo get_template_directory_uri(); ?>/images/question.svg" alt="質問"></span>
-                                        途中でプランを変更することは可能ですか？
+                                        <span class="qa-title__text">途中でプランを変更することは可能ですか？</span>
                                     </dt>
                                     <dd class="qa-text">
                                         <div class="qa-text__inner">
@@ -213,7 +215,7 @@
                                     </dd>
                                     <dt class="qa-title">
                                         <span class="qa-title__icon"><img src="<?php echo get_template_directory_uri(); ?>/images/question.svg" alt="質問"></span>
-                                        入学金などの分割払いはできますか？
+                                        <span class="qa-title__text">入学金などの分割払いはできますか？</span>
                                     </dt>
                                     <dd class="qa-text">
                                         <div class="qa-text__inner">
@@ -223,7 +225,7 @@
                                     </dd>
                                     <dt class="qa-title">
                                         <span class="qa-title__icon"><img src="<?php echo get_template_directory_uri(); ?>/images/question.svg" alt="質問"></span>
-                                        休学することも可能ですか？
+                                        <span class="qa-title__text">休学することも可能ですか？</span>
                                     </dt>
                                     <dd class="qa-text">
                                         <div class="qa-text__inner">
@@ -239,20 +241,41 @@
 
                 <section class="top-blog">
                     <?php
+                    // カテゴリ順（SNS→集客方法→ギター）で各カテゴリの最新記事を1件ずつ表示
+                    $top_blog_cate_order = array('sns', 'customer-acquisition', 'guiter');
+                    $top_blog_post_ids = array();
+                    foreach ($top_blog_cate_order as $cate_slug) {
+                        $cate_query = new WP_Query(array(
+                            'posts_per_page' => 1,
+                            'post_type'      => 'blog',
+                            'orderby'        => 'date',
+                            'order'          => 'DESC',
+                            'post__not_in'   => $top_blog_post_ids,
+                            'tax_query'      => array(
+                                array(
+                                    'taxonomy' => 'blog_cate',
+                                    'field'    => 'slug',
+                                    'terms'    => $cate_slug,
+                                ),
+                            ),
+                            'fields'         => 'ids',
+                        ));
+                        if ($cate_query->have_posts()) {
+                            $top_blog_post_ids = array_merge($top_blog_post_ids, $cate_query->posts);
+                        }
+                    }
                     $args = array(
                         'posts_per_page' => 3,
                         'post_type'      => 'blog',
-                        'taxonomy'        => 'blog_recommend',
-                        'term'            => 'recommend',
-                        'orderby'         => 'date',
-                        'order'           => 'DESC'
+                        'post__in'       => !empty($top_blog_post_ids) ? $top_blog_post_ids : array(0),
+                        'orderby'        => 'post__in',
                     );
                     $the_query = new WP_Query($args);
                     ?>
 
                     <div class="inner">
                         <div class="blog__contents">
-                            <h2 class="blog__title">ブログ</h2>
+                            <h2 class="blog__title">ブログ</h2>
                             <div class="blog__items">
                                 <?php
                                 if ($the_query->have_posts()) :
@@ -286,7 +309,7 @@
                                 ?>
                             </div>
                             <div class="blog-list-btn">
-                                <a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>">ブログ一覧へ</a>
+                                <a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>">ブログ一覧へ</a>
                             </div>
                         </div>
                     </div>

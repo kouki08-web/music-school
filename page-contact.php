@@ -18,7 +18,7 @@
 
                 <?php get_template_part('template-parts/breadcrumbs'); ?>
 
-                <section class="contact-form">
+                <div class="contact-form">
                     <div class="inner">
                         <p class="contact-form__intro">当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。<br>通常３営業日以内にメールにてご連絡させていただきます。</p>
 
@@ -31,7 +31,7 @@
                         endif;
                         ?>
                     </div>
-                </section>
+                </div>
             </div>
         </main>
 

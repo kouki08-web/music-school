@@ -11,12 +11,12 @@
                             </picture>
                         </div>
                         <div class="fv__catch">
-                            <h2>404 not found</h2>
+                            <h1>404 not found</h1>
                         </div>
                     </div>
                 </section>
 
-                <section class="not-found">
+                <div class="not-found">
                     <div class="inner">
                         <p class="not-found__text">申し訳ございませんが、お探しのページが見つかりませんでした。</p>
                         <p class="not-found__text">お探しのページは一時的に表示ができない状態にあるか、移動または削除された可能性があります。</p>
@@ -24,7 +24,7 @@
                             <a href="<?php echo esc_url(home_url('/')); ?>">ホームへ戻る</a>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
         </main>
 

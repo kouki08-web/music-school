@@ -48,11 +48,7 @@
                                     <?php endwhile; ?>
                                 </div>
 
-                                <nav class="pagination">
-                                    <ul class="pagination__list pagination__gap">
-                                        <?php wp_pagenavi(); ?>
-                                    </ul>
-                                </nav>
+                                <?php get_template_part('template-parts/pagination'); ?>
                             <?php else : ?>
                                 <div class="p-search-result__no-result">
                                     <p>検索されたキーワードにマッチする記事はありませんでした。</p>

@@ -308,7 +308,7 @@
                 <section class="blog">
                     <div class="inner">
                         <div class="blog__contents">
-                            <h2 class="blog__title">ブログ</h2>
+                            <h2 class="blog__title">ブログ</h2>
                             <div class="blog__items">
                                 <div class="blog__item blog-item">
                                     <a href="./blog_details.html" class="blog-item__link">
@@ -359,7 +359,7 @@
                                 </div>
                             </div>
                             <div class="blog-list-btn">
-                                <a href="./blog_list.html">ブログ一覧へ</a>
+                                <a href="./blog_list.html">ブログ一覧へ</a>
                             </div>
                         </div>
                     </div>

@@ -3,9 +3,9 @@
 
 //guide
 .guide {
-    padding: 4.6rem 0 4.8rem;
+    padding: 4.6rem 0 4.7rem;
     @include pc {
-        padding: 3.4rem 0 7.3rem;
+        padding: 3.4rem 0 7.1rem;
     }
 }
 
@@ -46,18 +46,18 @@
     }
 }
 
-.guide__items::after {
-    content: '';
+.guide__arrow {
     position: absolute;
-    left: 0.55rem;
-    width: 2.6rem;
-    height: 2.6rem;
-    bottom: 2.2rem;
-    border-right: 0.3rem solid $color-red;
-    border-bottom: 0.3rem solid $color-red;
-    transform: rotate(45deg);
+    left: 0.35rem;
+    bottom: 0.9rem;
+    width: 3.5rem;
+    height: 2rem;
+    background: url('../images/guide-arrow.svg') no-repeat center / contain;
+    transform: translateX(-49%);
     @include pc {
-        left: 4.85rem;
+        left: 0.1rem;
+        bottom: -1.8rem;
+        transform: translateX(-48.5%);
     }
 }
 
@@ -110,7 +110,7 @@
 .guide-item__text {
     font-size: 1.6rem;
     line-height: calc(30 / 16);
-    margin-left: 3.3rem;
+    margin-left: 3.32rem;
     margin-top: 1rem;
     @include pc {
         font-size: 1.8rem;

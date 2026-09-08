@@ -54,21 +54,21 @@
                                             <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                                         </div>
                                         <div class="blog-list-item__text">
-                                            <p><?php echo wp_trim_words(get_the_content(), 120, '...'); ?></p>
+                                            <p><?php echo wp_strip_all_tags(get_the_content()); ?></p>
                                         </div>
                                     </div>
                                 </a>
                                 <?php
                                 endwhile;
+                                else:
+                                ?>
+                                <p class="blog-list__empty">投稿はありません</p>
+                                <?php
                                 endif;
                                 ?>
                             </div>
 
-                            <nav class="pagination">
-                                <ul class="pagination__list pagination__gap">
-                                    <?php wp_pagenavi(); ?>
-                                </ul>
-                            </nav>
+                            <?php get_template_part('template-parts/pagination'); ?>
 
                         </div>
                     </div>

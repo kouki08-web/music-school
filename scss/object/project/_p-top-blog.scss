@@ -6,7 +6,7 @@
     position: relative;
     padding: 0 0 19.7rem;
     @include pc {
-        padding: 2rem 0 20.5rem;
+        padding: 2.1rem 0 20.5rem;
     }
 }
 
@@ -29,7 +29,7 @@
     row-gap: 4.2rem;
     @include pc {
         flex-direction: row;
-        margin-top: 3.8rem;
+        margin-top: 4rem;
         row-gap: 5rem;
     }
 }
@@ -103,8 +103,13 @@
     font-size: 2rem;
     line-height: calc(30 / 20);
     font-weight: 700;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
     @include pc {
-        margin-top: 2rem;
+        margin-top: 1.9rem;
         line-height: calc(25 / 20);
     }
 }
